@@ -1,0 +1,336 @@
+@font-face{ 
+	font-family: 'Montserrat';
+	src: url('../fonts/montserrat/montserrat_regular_macroman/Montserrat-Regular-webfont.eot');
+	src: url('../fonts/montserrat/montserrat_regular_macroman/Montserrat-Regular-webfont.eot?iefix') format('eot'),
+	     url('../fonts/montserrat/montserrat_regular_macroman/Montserrat-Regular-webfont.woff') format('woff'),
+	     url('../fonts/montserrat/montserrat_regular_macroman/Montserrat-Regular-webfont.ttf') format('truetype'),
+	     url('../fonts/montserrat/montserrat_regular_macroman/Montserrat-Regular-webfont.svg#webfont') format('svg');
+}
+
+*{font-family: Montserrat;}
+
+body {
+			color: #000;
+			background-color: #dcdcdc;
+		}
+
+header nav{
+	width: 100%;
+	background-color: #dedede;
+	position: fixed;
+	height: 5em;
+	padding-left: 1em;
+}
+header nav.navbar .menu{
+	padding: 1em 0 0 0;
+}
+header nav.navbar .menu > ul{
+	position: absolute;
+	display: block;
+	width: 200px;
+	background-color: #333;
+	top: 5em;
+	height: 7em;
+	color: #efefef;
+	display: none;
+}
+header nav.navbar .menu > ul > li{
+	display: block;
+	width: 100%;
+	padding-left: 1em;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.divider{
+	border: none;
+	border-right: 1px solid #000;
+	width: 1px;
+	height: 3em;
+}
+.navbar .logo{
+	padding: 0;
+	position: relative;
+	display: inline-block;
+	width: 20%;
+}
+.navbar .socialitem{
+	text-align: right;
+}
+.main{
+	position: relative;
+	top: 5em;
+	margin: 0 20px;
+	background-color: #fefefe;
+}
+.first-main{
+	font-family: Montserrat;
+	padding-top: 2px;
+	font-size: 1em;
+	height: 3em;
+	margin: 0;
+	background-color: #A526A3;
+	/*background-color: rgba(96,160,234,1);*/
+	/* background: rgba(10,10,10,0.8); */
+	color: #fefefe;
+	padding-left: 1em;
+	margin-top: 5px;
+	text-align: right;
+	font-variant: small-caps;
+	border-bottom: 1px solid #fff;
+}
+.title1-1{
+	color:#000 !important;
+	font-size:0.7em;
+	line-height: 0.5em;
+}
+.title1-2{
+	font-size:1.3em;
+	/*color:rgb(96,160,234) !important;*/
+	color: #A526A3 !important;
+	line-height: 1em;
+}
+
+@media (min-width: 768px) {
+  .navbar li {
+  	width: 8%;
+  	margin-top:1em;
+	}
+	.socialitem{
+		padding-top:0.5em;
+	}
+	.hiddendesktop{display: none !important;}
+}
+@media (max-width: 768px) {
+	.divider{display: none;}
+	.socialitem{display: inline-block; float: right !important; padding: 1em;}
+	header nav.navbar .menu{width: 30px;display: inline-block;}
+	header nav{height: 3.5em;}
+	.navbar .logo{ width: 150px;}
+	.navbar .socialitem{text-align: right;width: 2.5em;padding-left: 5px;padding-right: 5px;display: inline-block;}
+	header nav.navbar .menu > ul{
+		top: 3.5em;
+		height: 4em;
+	}
+	.main{top: 3.5em;}
+	.hiddenmobile{display: none !important;}
+	.lista-2 li{
+		height: 7em !important;
+	}
+	.lista-2 li div > div{
+		width: 49% !important;
+		vertical-align: middle;
+		margin-bottom: 0px !important;
+	}
+	.title-2{
+		padding-top: 0.5em;
+	}
+	.title1-1{
+		font-size:0.5em;
+	}
+	.title1-2{
+		font-size:0.7em;
+	}
+	header nav h1{padding: 0.5em 0 0 0;}
+	
+}
+
+.title-2{
+	font-family: Montserrat;
+	padding-top: 5px;
+	width: 100%;
+	/*background-color: rgb(96,160,234);*/
+	/*background:rgba(10,10,10,0.8);*/
+	background-color: #A526A3;
+	color: #fefefe;
+	text-align: center;
+	font-size: 1.5em;
+	height: 1.8em;
+}
+
+.lista-1{
+	list-style: none;
+	height: auto;
+	margin: 0;
+	padding-left: 1em;
+	font-family: monospace;
+	font-size: 1.2em;
+	/*margin-top: 5px;*/
+	/*background: #FFE;*/
+	/*background:rgba(10,10,10,0.5);*/
+}
+.lista-1 li{
+	display: inline-table;
+	/*background: rgba(49,167,224,.8);*/
+	height: 6.5em;
+	/*color: #fefefe;*/
+	color: #333;
+	padding: 0.5em;
+}
+.lista-1 li div > div {
+	display: inline-block;
+}
+.lista-1 li div > div > img{
+	display: inline-block;
+	padding:20px;
+}
+.imgholder-container{
+	position: absolute;
+	margin-left: 0 !important;
+}
+.imgholder{
+	font-family: Montserrat;
+	position: relative;
+	height: 4em;
+	bottom: 4em;
+	/*background: rgba(96,160,234,0.5);*/
+	background:rgba(10,10,10,0.8);
+	color: #fefefe;
+	font-size: 1.5em;
+	line-height: 1em;
+	padding: 1em;
+}
+
+.lista-2{
+	font-family: Montserrat;
+	list-style: none;
+	height: auto;
+	margin: 0;
+	padding:0;
+	color: #333;
+	margin-top: 10px;
+}
+.lista-2 li{
+	display: inline-table;
+	height: 6.9em;
+}
+.lista-2 li div > div {
+	display: inline-block;
+	padding:10px;
+	font-size: 1.2em;
+}
+.lista-2 span{
+	font-size: 0.8em;
+	color: #666;
+}
+
+footer{
+	margin-top: 7em;
+	background-color: #333;
+	color: #fff;
+}
+footer .property-info{
+	height: 10em;
+	font-size: 1em;
+	padding: 1em;
+	font-variant: small-caps;
+}
+footer .property-info p{
+	line-height: 1em;
+}
+footer .end{
+	text-align: center;
+	background: #A526A3;
+}
+footer h3{
+	/*color:#fff;*/
+}
+.border-right{
+	border-right: 1px dashed #fff;
+	color: #333;
+}
+.main h1,.main h2, .main h3{
+	display: inline-block;
+}
+.bignumber-1{
+	font-size: 6em;
+	display: inline-block;
+	line-height: 1em;
+}
+.bignumber-2{
+	font-size: 3.5em;
+	display: inline-block;
+	line-height: 1em;
+}
+
+.lista-3{
+	font-family: Montserrat;
+	list-style: none;
+	height: auto;
+	margin: 0;
+	padding:0;
+	color: #333;
+	margin-top: 10px;
+}
+.lista-3 li{
+	display: inline-table;
+	height: 6.9em;
+	padding:1em;
+	
+	/*background: rgba(10,10,10,0.1);*/
+	/*border: 1px solid #999;*/
+}
+.lista-3 li .unit-50{
+	margin-left: 0;
+}
+.lista-3 a{
+	text-decoration: none;
+	color: #A526A3;
+}
+
+
+.lista-4{
+	font-family: Montserrat;
+	list-style: none;
+	height: auto;
+	margin: 0;
+	padding:0;
+	color: #333;
+	margin-top: 10px;
+}
+.lista-4 li{
+	display: inline-table;
+	height: 1em;
+	padding:0;
+	/*background: #fefefe;*/
+	/*background: #dedede;*/
+	border: none;
+	width: 100%
+}
+.lista-4 li > span{
+	font-weight: bold;
+}
+
+.lista-5{
+	font-family: Montserrat;
+	list-style: none;
+	height: auto;
+	margin: 0;
+	padding:0;
+	color: #333;
+	margin-top: 10px;
+}
+.lista-5 li{
+	display: inline-table;
+	height: 6.9em;
+	padding:1em;
+}
+.lista-5 li .unit-50{
+	margin-left: 0;
+}
+.lista-5 a{
+	text-decoration: none;
+	color: #333;
+}
+
+.login-form{
+	margin: 3em 3em;
+}
+
+.btn-control-list{
+	list-style: none;
+}
+.btn-control-list li{
+	display: inline-block;
+	vertical-align: top;
+}
