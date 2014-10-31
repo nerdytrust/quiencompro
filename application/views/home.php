@@ -37,7 +37,7 @@
                                 <img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">
                             </div>
                             <div class="unit-60">
-                                 <img src="images/icons/glyphicons_264_vcard.png" alt="">
+                                 <img src="images/icons/user.png" width="45" alt="">
                                  <span>Por: Redacción  10 Agosto 2014</span><br/>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </div>
@@ -50,7 +50,7 @@
                                 <img class="hiddendesktop" src="http://lorempixel.com/240/280/people/" alt="">
                             </div>
                             <div class="unit-60">
-                            <img src="images/icons/glyphicons_264_vcard.png" alt="">
+                            <img src="images/icons/user.png" width="45" alt="">
                                  <span>Por: Redacción  10 Agosto 2014</span><br/>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </div>
@@ -63,7 +63,7 @@
                                 <img class="hiddendesktop" src="http://lorempixel.com/240/280/business/" alt="">
                             </div>
                             <div class="unit-60">
-                            <img src="images/icons/glyphicons_264_vcard.png" alt="">
+                            <img src="images/icons/user.png" width="45" alt="">
                                  <span>Por: Redacción  10 Agosto 2014</span><br/>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                             </div>
@@ -84,7 +84,7 @@
                     <li>
                         <div>
                             <div class="unit-30">
-                                <img src="images/icons/glyphicons_037_coins.png" alt="">
+                                <img src="images/icons/money.png" width="95" alt="">
                             </div>
                             <div class="unit-70">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -96,7 +96,7 @@
                     <li>
                         <div>
                             <div class="unit-30">
-                                <img src="images/icons/glyphicons_037_coins.png" alt="">
+                                <img src="images/icons/money.png" width="95" alt="">
                             </div>
                             <div class="unit-70">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -108,7 +108,7 @@
                     <li>
                         <div>
                             <div class="unit-30">
-                                <img src="images/icons/glyphicons_037_coins.png" alt="">
+                                <img src="images/icons/money.png" width="95" alt="">
                             </div>
                             <div class="unit-70">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -120,7 +120,7 @@
                     <li>
                         <div>
                             <div class="unit-30">
-                                <img src="images/icons/glyphicons_037_coins.png" alt="">
+                                <img src="images/icons/money.png" width="95" alt="">
                             </div>
                             <div class="unit-70">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -132,7 +132,7 @@
                     <li>
                         <div>
                             <div class="unit-30">
-                                <img src="images/icons/glyphicons_037_coins.png" alt="">
+                                <img src="images/icons/money.png" width="95" alt="">
                             </div>
                             <div class="unit-70">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -185,7 +185,7 @@
                     <li>
                         <div>
                             <div class="unit-20">
-                                <img src="images/icons/glyphicons_330_blog.png" alt="">
+                                <img src="images/icons/notebook.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -200,7 +200,7 @@
                     <li>
                         <div>
                             <div class="unit-20">
-                                <img src="images/icons/glyphicons_330_blog.png" alt="">
+                                <img src="images/icons/notebook.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -215,7 +215,7 @@
                     <li>
                         <div>
                             <div class="unit-20">
-                                <img src="images/icons/glyphicons_330_blog.png" alt="">
+                                <img src="images/icons/notebook.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -230,7 +230,7 @@
                     <li>
                         <div>
                             <div class="unit-20">
-                                <img src="images/icons/glyphicons_330_blog.png" alt="">
+                                <img src="images/icons/notebook.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -245,7 +245,7 @@
                     <li>
                         <div>
                             <div class="unit-20">
-                                <img src="images/icons/glyphicons_330_blog.png" alt="">
+                                <img src="images/icons/notebook.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -273,7 +273,7 @@
                     <li>
                         <div>
                             <div class="unit-20 ">
-                                <img src="images/icons/glyphicons_042_pie_chart.png" alt="">
+                                <img src="images/icons/stats.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -288,7 +288,7 @@
                     <li>
                         <div>
                             <div class="unit-20 ">
-                                <img src="images/icons/glyphicons_042_pie_chart.png" alt="">
+                                <img src="images/icons/stats.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -303,7 +303,7 @@
                     <li>
                         <div>
                             <div class="unit-20 ">
-                                <img src="images/icons/glyphicons_042_pie_chart.png" alt="">
+                                <img src="images/icons/stats.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -318,7 +318,7 @@
                     <li>
                         <div>
                             <div class="unit-20 ">
-                                <img src="images/icons/glyphicons_042_pie_chart.png" alt="">
+                                <img src="images/icons/stats.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>
@@ -333,7 +333,7 @@
                     <li>
                         <div>
                             <div class="unit-20 ">
-                                <img src="images/icons/glyphicons_042_pie_chart.png" alt="">
+                                <img src="images/icons/stats.png" alt="">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;">Diputados:</span>

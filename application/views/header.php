@@ -32,11 +32,14 @@
 				<!--<img src="images/quienc_small_logo.png" alt="">-->
 				<h1><span class="title1-1">¿Quién</span> <span class="title1-2">Compró?</span><h1>
 			</li>
-			<li class="divider"></li>
-			<li class="socialitem" ><a href="#"><img src="images/icons/glyphicons_social_30_facebook.png" width="40" alt=""></a></li>
-			<li class="socialitem"><a href="#"><img src="images/icons/glyphicons_social_31_twitter.png" width="40" alt=""></a></li>
-			<li class="socialitem"><a href="#"><img src="images/icons/glyphicons_social_22_youtube.png" width="40" alt=""></a></li>
-			<li class="socialitem"><a href="#"><img src="images/icons/glyphicons_social_02_google_plus.png" width="40" alt=""></a></li>
+			
+				<li class="divider"></li>
+					
+				<li class="socialitem" ><a href="#"><img src="images/icons/facebook-256.png" width="45" alt="" margin="10"></a></li>
+				<li class="socialitem"><a href="#"><img src="images/icons/twitter-256.png" width="45" alt=""></a></li>
+				<li class="socialitem"><a href="#"><img src="images/icons/youtube-256.png" width="45" alt=""></a></li>
+				<li class="socialitem"><a href="#"><img src="images/icons/googleplus-256.png" width="45" alt=""></a></li>
+					
 		</ul>
 	</nav>
 </header>
