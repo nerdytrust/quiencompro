@@ -97,7 +97,7 @@ header nav.navbar .menu > ul > li{
   	margin-top:1em;
 	}
 	.socialitem{
-		padding-top:0.5em;
+		padding-top:-0.5em;
 	}
 	.hiddendesktop{display: none !important;}
 }
