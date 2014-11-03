@@ -18,7 +18,7 @@
 
 	<div>
 		
-		<span><h2>Resultados de la búsqueda:</h2><h3>"zapatos"</h3></span>
+		<span><h2>Resultados de la búsqueda:</h2><h3>"<?=$txt?>"</h3></span>
 
 	</div>
 
@@ -26,29 +26,32 @@
 	<div class="units-row">
 		<!-- Columna Izquierda -->
     	<div class="unit-65">
-    		<span class="bignumber-1">26</span>
+    		<span class="bignumber-1"><?=$num_invoice?></span>
     		<h3>Resultados de búsqueda en FACTURAS</h3>
-    		<br><h4 style="padding-left:5px;color:#ACDF47;">$350,560.50</h4>
+    		<br><h4 style="padding-left:5px;color:#ACDF47;"><?=money_format('%i',$amount)?></h4>
     		<hr>
 
 			<ul class="lista-3">
 
+			<?php
+				foreach ($search_invoice as $key => $value) {
+			?>
 				<li><a href="">
 					<div>
 						<div class="unit-100">
 							<img src="images/icons/glyphicons_037_coins.png" alt="">
-							Diseño e impresión de tríptico y producción de fotografía y video
+							<?=$value->detail?>
 							<div class="units-row">
 								<div class="unit-50">
 									<ul class="lista-4">
-										<li><span>Camara:</span> Diputados</li>
-										<li><span>Legislatura:</span> LXII</li>
+										<li><span>Camara:</span> <?=(($value->id_camara == 1 ) ? 'Diputados' : 'Cenadores')?></li>
+										<li><span>Legislatura:</span> <?=$value->id_legislatura+61?></li>
 										<li><span>Comisiones Especiales</span></li>
 									</ul>
 								</div>
 								<div class="unit-50">
 									<ul class="lista-4">
-										<li><span>Monto:</span> $5,350.00</li>
+										<li><span>Monto:</span> <?=money_format('%i',$value->amount)?></li>
 										<li><span>Fecha:</span> 2014/03/21</li>
 										<li><span>Casa Productora Lion S.A. de C.V.</span></li>
 									</ul>
@@ -58,113 +61,16 @@
 					</div>
 					</a>
 				</li>
-				<li><a href="">
-					<div>
-						<div class="unit-100">
-							<img src="images/icons/glyphicons_037_coins.png" alt="">
-							Diseño e impresión de tríptico y producción de fotografía y video
-							<div class="units-row">
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Camara:</span> Diputados</li>
-										<li><span>Legislatura:</span> LXII</li>
-										<li><span>Comisiones Especiales</span></li>
-									</ul>
-								</div>
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Monto:</span> $5,350.00</li>
-										<li><span>Fecha:</span> 2014/03/21</li>
-										<li><span>Casa Productora Lion S.A. de C.V.</span></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</li>
-				<li><a href="">
-					<div>
-						<div class="unit-100">
-							<img src="images/icons/glyphicons_037_coins.png" alt="">
-							Diseño e impresión de tríptico y producción de fotografía y video
-							<div class="units-row">
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Camara:</span> Diputados</li>
-										<li><span>Legislatura:</span> LXII</li>
-										<li><span>Comisiones Especiales</span></li>
-									</ul>
-								</div>
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Monto:</span> $5,350.00</li>
-										<li><span>Fecha:</span> 2014/03/21</li>
-										<li><span>Casa Productora Lion S.A. de C.V.</span></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</li>
-				<li><a href="">
-					<div>
-						<div class="unit-100">
-							<img src="images/icons/glyphicons_037_coins.png" alt="">
-							Diseño e impresión de tríptico y producción de fotografía y video
-							<div class="units-row">
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Camara:</span> Diputados</li>
-										<li><span>Legislatura:</span> LXII</li>
-										<li><span>Comisiones Especiales</span></li>
-									</ul>
-								</div>
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Monto:</span> $5,350.00</li>
-										<li><span>Fecha:</span> 2014/03/21</li>
-										<li><span>Casa Productora Lion S.A. de C.V.</span></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</li>
-				<li><a href="">
-					<div>
-						<div class="unit-100">
-							<img src="images/icons/glyphicons_037_coins.png" alt="">
-							Diseño e impresión de tríptico y producción de fotografía y video
-							<div class="units-row">
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Camara:</span> Diputados</li>
-										<li><span>Legislatura:</span> LXII</li>
-										<li><span>Comisiones Especiales</span></li>
-									</ul>
-								</div>
-								<div class="unit-50">
-									<ul class="lista-4">
-										<li><span>Monto:</span> $5,350.00</li>
-										<li><span>Fecha:</span> 2014/03/21</li>
-										<li><span>Casa Productora Lion S.A. de C.V.</span></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					</a>
-				</li>
+			<?php
+				}
+			?>			
 
     		</ul>
 
     	</div>
 
     	<div class="unit-35">
-    		<span class="bignumber-2">13</span>
+    		<span class="bignumber-2"><?=$num_content?></span>
     			<h3>Resultados de búsqueda en NOTAS</h3>
     		<hr>
     		<ul class="lista-5">

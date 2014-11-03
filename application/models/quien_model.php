@@ -127,6 +127,23 @@
 	        return $sql->result_array();
 	    }
 
+	    public function search($match=''){
+	    	
+			$result = array();
+			$this->db->where("MATCH(detail,emisor_name,emisor_alias) AGAINST ('".$match."' IN BOOLEAN MODE) ", NULL, FALSE);
+	        $query_invoice = $this->db->get('gastos');
+	        
+	        array_push($result, $query_invoice->result());
+	        
+	        $this->db->where("MATCH(title,description) AGAINST ('".$match."' IN BOOLEAN MODE) ", NULL, FALSE);
+	        $query_content = $this->db->get('content');
+
+	        array_push($result, $query_content->result());
+
+	        return $result;
+
+		}
+
 	    //Salvar nueva nota
 	    //Recibe un arrelo con los datos a insertardesde el form
 		public function save_nueva_nota($data){
