@@ -9,10 +9,12 @@
         </div>
       
         <div style="display: inline-block;padding-top: 1px;">    
+        <form action="<?=base_url()?>busqueda">
                 <input type="text" name="txt" class="input-on-black"  placeholder="Criterio de Búsqueda" />
                 <span class="btn-append">
                     <button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
                 </span>
+        <form>
         </div>
     </div>
 </div>
