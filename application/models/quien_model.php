@@ -29,11 +29,11 @@
 	    }
 
 	   	public function get_facturas_recientes(){
-	    	$this->db->select("a.id_camara, a.modify_date, a.detail, a.amount, b.name");
+	    	$this->db->select("a.id,a.id_camara, a.modify_date, a.detail, a.amount, b.name");
  		    $this->db->from("gastos AS a");
-			$this->db->join('camaras AS b, a.id_camara = b.id ');
+			$this->db->join('camaras AS b', 'a.id_camara = b.id ');
  		    $this->db->order_by("a.modify_date", "desc");
- 		    $this->db->limit(5);
+ 		    $this->db->limit(6);
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
@@ -41,7 +41,7 @@
 	    public function get_facturas_monto(){
 	    	$this->db->select("a.id_camara, a.modify_date, a.detail, a.amount, b.name");
  		    $this->db->from("gastos AS a");
-			$this->db->join('camaras AS b, a.id_camara = b.id ');
+			$this->db->join('camaras AS b', 'a.id_camara = b.id ');
  		    $this->db->order_by("a.amount", "desc");
  		    $this->db->limit(5);
 	        $sql = $this->db->get();
@@ -112,11 +112,11 @@
 	    public function get_lista_facturas($ini_pagina){
 	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc, a.document, f.response_document AS solicitud");
 	    	$this->db->from("gastos AS a");
-			$this->db->join('legislaturas AS b, a.id_legislatura = b.id ');
-			$this->db->join('tipo_gastos AS c, a.id_tipo = c.id ');
-			$this->db->join('camaras AS d, a.id_camara = d.id ');
-			$this->db->join('responsable_gastos AS e, a.id_responsable = e.id ');
-			$this->db->join('sol_gastos AS f, a.id_sol = f.id ');
+			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
+			$this->db->join('tipo_gastos AS c',' a.id_tipo = c.id ');
+			$this->db->join('camaras AS d', 'a.id_camara = d.id ');
+			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
+			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
  		    $this->db->limit(10, $ini_pagina);
 	        return $sql->result_array();
 	    }
