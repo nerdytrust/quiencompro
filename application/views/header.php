@@ -4,10 +4,14 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<base href="<?=base_url();?>">
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 	<title><?=$titlepage?></title>
 
-	<base href="<?=base_url();?>">
+	
 	<script src="js/jquery-2.1.1.js"></script>
 	<script src="js/jquery-migrate-1.2.1.js"></script>
 
@@ -28,9 +32,9 @@
 					<li>Notas</li>
 				</ul>
 			</li>
-			<li class="logo">
-				<!--<img src="images/quienc_small_logo.png" alt="">-->
-				<h1><span class="title1-1">¿Quién</span> <span class="title1-2">Compró?</span><h1>
+			<li class="logo" style="margin:0;">
+				<img src="images/QC.png" alt="¿ Quien Compro ?" >
+				<!-- <h1><span class="title1-1">¿Quién</span> <span class="title1-2">Compró?</span><h1> -->
 			</li>
 			
 				<li class="divider"></li>

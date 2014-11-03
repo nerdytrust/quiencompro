@@ -15,6 +15,8 @@ class Home extends CI_Controller {
 			'notas_recientes'=> $this->Quien_model->get_notas_recientes(),
 			'facturas_recientes'=>$this->Quien_model->get_facturas_recientes(),
 			'banner_der' =>($this->Quien_model->get_banner_der()==null)?null:$this->Quien_model->get_banner_der()[0],
+			'facturas_monto' => $this->Quien_model->get_facturas_monto(),
+			'facturas_beneficiados' => $this->Quien_model->get_facturas_beneficiados(),
 			);
 
 		$this->load->view('header',$header);
