@@ -19,56 +19,40 @@
 <div class="units-row">
     <!-- Columna Izquierda -->
     <div class="unit-65">
-        <div>
-            <img src="http://lorempixel.com/640/420/people/" alt="" width="100%">
+        <div><a href="<?=base_url()?>detallenota/<?=$nota_principal['id']?>">
+            <img src="<?=base_url().$nota_principal['featured_image']?>" alt="<?=$nota_principal['title']?>" width="100%">
             <div class="imgholder-container unit-65">
                 <div class="imgholder">
-                    Comisiones especiales de San Lázaro: muchos gastos y poco trabajo.
+                    <?=$nota_principal['title']?>
                 </div>
             </div>
+            </a>
         </div>
         <div>
             <ul class="lista-2">
-
+                <?php
+                    foreach ($notas_recientes as $key => $value) {
+                ?>
                     <li>
                         <div>
                             <div class="unit-40">
-                                <img class="hiddenmobile"  src="http://lorempixel.com/280/120/technics/" alt="">
+                                <!--
+                                <img class="hiddenmobile"  src="http://lorempixel.com/280/240/technics/" alt="">
                                 <img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">
+                                -->
+                                <img class="hiddenmobile"  src="<?=base_url().$value['featured_image']?>" alt="<?=$value['title']?>">
                             </div>
                             <div class="unit-60">
                                  <img src="images/icons/user.png" width="45" alt="">
-                                 <span>Por: Redacción  10 Agosto 2014</span><br/>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                 <span>Por: Redacción  <?=$value['modify_date']?></span><br/>
+                                 <?=$value['description'];?>
                             </div>
                         </div>
                     </li>
-                    <li>
-                        <div>
-                            <div class="unit-40">
-                                <img class="hiddenmobile" src="http://lorempixel.com/280/120/people/" alt="">
-                                <img class="hiddendesktop" src="http://lorempixel.com/240/280/people/" alt="">
-                            </div>
-                            <div class="unit-60">
-                            <img src="images/icons/user.png" width="45" alt="">
-                                 <span>Por: Redacción  10 Agosto 2014</span><br/>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-40">
-                                <img class="hiddenmobile" src="http://lorempixel.com/280/120/business/" alt="">
-                                <img class="hiddendesktop" src="http://lorempixel.com/240/280/business/" alt="">
-                            </div>
-                            <div class="unit-60">
-                            <img src="images/icons/user.png" width="45" alt="">
-                                 <span>Por: Redacción  10 Agosto 2014</span><br/>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </div>
-                        </div>
-                    </li>            
+                
+                <?php
+                    }
+                ?>
 
         </div>
     </div>
@@ -79,76 +63,31 @@
             <div class="title-2">Últimas Facturas</div>
             <div>
                 <ul class="lista-1">
-
+                    <?php
+                        foreach ($facturas_recientes as $key => $value) {
+                    ?>
+                    <li>
+                        <div><a href="<?=base_url()?>detallefactura/<?=$value['id']?>" style="color:#000;">
+                            <div class="unit-30">
+                                <img src="images/icons/money.png" width="50" alt="">
+                            </div>
+                            <div class="unit-70">
+                                <span style="font-weight:bold;"><?=$value['name']?>:</span>
+                                <span style="font-size:0.8em;"><?=$value['detail']?></span>
+                                <span style="color:#ACDF47;"><?=money_format('%i',$value['amount'])?></span>
+                            </div>
+                            </a>
+                        </div>
+                    </li>
+                    <?php
+                        }
+                    ?>
                     
-                    <li>
-                        <div>
-                            <div class="unit-30">
-                                <img src="images/icons/money.png" width="95" alt="">
-                            </div>
-                            <div class="unit-70">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-30">
-                                <img src="images/icons/money.png" width="95" alt="">
-                            </div>
-                            <div class="unit-70">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-30">
-                                <img src="images/icons/money.png" width="95" alt="">
-                            </div>
-                            <div class="unit-70">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-30">
-                                <img src="images/icons/money.png" width="95" alt="">
-                            </div>
-                            <div class="unit-70">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-30">
-                                <img src="images/icons/money.png" width="95" alt="">
-                            </div>
-                            <div class="unit-70">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-    
                     <li style="width:100%;">
                             <div class="unit-100 hiddenmobile" >
-                                <img  width="100%" src="http://dummyimage.com/300x300/000/fff.png&text=Lorem+Image" alt="">
+                                <img  width="100%" src="<?=($banner_der==null) ? 'http://dummyimage.com/300x300/000/fff.png&text=Lorem+Image' : $banner_der['image']?>" alt="">
                             </div>
                     </li>
-
-                    
                     
                     
                 </ul>
