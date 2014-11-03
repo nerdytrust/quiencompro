@@ -119,84 +119,33 @@
         <div>
             <div class="title-2"> Ranking de Monto en Facturas</div>
             <div>
-                <ul class="lista-1">
+                <ul class="lista-1"> 
 
+                <?php
+                    foreach ($facturas_monto as $key => $value) {
+                ?>
                     <li>
-                        <div>
+                        <div><a href="<?=base_url()?>detallefactura/<?=$value['id']?>" style="color:#000;">
                             <div class="unit-20">
                                 <img src="images/icons/notebook.png" alt="">
                             </div>
                             <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
+                                <span style="font-weight:bold;"><?=$value['name']?>:</span>
+                                <span style="font-size:0.8em;"><?=$value['detail']?></span>
                             </div>
                             <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
+                                <?=$value['modify_date']?>
+                                <span style="color:#ACDF47;"><?=money_format('%i',$value['amount'])?></span>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20">
-                                <img src="images/icons/notebook.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20">
-                                <img src="images/icons/notebook.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20">
-                                <img src="images/icons/notebook.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20">
-                                <img src="images/icons/notebook.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
+                            </a>
                         </div>
                     </li>
                     
+                  <?php  
+                    }
+                  ?>
+
+                    </li>
                     
                 </ul>
             </div>
@@ -209,84 +158,29 @@
             <div>
                 <ul class="lista-1">
 
+                <?php
+                    foreach ($facturas_beneficiados as $key => $value) {
+                ?>
                     <li>
-                        <div>
-                            <div class="unit-20 ">
+                        <div><a href="<?=base_url()?>detallefactura/<?=$value['id']?>" style="color:#000;">
+                            <div class="unit-20">
                                 <img src="images/icons/stats.png" alt="">
                             </div>
                             <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
+                                <span style="font-weight:bold;"><?=$value['name']?>:</span>
+                                <span style="font-size:0.8em;"><?=$value['emisor_name']?></span>
                             </div>
                             <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
+                                <?=$value['emisor_rfc']?>
+                                <span style="color:#ACDF47;"><?=money_format('%i',$value['total'])?></span>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20 ">
-                                <img src="images/icons/stats.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20 ">
-                                <img src="images/icons/stats.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20 ">
-                                <img src="images/icons/stats.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <div class="unit-20 ">
-                                <img src="images/icons/stats.png" alt="">
-                            </div>
-                            <div class="unit-40">
-                                <span style="font-weight:bold;">Diputados:</span>
-                                <span style="font-size:0.8em;">Diseño e impresión de tríptico y producción de fotografía y video</span>
-                            </div>
-                            <div class="unit-40">
-                                20 de Abril 2014
-                                <span style="color:#ACDF47;">$51,620.00</span>
-                            </div>
+                            </a>
                         </div>
                     </li>
                     
-                    
-                    
+                  <?php  
+                    }
+                  ?>                    
                 </ul>
             </div>
         </div>
