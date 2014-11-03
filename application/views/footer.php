@@ -1,36 +1,143 @@
 
 	<footer class="">
-		<hr><hr style="margin-bottom: 0.5em;">
+
+
+<div class="units-row" style="background: #A526A3;color: #fff;">
+				<div class="property-info">
+			        <h3 style="color:#fff;">El equipo</h3>
+			          
+<!-- Team -->
+					<div class="unit-25 zerif_team">
+						<div>
+							<div class="team-member">
+								<figure class="profile-pic">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/israel.JPG" alt="">
+								</figure>
+								<div class="member-details">
+									<h3>Israel Piña</h3>
+									<div class="position">COORDINADOR GENERAL</div>
+								</div>
+								<div class="social-icons">
+									<ul>
+										<li><a href="https://www.facebook.com/israelpicam"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
+										<li><a href="https://twitter.com/Israel_Picam"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+									</ul>
+								</div>
+								<div class="details">
+									Textoservidor web. Obsesivo de la tecnología y la cultura digital. Soy fan de Julio Cortázar. Fui Editor de la Revista Etcétera. Trabajé como reportero del Periódico Mural de Guadalajara. Soy maestrante en Periodismo en el CIDE y licenciado en Comunicación por la UNAM.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="unit-25 zerif_team">
+						<div>
+							<div class="team-member">
+								<figure class="profile-pic">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/elidet.JPG" alt="">
+								</figure>
+								<div class="member-details">
+									<h3>Elidet Soto</h3>
+									<div class="position">COORDINADORA DE INVESTIGACIÓN</div>
+								</div>
+								<div class="social-icons">
+									<ul>
+										<li><a href="https://www.facebook.com/eli.soto.52"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
+										<li><a href="https://twitter.com/ElidetSoto"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+									</ul>
+								</div>
+								<div class="details">
+                    Amante de la comida chatarra, la política y la grilla en el  Congreso. Reportera en la Cámara de Diputados; a veces edito un portal. Fan de Kapuściński y las películas alemanas. Estudié comunicación en la FES Aragón. Diplomado en derecho electoral por el Tribunal Electoral del DF.
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="unit-25 zerif_team">
+						<div>
+							<div class="team-member">
+								<figure class="profile-pic">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/isaac.JPG" alt="">
+								</figure>
+								<div class="member-details">
+									<h3>Isaac Caporal</h3>
+									<div class="position">COORDINADOR DE INVESTIGACIÓN</div>
+								</div>
+								<div class="social-icons">
+									<ul>
+										<li><a href="https://www.facebook.com/icaporal"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
+										<li><a href="https://twitter.com/ICaporal"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+									</ul>
+								</div>
+								<div class="details">
+                    Me gusta la política, el futbol, leer, dibujar, fumar y dormir. Soy reportero en Vértigo Político.
+					Estudié en la Escuela de Periodismo Carlos Septién, tengo diplomados en periodismo deportivo en la Septién, científico en la UNAM y de derechos humanos en la Ibero. Hago ilustraciones en Rayones. 
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="unit-20 zerif_team">
+						<div>
+							<div class="team-member">
+								<figure class="profile-pic">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/Miriam.JPG" alt="">
+								</figure>
+								<div class="member-details">
+									<h3>Miriam Vizcarra</h3>
+									<div class="position">COORDINADORA DE SOCIAL MEDIA</div>
+								</div>
+								<div class="social-icons">
+									<ul>
+										<li><a href="https://www.facebook.com/miriamgonzalezvizcarra"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
+										<li><a href="https://twitter.com/Miriam_Vizcarra"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+									</ul>
+								</div>
+								<div class="details">
+									Textoservidor web. Obsesivo de la tecnología y la cultura digital. Soy fan de Julio Cortázar. Fui Editor de la Revista Etcétera. Trabajé como reportero del Periódico Mural de Guadalajara. Soy maestrante en Periodismo en el CIDE y licenciado en Comunicación por la UNAM.
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+<!-- Team -->
+
+
+			    </div>
+		</div>
+
 		<div class="units-row" style="background: #fff;color: #333;">
 
 			<div class="unit-40 border-right">
 				<div class="property-info">
 			        <h3>¿Quienes Somos?</h3>
-			        <img style="background:#fff;" src="images/openfeed.png" width="100px" alt="Nerdy Trust">
-			        <p style="width: 55%;vertical-align: top;display: inline-block;">
-			          Plataforma de periodismo de datos para vigilar y transparentar el uso del dinero público en las cámaras de Diputados y Senadores de México.
+			        <img style="background:#fff;" src="images/openfeed.png" width="200px" alt="Nerdy Trust">
+			        <p style="width: 100%;vertical-align: top;display: inline-block;">
+			          <br>Plataforma de periodismo de datos para vigilar y transparentar el uso del dinero público en las cámaras de Diputados y Senadores de México.
 			        </p>
 			    </div>
 			</div>
 			<div class="unit-20 border-right" style="margin-left:0.5%;">
 				<div class="property-info" style="padding-left:0px;padding-right:0px;">
 			        <h3>Contactanos</h3>
-			          <p style="margin-bottom:0;">Tweeteanos <br> <a href="#">@quiencompro</a></p>
-              		  <p>Email <br> <a href="#">quiencompro@gmail.com</a></p>
+			          <p style="margin-bottom:0;">Twitter  <a href="#">@quiencompro</a></p>
+              		  <p><a href="#">quiencompro@gmail.com</a></p>
 			    </div>
 			</div>
 			<div class="unit-40">
 				<div class="property-info">
 			        <h3>Patrocinadores</h3>
-			          <img style="background:#fff;" src="images/nerdy.png" width="100px" alt="Nerdy Trust">
-			          <p style="width: 55%;vertical-align: top;display: inline-block">
-			          Empresa de expertos en tecnología capaces de brindar la mejor solución a sus clientes.
-			          </p>
+			          <a href="http://www.nerdytrust.com">
+			          <img style="background:#fff;" src="images/nerd.png" width="85%" alt="Nerdy Trust">
+			          </a>
 			    </div>
 			</div>
 
 		</div>
-		<hr>
+
+		
+
 		<div class="units-row end">
 		  Derechos reservados &copy;¿Quién Compró? <?=date('Y')?>
 		</div>
