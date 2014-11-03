@@ -20,6 +20,7 @@
  */
 	define('ENVIRONMENT', 'development');
 	setlocale(LC_TIME, 'es_MX.utf8');
+	setlocale(LC_MONETARY, 'es_MX.UTF-8');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
