@@ -39,7 +39,7 @@
 	    }
 
 	    public function get_facturas_monto(){
-	    	$this->db->select("a.id_camara, a.modify_date, a.detail, a.amount, b.name");
+	    	$this->db->select("a.id,a.id_camara, a.modify_date, a.detail, a.amount, b.name");
  		    $this->db->from("gastos AS a");
 			$this->db->join('camaras AS b', 'a.id_camara = b.id ');
  		    $this->db->order_by("a.amount", "desc");
@@ -50,7 +50,7 @@
 	    
 	    // proveedores más beneficiados
 	   	public function get_facturas_beneficiados(){ 
-	    	$this->db->select("a.id_camara, a.emisor_name, SUM(a.amount) AS total, a.emisor_rfc, b.name");
+	    	$this->db->select("a.id,a.id_camara, a.emisor_name, SUM(a.amount) AS total, a.emisor_rfc, b.name");
  		    $this->db->from("gastos AS a");
 			$this->db->join('camaras AS b', 'a.id_camara = b.id ');
  		    $this->db->group_by("a.emisor_name");
