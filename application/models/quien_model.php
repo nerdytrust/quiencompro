@@ -164,6 +164,18 @@
 			else return FALSE;
 		}	
 
+		public function check_login($data){	
+			$this->db->select('username, password, seudonimo, tweeter, level');
+			$this->db->where('password', "'{$data['pass']}'", FALSE);
+			$this->db->where('username', "'{$data['user']}'", FALSE);
+			$this->db->where('active',1);
+			$login = $this->db->get('usuarios');
+			if ($login->num_rows() > 0)
+			return $login->result();
+			else return FALSE;
+			$login->free_result();
+		}
+
 	    // Aun no se como voy a ctualizar en base al tiempo los archivos de cache necearios.:(
 	    public function write_file_data($seccion = 'uno', $data_array){
 	    	$data = $data_array;

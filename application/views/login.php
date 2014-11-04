@@ -20,10 +20,13 @@
     
         <div class="unit-100">
             <div class="login-form">
-                
+
                 <h1>Acceso al administrador del sistema</h1>
                 <br>
-                <form method="post" action="" class="forms">
+                <?php
+                    $attr = array('id'=>'form_admin_login','name'=>'form_admin_login','method'=>'POST','autocomplete'=>'off','role'=>'form');
+                    echo form_open_multipart('login/verificar', $attr);
+                ?>
                     <label>
                         Email
                         <input type="email" name="user-email" class="width-50" />
@@ -36,7 +39,7 @@
                         <button class="btn">Log in</button>
                         <button class="btn">Cancel</button>
                     </p>
-                </form>
+                <?php echo form_close(); ?>
 
                 
             </div>
