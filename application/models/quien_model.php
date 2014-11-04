@@ -70,7 +70,7 @@
 	    }
 
 	    public function get_detalle_nota($id_nota){
-	    	$this->db->select("b.seudonimo, b.tweeter, a.title, a.description, a.alias, a.content, a.created_date");
+	    	$this->db->select("b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date");
 	    	$this->db->from("content AS a");
 			$this->db->join('usuarios AS b', 'a.author = b.id ');
  		    $this->db->where("published", 1);

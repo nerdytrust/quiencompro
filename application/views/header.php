@@ -33,7 +33,7 @@
 				</ul>
 			</li>
 			<li class="logo" style="margin:0;">
-				<img src="images/QC.png" alt="¿ Quien Compro ?" >
+				<a href="<?=base_url()?>"><img src="images/QC.png" alt="¿ Quien Compro ?" ></a>
 				<!-- <h1><span class="title1-1">¿Quién</span> <span class="title1-2">Compró?</span><h1> -->
 			</li>
 			

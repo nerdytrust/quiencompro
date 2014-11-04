@@ -187,6 +187,7 @@ header nav.navbar .menu > ul > li{
 .imgholder-container{
 	position: absolute;
 	margin-left: 0 !important;
+	height: 0;
 }
 .imgholder{
 	font-family: Montserrat;
