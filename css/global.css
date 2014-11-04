@@ -13,6 +13,10 @@ body {
 			color: #000;
 			background-color: #dcdcdc;
 		}
+a{
+	text-decoration: none;
+	color: #000;
+}
 
 header nav{
 	width: 100%;
@@ -418,15 +422,6 @@ footer h3{
 	display: inline-block;
 	line-height: 32px;
 	margin: 6px;
-}
-.team-member .social-icons ul li a {
-	background: #FFF;
-	font-size: 18px;
-	border-radius: 50%;
-	color: #808080;
-}
-.team-member .social-icons ul li a:hover {
-	color: #e96656;
 }
 .our-team .row > div:nth-child(4n+1) .red-border-bottom:before{
     background: #e96656;
