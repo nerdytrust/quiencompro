@@ -29,10 +29,6 @@ class Busqueda extends CI_Controller {
 				'num_content'=>count($result[1]) 
 			);
 
-		print_r($body);
-
-		//die;
-
 		$this->load->view('header',$header);
 		$this->load->view('busqueda',$body);
 		$this->load->view('footer');

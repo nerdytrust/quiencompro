@@ -94,7 +94,7 @@
 	    }
 
 	    public function get_lista_notas($ini_pagina){
-	    	$this->db->select("id, title, description, featured_image");
+	    	$this->db->select("id, title, description, featured_image,modify_date");
  		    $this->db->where('published', 1);
  		    $this->db->order_by("modify_date", "desc");
  		    $this->db->limit(10, $ini_pagina);
@@ -110,7 +110,7 @@
 	    }
 
 	    public function get_lista_facturas($ini_pagina){
-	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc, a.document, f.response_document AS solicitud");
+	    	$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
 			$this->db->join('tipo_gastos AS c',' a.id_tipo = c.id ');
@@ -118,12 +118,14 @@
 			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
 			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
  		    $this->db->limit(10, $ini_pagina);
+ 		    $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
 
 	    public function get_total_facturas(){
 	    	$this->db->select("COUNT(1) AS total_facturas, SUM(amount) AS monto_total");
 	    	$this->db->from("gastos");
+	    	$sql = $this->db->get();
 	        return $sql->result_array();
 	    }
 
@@ -137,14 +139,17 @@
 			$this->db->join('camaras AS d', 'a.id_camara = d.id ');
 			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
 			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
-			$this->db->where("MATCH(detail,emisor_name,emisor_alias) AGAINST ('".$match."' IN BOOLEAN MODE) ", NULL, FALSE);
+			$this->db->where("MATCH(detail,emisor_name,emisor_alias,emisor_alias) AGAINST ('".$match."' IN BOOLEAN MODE) ", NULL, FALSE);
+			$this->db->limit(50);
 	        $query_invoice = $this->db->get();
 	        
 	        array_push($result, $query_invoice->result());
 	        
+	        $this->db->select("a.id, a.title, a.description,a.featured_image");
+	        $this->db->from("content AS a");
 	        $this->db->where("MATCH(title,description) AGAINST ('".$match."' IN BOOLEAN MODE) ", NULL, FALSE);
-	        $query_content = $this->db->get('content');
-
+	        $this->db->limit(50);
+	        $query_content = $this->db->get();
 	        array_push($result, $query_content->result());
 
 	        return $result;
