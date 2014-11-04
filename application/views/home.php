@@ -21,7 +21,7 @@
 <div class="units-row">
     <!-- Columna Izquierda -->
     <div class="unit-65">
-        <div><a href="<?=base_url()?>detallenota/<?=$nota_principal['id']?>">
+        <div><a href="<?=base_url()?>detallenota?nota=<?=$nota_principal['id']?>">
             <img src="<?=base_url().$nota_principal['featured_image']?>" alt="<?=$nota_principal['title']?>" width="100%">
             <div class="imgholder-container unit-65">
                 <div class="imgholder">
@@ -37,18 +37,22 @@
                 ?>
                     <li>
                         <div>
+                        <a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
                             <div class="unit-40">
                                 <!--
                                 <img class="hiddenmobile"  src="http://lorempixel.com/280/240/technics/" alt="">
                                 <img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">
                                 -->
-                                <img class="hiddenmobile"  src="<?=base_url().$value['featured_image']?>" alt="<?=$value['title']?>">
+                                <img class="hiddenmobile thumb"  src="<?=base_url().$value['featured_image']?>" alt="<?=$value['title']?>" >
+                                <img class="hiddendesktop thumb"  src="<?=base_url().$value['featured_image']?>" alt="<?=$value['title']?>" >
                             </div>
                             <div class="unit-60">
                                  <img src="images/icons/user.png" width="45" alt="">
                                  <span>Por: Redacción  <?=$value['modify_date']?></span><br/>
+                                 <h3><?=$value['title'];?></h3><br/>
                                  <?=$value['description'];?>
                             </div>
+                            </a>
                         </div>
                     </li>
                 
@@ -56,6 +60,9 @@
                     }
                 ?>
 
+        </div>
+        <div class="unit-push-right unit-50" style="text-align:right;margin-right:1em;">
+            <a href="<?=base_url()?>notas">Ver más notas >></a>
         </div>
     </div>
     
@@ -69,7 +76,7 @@
                         foreach ($facturas_recientes as $key => $value) {
                     ?>
                     <li>
-                        <div><a href="<?=base_url()?>detallefactura/<?=$value['id']?>" style="color:#000;">
+                        <div><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>" style="color:#000;">
                             <div class="unit-30">
                                 <img src="images/icons/money.png" width="50" alt="">
                             </div>
@@ -84,6 +91,10 @@
                     <?php
                         }
                     ?>
+
+                    <div class="unit-push-right unit-80" style="text-align:right;margin-right:1em;">
+                        <a href="<?=base_url()?>facturas">Ver más facturas >></a>
+                    </div>
                     
                     <li style="width:100%;">
                             <div class="unit-100 hiddenmobile" >
@@ -127,7 +138,7 @@
                     foreach ($facturas_monto as $key => $value) {
                 ?>
                     <li>
-                        <div><a href="<?=base_url()?>detallefactura/<?=$value['id']?>" style="color:#000;">
+                        <div><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>" style="color:#000;">
                             <div class="unit-20">
                                 <img src="images/icons/notebook.png" alt="">
                             </div>
@@ -164,7 +175,7 @@
                     foreach ($facturas_beneficiados as $key => $value) {
                 ?>
                     <li>
-                        <div><a href="<?=base_url()?>detallefactura/<?=$value['id']?>" style="color:#000;">
+                        <div><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>" style="color:#000;">
                             <div class="unit-20">
                                 <img src="images/icons/stats.png" alt="">
                             </div>
