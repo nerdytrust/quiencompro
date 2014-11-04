@@ -80,15 +80,15 @@
 	    }
 
 	    public function get_detalle_factura($id_factura){
-	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc, a.document, f.response_document AS solicitud");
+	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b', 'a.id_legislatura = b.id ');
 			$this->db->join('tipo_gastos AS c', 'a.id_tipo = c.id ');
 			$this->db->join('camaras AS d', 'a.id_camara = d.id ');
 			$this->db->join('responsable_gastos AS e', 'a.id_responsable = e.id ');
 			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
- 		    $this->db->where("published", 1);
- 		    $this->db->where("a.id", $id_nota);
+ 		    //$this->db->where("published", 1);
+ 		    $this->db->where("a.id", $id_factura);
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
