@@ -130,8 +130,15 @@
 	    public function search($match=''){
 	    	
 			$result = array();
+			$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc, a.emisor_alias,a.document, f.response_document AS solicitud");
+	    	$this->db->from("gastos AS a");
+			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
+			$this->db->join('tipo_gastos AS c',' a.id_tipo = c.id ');
+			$this->db->join('camaras AS d', 'a.id_camara = d.id ');
+			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
+			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
 			$this->db->where("MATCH(detail,emisor_name,emisor_alias) AGAINST ('".$match."' IN BOOLEAN MODE) ", NULL, FALSE);
-	        $query_invoice = $this->db->get('gastos');
+	        $query_invoice = $this->db->get();
 	        
 	        array_push($result, $query_invoice->result());
 	        
