@@ -188,6 +188,23 @@
 			$login->free_result();
 		}
 
+		public function get_lista_notas_admin($user, $level, $ini_pagina = 0){
+	    	$this->db->select("id, title, description, featured_image, modify_date");
+ 		    if ($level != 1) {
+ 		    	$this->db->where('author', $user);
+ 		    }
+ 		    $this->db->order_by("modify_date", "desc");
+ 		    $this->db->limit(10, $ini_pagina);
+	        $sql = $this->db->get("content");
+	        return $sql->result_array();
+	    }
+
+		public function elimina_nota($id_nota){
+			$this->db->where('id', $id_nota);
+			$eliminado = $this->db->delete('content'); 
+			echo $this->db->affected_rows();
+		}
+
 	    // Aun no se como voy a ctualizar en base al tiempo los archivos de cache necearios.:(
 	    public function write_file_data($seccion = 'uno', $data_array){
 	    	$data = $data_array;

@@ -36,9 +36,7 @@
 			<div class="unit-100">
 
 				<ul class="btn-control-list">
-					<li><a type="button" class="btn btn" href="admin/nueva_nota">Nuevo</a></li>
-					<li><button class="btn btn">Editar</button></li>
-					
+					<li><a type="button" class="btn btn" href="admin/nueva_nota">Nuevo</a></li>					
 					<li>
 						<form action="">
 						    <div>
@@ -52,20 +50,30 @@
 				</ul>
 				
 			</div>
+
 			<div class="unit-100">
 				<table class="table-hovered">
+				    <?php foreach ($data as $data_note) { ?>
 				    <tr>
-				        <td>Nota #1</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/1">Eliminar</a></td>
+				        <td>
+				        	<?php echo $data_note['id'];?> 
+				        </td>
+				        <td>
+				        	<a value="<?php echo base_url(); ?>admin/edita_nota?id_nota=<?php echo $data_note['id']; ?>" class="edita_nota">
+				        		<?php echo $data_note['title'];?>
+				        	</a>
+				        </td>
+				        <td>
+				        	<?php echo $data_note['modify_date'];?>
+				        </td>
+				        <td>
+				        	<a value="<?php echo base_url(); ?>admin/elimina_nota?id_nota=<?php echo $data_note['id']; ?>" class="btn btn-red elimina-nota">
+				        		Eliminar
+				        	</a>
+				        </td>
 				    </tr>
-				    <tr>
-				        <td>Nota #2</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/2">Eliminar</a></td>
-				    </tr>
-				    <tr>
-				        <td>Nota #3</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/3">Eliminar</a></td>
-				    </tr>
-				    <tr>
-				        <td>Nota #4</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/4">Eliminar</a></td>
-				    </tr>
+				    <?php } ?>
+
 				</table>
 
 				<ul class="pagination">

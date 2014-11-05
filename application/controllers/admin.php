@@ -13,8 +13,9 @@ class Admin extends CI_Controller {
 	public function index(){
 		if($this->session->userdata('session') === TRUE ){
 			$nivel=$this->session->userdata('level');
+			$user_id=$this->session->userdata('id');
 			$data = array('titlepage' => '¿ Quién Compró ?' );
-			$data_notas = $this->quien->get_lista_notas();
+			$data_notas = array('data' => $this->quien->get_lista_notas_admin($user_id,$nivel) );
 			$this->load->view('header',$data);
 			$this->load->view('admin-notas', $data_notas);
 			$this->load->view('footer');
@@ -79,6 +80,12 @@ class Admin extends CI_Controller {
 	            	echo "No se han insertado los datos correctamente";
 				}
 		}
+	}
+
+	public function elimina_nota(){
+		$id_nota = $this->input->get( "id_nota" );
+		$elimina_data = $this->quien->elimina_nota($id_nota);
+		echo $elimina_data;
 	}
 
 
