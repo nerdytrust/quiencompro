@@ -8,6 +8,7 @@ class Login extends CI_Controller {
 		$this->load->library('session');
 		$this->load->model('quien_model', 'quien');
 		$this->load->helper(array('download', 'file', 'url', 'html', 'form'));
+		//$this->session->sess_destroy();
 	}
 	
 	public function index()

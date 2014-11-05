@@ -18,10 +18,10 @@
 
     <div class="units-row">
     
-        <div class="unit-100">
+        <div class="unit-centered" style="width: 395px;">
             <div class="login-form">
 
-                <h1>Acceso al administrador del sistema</h1>
+                <h1 style="text-align:center;">Acceso al administrador del sistema</h1>
                 <br>
                 <?php
                     $attr = array('id'=>'form_admin_login','name'=>'form_admin_login','method'=>'POST','autocomplete'=>'off','role'=>'form');
