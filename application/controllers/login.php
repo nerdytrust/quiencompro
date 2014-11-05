@@ -13,14 +13,20 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$data = array('titlepage' => '¿ Quién Compró ?' );
-
+		if($this->session->userdata('session') != TRUE ){
 		$this->load->view('header',$data);
 		$this->load->view('login');
 		$this->load->view('footer');
+		}
+		else
+		{
+		 	redirect('admin');
+		}
+
 	}
 
 	public function verificar(){
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		$this->form_validation->set_rules('user-email','Usuario','trim|required|xss_clean');
 		$this->form_validation->set_rules('user-password','Contraseña','trim|required|xss_clean');
 
@@ -31,20 +37,21 @@ class Login extends CI_Controller {
 				$data['pass']		=	$this->input->post('user-password');
 	            $data 				= 	$this->security->xss_clean($data);  
 	            $login_check = $this->quien->check_login($data);
+
 	            if ( $login_check != FALSE ){
 	            	$this->session->set_userdata('session', TRUE);
 	            	$this->session->set_userdata('usuario', $data['user']);
+
 	            	if (is_array($login_check))
 	            		foreach ($login_check as $login_element) {
 	            			$this->session->set_userdata('level', $login_element->level);
 							$this->session->set_userdata('seudonimo', $login_element->seudonimo);
 							$this->session->set_userdata('e-mail', $login_element->username);
 	            		}
-	            		$acceso = $this->session->userdata('level');
-	            	if( !$acceso && $acceso == 1)
-	            	redirect('/admin?page=1', 'refresh');
+	            	redirect('admin');
 	            } else {
 	            	echo '<span class="error">¡Ups! tus datos no son correctos, verificalos e intenta nuevamente por favor.</span>';
+	            	redirect('login');
 	            }
 		}
 	}

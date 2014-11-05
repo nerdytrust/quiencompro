@@ -8,19 +8,22 @@ class Admin extends CI_Controller {
 		$this->load->helper(array('download', 'file', 'url', 'html', 'form'));
 	}
 
-	public function index()
-	{
-		$this->output->enable_profiler(TRUE);
-		$data = array('titlepage' => '¿ Quién Compró ?' );
-		$pagina = $this->input->get( "page" ); //los elementos por página siempre son 10 (limit), por tanto el offset debe ser de 10 en 10
-		$pagina = ($pagina - 1) * 10; //temporal, calculo de página
-		$data_notas = $this->quien->get_lista_notas($pagina);
-		$this->load->view('header',$data);
-		$this->load->view('admin-notas', $data_notas);
-		$this->load->view('footer');
+	public function index(){
+		if($this->session->userdata('session') === TRUE ){
+			$nivel=$this->session->userdata('level');
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+			$data_notas = $this->quien->get_lista_notas();
+			$this->load->view('header',$data);
+			$this->load->view('admin-notas', $data_notas);
+			$this->load->view('footer');
+		}
+		else{
+			redirect('login');	
+		}
 	}
+	
 
-	public function editarnota()
+	public function editarnota($id_nota)
 	{
 		$this->output->enable_profiler(TRUE);
 		$data = array('titlepage' => '¿ Quién Compró ?' );

@@ -93,7 +93,7 @@
 	        return $sql->result_array();
 	    }
 
-	    public function get_lista_notas($ini_pagina){
+	    public function get_lista_notas($ini_pagina = 0){
 	    	$this->db->select("id, title, description, featured_image,modify_date");
  		    $this->db->where('published', 1);
  		    $this->db->order_by("modify_date", "desc");
