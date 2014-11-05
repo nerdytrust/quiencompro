@@ -14,7 +14,9 @@
 	
 	<script src="js/jquery-2.1.1.js"></script>
 	<script src="js/jquery-migrate-1.2.1.js"></script>
-
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="<?php echo base_url(); ?>js/jquery.form.min.js"></script>
+	<script src="<?php echo base_url(); ?>js/global.js"></script>
 	<link rel="stylesheet" href="css/kube.css">
 	<script src="js/kube.js"></script>
 

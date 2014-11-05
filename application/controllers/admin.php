@@ -2,8 +2,10 @@
 
 class Admin extends CI_Controller {
 
-	public function __construct(){
+	function __construct(){
 		parent::__construct();
+		$this->load->library('form_validation');
+		$this->load->library('session');
 		$this->load->model('quien_model', 'quien');
 		$this->load->helper(array('download', 'file', 'url', 'html', 'form'));
 	}
@@ -34,13 +36,50 @@ class Admin extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function nueva_nota()
-	{
-		$this->output->enable_profiler(TRUE);
-		$data = array('titlepage' => '¿ Quién Compró ?' );
-		$this->load->view('header',$data);
-		$this->load->view('nueva-nota');
-		$this->load->view('footer');
+	public function nueva_nota(){
+		if($this->session->userdata('session') === TRUE ){
+			$this->output->enable_profiler(TRUE);
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+			$this->load->view('header',$data);
+			$this->load->view('nueva-nota');
+			$this->load->view('footer');
+		}
+		else{
+			redirect('login');	
+		}
+
 	}
+
+	public function guarda_nota(){
+		$this->form_validation->set_rules('title-note','Título Nota','trim|required|xss_clean');
+		$this->form_validation->set_rules('tags-note','Tags','trim|required|xss_clean');
+		$this->form_validation->set_rules('desc-note','Descripción','trim|required|xss_clean');
+		$this->form_validation->set_rules('content-note','Contenido','trim|required|xss_clean');
+
+		if ( $this->form_validation->run() == FALSE ){
+			echo validation_errors();
+		}else {
+				$data['autor-note']			=	$this->session->userdata('id');
+				$data['title-note']			=	$this->input->post('title-note');
+				$data['tags-note']			=	$this->input->post('tags-note');
+				$data['desc-note']			=	$this->input->post('desc-note');
+				$data['content-note']		=	$this->input->post('content-note');
+				$data['vip-note']			=	$this->input->post('vip-note');
+				$data['feat-note']			=	$this->input->post('feat-note');
+				$data['published-note']		=	$this->input->post('published-note');
+				$data['feat-img-note']		=	$this->input->post('feat-img-note');
+
+	            $data 						= 	$this->security->xss_clean($data);  
+	            
+	            $ins_note_check = $this->quien->save_nueva_nota($data);
+
+	            if ( $ins_note_check != FALSE ){
+	            	echo "exito";
+	            }else {
+	            	echo "No se han insertado los datos correctamente";
+				}
+		}
+	}
+
 
 }

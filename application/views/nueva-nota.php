@@ -45,34 +45,59 @@
 
 			<div class="unit-100">
 
-				<form method="post" action="" class="forms">
+				 <?php
+                    $attr = array('id'=>'id_form_nueva_nota','name'=>'form_nueva_nota','method'=>'POST','autocomplete'=>'off','role'=>'form');
+                    echo form_open_multipart('admin/guarda_nota', $attr);
+                ?>
 				    <label>
 				        Name
-				        <input type="text" name="user-name" class="width-50" />
+				        <input type="text" name="title-note" class="width-50" />
 				    </label>
 				    <fieldset>
 				        <legend>Meta data</legend>
 				            Tags
-				            <input type="text" name="tags" class="width-100" />
+				            <input type="text" name="tags-note" class="width-100" />
 				        <label>
 				            Descripción
-				            <textarea name="" id="" cols="30" rows="3">
+				            <textarea name="desc-note" id="" cols="30" rows="3">
 				            </textarea>
 				        </label>
 				    </fieldset>
 				    <fieldset>
 				        <legend>Contenido</legend>
 				        <label>
-				            <textarea name="content" id="content">				            	
+				            <textarea name="content-note" id="content">				            	
 				            </textarea>
 				        </label>
 				    </fieldset>
+				    <fieldset>
+				    	<label>
+					    	Imagen destacada: 
+					    	<input type="file" name="feat-img-note">
+				    	</label>
+				    </fieldset>
+				    <label>
+				    	Nota destacada: 
+				    	<input type="checkbox" name="feat-note" value="1">
+				    </label>
+				    <label>
+				    	Publicar:
+				    	<input type="checkbox" name="published-note" value="1">
+				    </label>
+				    <label>
+				    	Nota VIP: 
+				    	<input type="checkbox" name="vip-note" value="1">
+				    </label>
+				    
 				    <p>
-				        <input type="submit" class="btn" value="Enviar" />
-				        <button class="btn btn-small btn-outline">Cancelar</button>
+				    </br>
+				        <input id="envia_nota_nueva" type="submit" class="btn" value="Enviar" />
+				        
+				        <a type="button" class="btn btn-small btn-outline" href="admin">Cancelar</a>
 
 				    </p>
-				</form>
+				<?php echo form_close(); ?>
+				
 
 				
 			</div>

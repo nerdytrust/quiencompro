@@ -44,13 +44,13 @@ class Login extends CI_Controller {
 
 	            	if (is_array($login_check))
 	            		foreach ($login_check as $login_element) {
+	            			$this->session->set_userdata('id', $login_element->id);
 	            			$this->session->set_userdata('level', $login_element->level);
 							$this->session->set_userdata('seudonimo', $login_element->seudonimo);
 							$this->session->set_userdata('e-mail', $login_element->username);
 	            		}
 	            	redirect('admin');
 	            } else {
-	            	echo '<span class="error">¡Ups! tus datos no son correctos, verificalos e intenta nuevamente por favor.</span>';
 	            	redirect('login');
 	            }
 		}

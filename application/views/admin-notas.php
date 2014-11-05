@@ -36,9 +36,9 @@
 			<div class="unit-100">
 
 				<ul class="btn-control-list">
-					<li><button class="btn btn">Nuevo</button></li>
+					<li><a type="button" class="btn btn" href="admin/nueva_nota">Nuevo</a></li>
 					<li><button class="btn btn">Editar</button></li>
-					<li><button class="btn btn-red">Eliminar</button></li>
+					
 					<li>
 						<form action="">
 						    <div>
@@ -55,16 +55,16 @@
 			<div class="unit-100">
 				<table class="table-hovered">
 				    <tr>
-				        <td>Nota #1</td><td>Redacción</td><td>2014/05/01</td><td>1</td>
+				        <td>Nota #1</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/1">Eliminar</a></td>
 				    </tr>
 				    <tr>
-				        <td>Nota #2</td><td>Redacción</td><td>2014/05/01</td><td>0</td>
+				        <td>Nota #2</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/2">Eliminar</a></td>
 				    </tr>
 				    <tr>
-				        <td>Nota #3</td><td>Redacción</td><td>2014/05/01</td><td>1</td>
+				        <td>Nota #3</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/3">Eliminar</a></td>
 				    </tr>
 				    <tr>
-				        <td>Nota #4</td><td>Redacción</td><td>2014/05/01</td><td>0</td>
+				        <td>Nota #4</td><td>Redacción</td><td>2014/05/01</td><td><a type="button" class="btn btn-red" href="admin/eliminar/4">Eliminar</a></td>
 				    </tr>
 				</table>
 

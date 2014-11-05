@@ -159,25 +159,25 @@
 	    //Salvar nueva nota
 	    //Recibe un arrelo con los datos a insertardesde el form
 		public function save_nueva_nota($data){
-            //$this->db->set('author', ); //traer desde los datos de la ssesion del usuario
-            $this->db->set('title', $data['title']);
-            $this->db->set('description', $data['description']);
-            $this->db->set('alias', $data['alias']);
-            $this->db->set('content', $data['content']);
+            $this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
+            $this->db->set('title', $data['title-note']);
+            $this->db->set('description', $data['desc-note']);
+            $this->db->set('alias', $data['title-note']);
+            $this->db->set('content', $data['content-note']);
             $this->db->set('created_date', time());
             $this->db->set('modify_date', time());
-            $this->db->set('vip', $data['vip']);
-            $this->db->set('featured', $data['featured']);
-            $this->db->set('featured_image', $data['featured_image']);
-            $this->db->set('published', $data['published']);
-            $this->db->set('tags', $data['tags']);
+            $this->db->set('vip', $data['vip-note']);
+            $this->db->set('featured', $data['feat-note']);
+            $this->db->set('featured_image', $data['feat-img-note']);
+            $this->db->set('published', $data['published-note']);
+            $this->db->set('tags', $data['tags-note']);
             $this->db->insert('content');
             if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;
 		}	
 
 		public function check_login($data){	
-			$this->db->select('username, password, seudonimo, tweeter, level');
+			$this->db->select('id, username, password, seudonimo, tweeter, level');
 			$this->db->where('password', "'{$data['pass']}'", FALSE);
 			$this->db->where('username', "'{$data['user']}'", FALSE);
 			$this->db->where('active',1);
