@@ -73,7 +73,7 @@
 				    <fieldset>
 				    	<label>
 					    	Imagen destacada: 
-					    	<input type="file" name="feat-img-note">
+					    	<input type="file" name="file" data-tools="upload" data-url="<?=base_url()?>admin/upload_image_content">
 				    	</label>
 				    </fieldset>
 				    <label>
@@ -113,12 +113,13 @@ $(function()
 {
     $('#content').redactor(
     {
-    	imageUpload:'',
-    	fileUpload:'',
+    	imageUpload:'<?=base_url()?>admin/upload_image_content',
     	minHeight: 500,
     	toolbarFixed: true,
     	toolbarFixedTopOffset: 80,
-    }
-    );
+    	focus: true,
+        buttonSource: true
+
+    });
 });
 </script>

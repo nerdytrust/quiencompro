@@ -337,7 +337,7 @@ footer h3{
 }
 
 .login-form{
-	margin: 3em 3em;
+	margin: 2em 0;
 }
 
 .btn-control-list{
@@ -435,4 +435,69 @@ footer h3{
 }
 .our-team .row > div:nth-child(4n+4) .red-border-bottom:before{
     background: #f7d861;
+}
+
+
+.login-form form{
+	text-align: right;
+	margin-right: 5em
+}
+.login-form form label{
+	display: block;
+	margin: 1em 0;
+}
+.login-form form input{
+	width: 15em;
+}
+
+
+.redactor-editor {
+    background: #f5f5f5;
+}
+.redactor-editor,
+.redactor-editor h1,
+.redactor-editor h2,
+.redactor-editor h3,
+.redactor-editor h4,
+.redactor-editor h5,
+.redactor-editor h6 {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+.redactor-editor pre {
+    font-size: 100%;
+    background: #333;
+    color: #fff;
+}
+.red-styled {
+    color: red;
+}
+.blue-styled {
+    color: blue;
+    font-weight: bold;
+}
+.marked-span {
+    background: yellow;
+    font-family: monospace;
+}
+.redactor-dropdown .redactor-formatting-span-font-size-20 {
+    font-size: 20px;
+}
+.redactor-dropdown .redactor-formatting-span-font-family-georgia {
+    font-family: Georgia;
+}
+.redactor-dropdown .redactor-formatting-span-big-red {
+    font-size: 20px;
+    color: red;
+}
+.redactor-dropdown .redactor-formatting-code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    background: #f4f4f4;
+}
+.redactor-dropdown .redactor-formatting-mark {
+    background-color: #ffc800;
+    color: #0f0f0f;
+}
+.redactor-dropdown .redactor-formatting-span-marked-span {
+    background: yellow;
+    font-family: monospace;
 }

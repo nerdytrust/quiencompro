@@ -125,4 +125,41 @@ class Admin extends CI_Controller {
 	}
 
 
+
+	public function upload_image_content()
+	{ 
+		$dir = 'images/content/';
+ 
+		$_FILES['file']['type'] = strtolower($_FILES['file']['type']);
+		 
+		if ($_FILES['file']['type'] == 'image/png'
+		|| $_FILES['file']['type'] == 'image/jpg'
+		|| $_FILES['file']['type'] == 'image/gif'
+		|| $_FILES['file']['type'] == 'image/jpeg'
+		|| $_FILES['file']['type'] == 'image/pjpeg')
+		{
+		    // setting file's mysterious name
+		    $ext = 'png';
+			if($_FILES['file']['type'] == 'image/jpg')$ext = 'jpg';
+			if($_FILES['file']['type'] == 'image/gif')$ext = 'gif';
+			if($_FILES['file']['type'] == 'image/jpeg')$ext = 'jpeg';
+			if($_FILES['file']['type'] == 'image/pjpeg')$ext = 'pjpeg';
+
+
+		    $filename = md5(date('YmdHis')).'.'.$ext;
+		    $file = $dir.$filename;
+		 
+		    // copying
+		    move_uploaded_file($_FILES['file']['tmp_name'], $file);
+		 
+		    // displaying file
+		    $array = array(
+		        'filelink' => $dir.$filename
+		    );
+		 
+		    echo stripslashes(json_encode($array));
+		}
+	
+	}
+
 }
