@@ -171,8 +171,9 @@ header nav.navbar .menu > ul > li{
 }
 .lista-1 li{
 	display: inline-table;
+	width: 100%;
 	/*background: rgba(49,167,224,.8);*/
-	height: 6.5em;
+	height: 4.5em;
 	/*color: #fefefe;*/
 	color: #333;
 	padding: 0.5em;

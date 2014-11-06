@@ -33,7 +33,7 @@
  		    $this->db->from("gastos AS a");
 			$this->db->join('camaras AS b', 'a.id_camara = b.id ');
  		    $this->db->order_by("a.modify_date", "desc");
- 		    $this->db->limit(6);
+ 		    $this->db->limit(10);
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
@@ -164,8 +164,8 @@
             $this->db->set('description', $data['desc-note']);
             $this->db->set('alias', $data['title-note']);
             $this->db->set('content', $data['content-note']);
-            //$this->db->set('created_date', date("d-m-Y H:i:s"));
-            //$this->db->set('modify_date', date("d-m-Y H:i:s"));
+            $this->db->set('created_date', date('Y-m-d H:i:s'));
+            $this->db->set('modify_date',  date('Y-m-d H:i:s'));
             $this->db->set('vip', $data['vip-note']);
             $this->db->set('featured', $data['feat-note']);
             $this->db->set('featured_image', $data['feat-img-note']);
@@ -185,8 +185,10 @@
                'content' => $data['content-note'],
                'vip' => $data['vip-note'],
                'featured' => $data['feat-note'],
+               'featured_image'=>$data['feat-img-note'],
                'published' => $data['published-note'],
-               'tags' => $data['tags-note']
+               'tags' => $data['tags-note'],
+               'modify_date'=> date('Y-m-d H:i:s')
             );
 
 			$this->db->where('id', $data['id-note']);

@@ -147,8 +147,10 @@
                                 <span style="font-size:0.8em;"><?=$value['detail']?></span>
                             </div>
                             <div class="unit-40">
-                                <?=$value['modify_date']?>
-                                <span style="color:#ACDF47;"><?=money_format('%i',$value['amount'])?></span>
+                                <div>
+                                    <?=$value['modify_date']?>
+                                </div>
+                                <div><span style="color:#ACDF47;"><?=money_format('%i',$value['amount'])?></span></div>
                             </div>
                             </a>
                         </div>
@@ -184,8 +186,8 @@
                                 <span style="font-size:0.8em;"><?=$value['emisor_name']?></span>
                             </div>
                             <div class="unit-40">
-                                <?=$value['emisor_rfc']?>
-                                <span style="color:#ACDF47;"><?=money_format('%i',$value['total'])?></span>
+                                <div ><?=$value['emisor_rfc']?></div>
+                                <div ><span style="color:#ACDF47;"><?=money_format('%i',$value['total'])?></span></div>
                             </div>
                             </a>
                         </div>

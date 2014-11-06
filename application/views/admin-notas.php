@@ -7,12 +7,6 @@
 	                    México D.F. a <?=strftime('%A %d de %B de %Y', time())?> 
 	        </div>
 	      
-	        <div style="display: inline-block;padding-top: 1px;">    
-	                <input type="text" name="go" class="input-on-black"  placeholder="Búsqueda" />
-	                <span class="btn-append">
-	                    <button class="btn btn-white btn-outline" style="margin-right:5px;">Go</button>
-	                </span>
-	        </div>
 	    </div>
 	</div>
 
@@ -37,16 +31,6 @@
 
 				<ul class="btn-control-list">
 					<li><a type="button" class="btn btn" href="admin/nueva_nota">Nuevo</a></li>					
-					<li>
-						<form action="">
-						    <div>
-						        <input type="text" name="go" placeholder="Búsqueda" />
-						        <span class="btn-append">
-						            <button class="btn">Ir</button>
-						        </span>
-						    </div>
-						</form>
-					</li>
 				</ul>
 				
 			</div>
@@ -76,6 +60,7 @@
 
 				</table>
 
+				<!--
 				<ul class="pagination">
 					<li><a href="#">&larr;</a></li>
 				    <li><a href="#">1</a></li>
@@ -84,6 +69,7 @@
 				    <li><a href="#">4</a></li>
 				    <li><a href="#">&rarr;</a></li>
 				</ul>
+				-->
 			</div>
 
 		</div>

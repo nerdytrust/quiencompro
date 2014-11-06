@@ -10,12 +10,6 @@
 	                    México D.F. a <?=strftime('%A %d de %B de %Y', time())?> 
 	        </div>
 	      
-	        <div style="display: inline-block;padding-top: 1px;">    
-	                <input type="text" name="go" class="input-on-black"  placeholder="Búsqueda" />
-	                <span class="btn-append">
-	                    <button class="btn btn-white btn-outline" style="margin-right:5px;">Go</button>
-	                </span>
-	        </div>
 	    </div>
 	</div>
 
@@ -73,8 +67,10 @@
 				    <fieldset>
 				    	<label>
 					    	Imagen destacada: 
-					    	<input type="file" name="file" data-tools="upload" data-url="<?=base_url()?>admin/upload_image_content">
+					    	<input type="file" id="file" name="file" data-tools="upload" data-url="<?=base_url()?>admin/upload_image_content">
+					    	<input type="hidden" id="featured_image" name="feat-img-note" value="">
 				    	</label>
+				    	<img id="f_image" src="images/1x1.png" alt="featured image">
 				    </fieldset>
 				    <label>
 				    	Nota destacada: 
@@ -121,5 +117,12 @@ $(function()
         buttonSource: true
 
     });
+
+    $('#file').on('success.tools.upload', function(json)
+    {
+    	$("#featured_image").val(json.filelink);
+    	$("#f_image").attr("src",json.filelink);
+    });
+
 });
 </script>

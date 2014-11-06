@@ -8,16 +8,9 @@
 				México D.F. a <?=strftime('%A %d de %B de %Y', time())?>
 			</div>
 			
-			<div style="display: inline-block;padding-top: 1px;">
-				<form action="<?=base_url()?>busqueda">
-					<input type="text" name="txt" class="input-on-black"  placeholder="Criterio de Búsqueda" />
-					<span class="btn-append">
-					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
-					</span>
-				</form>
-					</div>
-				</div>
-			</div>
+			
+		</div>
+	</div>
 			
 			<div class="units-row">
 				
@@ -76,10 +69,12 @@
 							</fieldset>
 
 							<fieldset>
-					    	<label>
-						    	Imagen destacada: 
-						    	<input type="file" name="feat-img-note" value="<?php echo $contenido_nota['featured_image']; ?>">
-					    	</label>
+						    	<label>
+							    	Imagen destacada: 
+							    	<input type="file" id="file" name="file" data-tools="upload" data-url="<?=base_url()?>admin/upload_image_content">
+							    	<input type="hidden" id="featured_image" name="feat-img-note" value="<?=($contenido_nota['featured_image']=='')?'images/1x1.png':$contenido_nota['featured_image']?>">
+						    	</label>
+						    	<img id="f_image" src="<?=($contenido_nota['featured_image']=='')?'images/1x1.png':$contenido_nota['featured_image']?>" alt="featured image">
 						    </fieldset>
 						    <label>
 						    	Nota destacada: 
@@ -107,16 +102,24 @@
 		</div>
 		
 		<script type="text/javascript">
-		$(function()
-		{
-		$('#content').redactor(
-		{
-			imageUpload:'',
-			fileUpload:'',
-			minHeight: 500,
-			toolbarFixed: true,
-			toolbarFixedTopOffset: 80,
-		}
-		);
-		});
-		</script>
+$(function()
+{
+    $('#content').redactor(
+    {
+    	imageUpload:'<?=base_url()?>admin/upload_image_content',
+    	minHeight: 500,
+    	toolbarFixed: true,
+    	toolbarFixedTopOffset: 80,
+    	focus: true,
+        buttonSource: true
+
+    });
+
+    $('#file').on('success.tools.upload', function(json)
+    {
+    	$("#featured_image").val(json.filelink);
+    	$("#f_image").attr("src",json.filelink);
+    });
+
+});
+</script>
