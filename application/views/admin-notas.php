@@ -59,7 +59,7 @@
 				        	<?php echo $data_note['id'];?> 
 				        </td>
 				        <td>
-				        	<a value="<?php echo base_url(); ?>admin/edita_nota?id_nota=<?php echo $data_note['id']; ?>" class="edita_nota">
+				        	<a style="cursor:pointer;" href="<?php echo base_url(); ?>admin/editar_nota?id_nota=<?php echo $data_note['id']; ?>">
 				        		<?php echo $data_note['title'];?>
 				        	</a>
 				        </td>

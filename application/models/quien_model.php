@@ -70,7 +70,7 @@
 	    }
 
 	    public function get_detalle_nota($id_nota){
-	    	$this->db->select("b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date");
+	    	$this->db->select("b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured");
 	    	$this->db->from("content AS a");
 			$this->db->join('usuarios AS b', 'a.author = b.id ');
  		    $this->db->where("published", 1);
@@ -157,7 +157,7 @@
 		}
 
 	    //Salvar nueva nota
-	    //Recibe un arrelo con los datos a insertardesde el form
+	    //Recibe un arrelo con los datos a insertar desde el form
 		public function save_nueva_nota($data){
             $this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
             $this->db->set('title', $data['title-note']);
@@ -175,6 +175,10 @@
             if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;
 		}	
+
+		public function actualiza_nota($data){
+			
+		}
 
 		public function check_login($data){	
 			$this->db->select('id, username, password, seudonimo, tweeter, level');

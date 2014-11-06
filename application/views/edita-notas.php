@@ -38,34 +38,69 @@
 						</ul>
 						
 					</div>
+					<?php if($data && is_array($data) )
+					{
+						$contenido_nota = $data[0];
+					} else{
+						$contenido_nota= "";
+						echo '<span style="color:red;">Error al traer la información de la Nota o la nota referida no existe.</span>';
+						redirect('admin');
+					}?>
+
 					<div class="unit-100">
-						<form method="post" action="" class="forms">
+						<?php
+		                    $attr = array('id'=>'id_form_edita_nota','name'=>'form_edita_nota','method'=>'POST','autocomplete'=>'off','role'=>'form');
+		                    echo form_open_multipart('admin/actualiza_nota', $attr);
+	                	?>
+							
 							<label>
 								Name
-								<input type="text" name="user-name" class="width-50" value="Nota #1" />
+								<input type="text" name="title-note" class="width-50" value="<?php echo $contenido_nota['title']; ?>" />
 							</label>
 							<fieldset>
 								<legend>Meta data</legend>
 								Tags
-								<input type="text" name="tags" class="width-100" value="text1, text2, text3"  />
+								<input type="text" name="tags-note" class="width-100" value="<?php echo $contenido_nota['tags']; ?>"  />
 								<label>
 									Descripción
-									<textarea name="" id="" cols="30" rows="3">Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
+									<textarea name="desc-note" id="" cols="30" rows="3"><?php echo $contenido_nota['description']; ?>
 									</textarea>
 								</label>
 							</fieldset>
 							<fieldset>
 								<legend>Contenido</legend>
 								<label>
-									<textarea name="content" id="content">Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.
+									<textarea name="content-note" id="content"><?php echo $contenido_nota['content']; ?>
 									</textarea>
 								</label>
 							</fieldset>
+
+							<fieldset>
+					    	<label>
+						    	Imagen destacada: 
+						    	<input type="file" name="feat-img-note" value="<?php echo $contenido_nota['featured_image']; ?>">
+					    	</label>
+						    </fieldset>
+						    <label>
+						    	Nota destacada: 
+						    	<input type="checkbox" name="feat-note" value="1">
+						    </label>
+						    <label>
+						    	Publicar:
+						    	<input type="checkbox" name="published-note" value="1">
+						    </label>
+						    <label>
+						    	Nota VIP: 
+						    	<input type="checkbox" name="vip-note" value="1">
+						    </label>
+
 							<p>
-							<input type="submit" class="btn" value="Enviar" />
-							<button class="btn btn-small btn-outline">Cancelar</button>
+							</br>
+						        <input id="envia_nota_edita" type="submit" class="btn" value="Enviar" />
+						        
+						        <a type="button" class="btn btn-small btn-outline" href="admin">Cancelar</a>
 							</p>
-						</form>
+						<?php echo form_close(); ?>
 						
 					</div>
 				</div>

@@ -14,6 +14,20 @@ $(function(){
 		return false;
 	});
 
+	$("#id_form_edita_nota").submit(function(){
+		$(this).ajaxSubmit({
+			success: function(data){
+				if(data != "exito"){
+					alert(data);
+				}else{
+					alert("Datos guardados!");
+					window.location.href = 'admin';
+				}
+			} 
+		});
+		return false;
+	});
+
 	$('.elimina-nota').click(function(){
 	    var r = confirm("¿Realmente desea eliminar este registro?");
 	    if (r == true) {
