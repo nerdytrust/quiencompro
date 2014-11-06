@@ -40,7 +40,7 @@
 					</div>
 					<br>
 					<form class="forms">
-						<div class="unit-50">
+						<div class="unit-40">
 							<label>Camara
 								<input readonly="readonly" type="text" class="width-90" value="<?=$factura['camara']?>">
 							</label>
@@ -80,4 +80,8 @@
 					</form>
 				</div>
 			</div>
+
+<br>
+<br>
+<br>
 		</div>

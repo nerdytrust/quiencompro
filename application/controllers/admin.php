@@ -25,6 +25,23 @@ class Admin extends CI_Controller {
 			redirect('login');	
 		}
 	}
+
+	public function facturas()
+	{
+		$this->output->enable_profiler(TRUE);
+		if($this->session->userdata('session') === TRUE ){
+			$nivel=$this->session->userdata('level');
+			$user_id=$this->session->userdata('id');
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+			$data_facturas = array('data' => $this->quien->get_lista_facturas_admin($user_id,$nivel) 	);
+			$this->load->view('header',$data);
+			$this->load->view('admin-facturas', $data_facturas);
+			$this->load->view('footer');
+		}
+		else{
+			redirect('login');	
+		}
+	}
 	
 
 	public function editar_nota()
@@ -55,6 +72,30 @@ class Admin extends CI_Controller {
 			redirect('login');	
 		}
 
+	}
+
+	public function nueva_factura()
+	{
+		if($this->session->userdata('session') === TRUE ){
+			$this->output->enable_profiler(TRUE);
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+
+
+			$catalogos = array(
+				'ct_legislatura' => $this->quien->get_legislaturas(),
+				'ct_camara' => $this->quien->get_camaras(),
+				'ct_responsable' => $this->quien->get_responsables(),
+				'ct_tipo' => $this->quien->get_tipos(),
+			);
+
+
+			$this->load->view('header',$data);
+			$this->load->view('nueva-factura',$catalogos);
+			$this->load->view('footer');
+		}
+		else{
+			redirect('login');	
+		}
 	}
 
 	public function guarda_nota(){
@@ -126,6 +167,21 @@ class Admin extends CI_Controller {
 	}
 
 
+	public function upload_pdf_factura()
+	{
+		$dir = 'invoices/';
+ 
+		$_FILES['file']['type'] = strtolower($_FILES['file']['type']);
+		if ($_FILES['file']['type'] == 'application/pdf')		
+		{
+		    $filename = $dir.$_FILES['file']['name'];
+		    move_uploaded_file($_FILES['file']['tmp_name'], $filename);
+		    $array = array(
+		        'filelink' => $_FILES['file']['name']
+		    );
+		    echo stripslashes(json_encode( $array ) );
+		}
+	}
 
 	public function upload_image_content()
 	{ 

@@ -216,8 +216,22 @@
  		    	$this->db->where('author', $user);
  		    }
  		    $this->db->order_by("modify_date", "desc");
- 		    $this->db->limit(10, $ini_pagina);
+ 		    $this->db->limit(50, $ini_pagina);
 	        $sql = $this->db->get("content");
+	        return $sql->result_array();
+	    }
+
+	    public function get_lista_facturas_admin($user, $level, $ini_pagina = 0){
+	    	$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
+	    	$this->db->from("gastos AS a");
+			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
+			$this->db->join('tipo_gastos AS c',' a.id_tipo = c.id ');
+			$this->db->join('camaras AS d', 'a.id_camara = d.id ');
+			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
+			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
+			$this->db->order_by("a.date ", "desc");
+	        $this->db->limit(50, $ini_pagina);
+ 		    $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
 
@@ -226,6 +240,34 @@
 			$eliminado = $this->db->delete('content'); 
 			echo $this->db->affected_rows();
 		}
+
+
+		public function get_legislaturas(){	
+			$this->db->select('id,name');
+			$this->db->from("legislaturas");
+			$this->db->where('active',1);
+			$this->db->order_by("id", "desc");
+			return $this->db->get()->result_array();
+		}
+		public function get_camaras(){	
+			$this->db->select('id,name');
+			$this->db->from("camaras");
+			$this->db->where('active',1);
+			return $this->db->get()->result_array();
+		}
+		public function get_responsables(){	
+			$this->db->select('id,name');
+			$this->db->from("responsable_gastos");
+			$this->db->where('active',1);
+			return $this->db->get()->result_array();
+		}
+		public function get_tipos(){	
+			$this->db->select('id,name');
+			$this->db->from("tipo_gastos");
+			$this->db->where('active',1);
+			return $this->db->get()->result_array();
+		}
+
 
 	    // Aun no se como voy a ctualizar en base al tiempo los archivos de cache necearios.:(
 	    public function write_file_data($seccion = 'uno', $data_array){

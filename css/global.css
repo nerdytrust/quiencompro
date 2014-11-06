@@ -280,7 +280,7 @@ footer h3{
 	display: inline-table;
 	height: 6.9em;
 	padding:1em;
-	
+	width: 100%;	
 	/*background: rgba(10,10,10,0.1);*/
 	/*border: 1px solid #999;*/
 }
@@ -501,4 +501,19 @@ footer h3{
 .redactor-dropdown .redactor-formatting-span-marked-span {
     background: yellow;
     font-family: monospace;
+}
+
+form select {
+	height: 2em;
+	width: 98%;
+}
+
+.ffact label{
+	display: table-caption;
+}
+.ffact label input{
+	width: 600px;
+}
+fieldset{
+	width: 95%;
 }
