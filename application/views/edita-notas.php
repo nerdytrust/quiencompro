@@ -14,7 +14,7 @@
 					<span class="btn-append">
 					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 					</span>
-					<form>
+				</form>
 					</div>
 				</div>
 			</div>
@@ -38,7 +38,7 @@
 						</ul>
 						
 					</div>
-					<?php if($data && is_array($data) )
+					<?php if($data && $nota && is_array($data) )
 					{
 						$contenido_nota = $data[0];
 					} else{
@@ -93,11 +93,10 @@
 						    	Nota VIP: 
 						    	<input type="checkbox" name="vip-note" value="1">
 						    </label>
-
+						    	<input type="hidden" name="id-note" value="<?php echo $nota; ?>" />
 							<p>
 							</br>
 						        <input id="envia_nota_edita" type="submit" class="btn" value="Enviar" />
-						        
 						        <a type="button" class="btn btn-small btn-outline" href="admin">Cancelar</a>
 							</p>
 						<?php echo form_close(); ?>
@@ -106,6 +105,7 @@
 				</div>
 			</div>
 		</div>
+		
 		<script type="text/javascript">
 		$(function()
 		{

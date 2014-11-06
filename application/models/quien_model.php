@@ -164,20 +164,36 @@
             $this->db->set('description', $data['desc-note']);
             $this->db->set('alias', $data['title-note']);
             $this->db->set('content', $data['content-note']);
-            $this->db->set('created_date', time());
-            $this->db->set('modify_date', time());
+            //$this->db->set('created_date', date("d-m-Y H:i:s"));
+            //$this->db->set('modify_date', date("d-m-Y H:i:s"));
             $this->db->set('vip', $data['vip-note']);
             $this->db->set('featured', $data['feat-note']);
             $this->db->set('featured_image', $data['feat-img-note']);
             $this->db->set('published', $data['published-note']);
             $this->db->set('tags', $data['tags-note']);
             $this->db->insert('content');
+
             if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;
 		}	
 
 		public function actualiza_nota($data){
-			
+			$data2 = array(
+               'title' => $data['title-note'],
+               'description' => $data['desc-note'],
+               'alias' => $data['title-note'],
+               'content' => $data['content-note'],
+               'vip' => $data['vip-note'],
+               'featured' => $data['feat-note'],
+               'published' => $data['published-note'],
+               'tags' => $data['tags-note']
+            );
+
+			$this->db->where('id', $data['id-note']);
+			$this->db->update('content', $data2); 
+
+			if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
 		}
 
 		public function check_login($data){	

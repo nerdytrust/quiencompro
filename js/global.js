@@ -20,7 +20,7 @@ $(function(){
 				if(data != "exito"){
 					alert(data);
 				}else{
-					alert("Datos guardados!");
+					alert("Datos actualizados!");
 					window.location.href = 'admin';
 				}
 			} 

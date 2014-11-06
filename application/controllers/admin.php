@@ -11,6 +11,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function index(){
+		$this->output->enable_profiler(TRUE);
 		if($this->session->userdata('session') === TRUE ){
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
@@ -32,7 +33,7 @@ class Admin extends CI_Controller {
 			$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$id_nota = $this->input->get( "id_nota" );
-			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota) );
+			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota), 'nota' => $id_nota );
 			$this->load->view('header',$data);
 			$this->load->view('edita-notas', $nota_data);
 			$this->load->view('footer');
@@ -102,7 +103,7 @@ class Admin extends CI_Controller {
 		if ( $this->form_validation->run() == FALSE ){
 			echo validation_errors();
 		}else {
-				$data['autor-note']			=	$this->session->userdata('id');
+				$data['id-note']			=	$this->input->post('id-note');
 				$data['title-note']			=	$this->input->post('title-note');
 				$data['tags-note']			=	$this->input->post('tags-note');
 				$data['desc-note']			=	$this->input->post('desc-note');
