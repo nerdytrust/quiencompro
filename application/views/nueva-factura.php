@@ -48,6 +48,16 @@
                 <fieldset>
 				        <legend>Catalogos</legend>
 
+
+				    <label>
+				        Solicitud
+				        <select name="solicitud" id="solicitud">
+				        	<?php foreach ($ct_solicitud as $key => $value): ?>
+								<option value="<?=$value['id']?>"><?=$value['request_folio']?></option>
+				        	<?php endforeach ?>
+				        </select>
+				    </label>
+
                 	<label>
 				        Camara
 				        <select name="camara" id="camara">

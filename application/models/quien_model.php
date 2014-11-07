@@ -186,37 +186,23 @@
 
 		public function save_nueva_factura($data){
 
-			$this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
-            $this->db->set('title', $data['title-note']);
-            $this->db->set('description', $data['desc-note']);
-            $this->db->set('alias', $data['title-note']);
-            $this->db->set('content', $data['content-note']);
-            $this->db->set('created_date', date('Y-m-d H:i:s'));
-            $this->db->set('modify_date',  date('Y-m-d H:i:s'));
-            $this->db->set('vip', $data['vip-note']);
-            $this->db->set('featured', $data['feat-note']);
-            $this->db->set('featured_image', $data['feat-img-note']);
-            $this->db->set('published', $data['published-note']);
-            $this->db->set('tags', $data['tags-note']);
-            
+			$this->db->set('id_camara', $data['camara'] ); //traer desde los datos de la ssesion del usuario
+            $this->db->set('id_legislatura', $data['legislatura']);
+            $this->db->set('id_responsable', $data['responsable']);
+            $this->db->set('id_tipo', $data['tipo']);
+            $this->db->set('folio', $data['folio']);
+            $this->db->set('date', $data['fecha']);
+            $this->db->set('amount',  $data['monto']);
+            $this->db->set('detail', $data['descripcion']);
+            $this->db->set('emisor_name', $data['alias']);
+            $this->db->set('emisor_alias', $data['razonsocial']);
+            $this->db->set('emisor_rfc', $data['rfc']);
+            $this->db->set('emisor_address1', $data['direccion1']);
+            $this->db->set('emisor_address2', $data['direccion2']);
+            $this->db->set('document', $data['document']);
+            $this->db->set('id_sol', $data['solicitud']);
 
-            $this->db->insert('content');
-
-
-            	$data['camara']			    =	$this->input->post('camara');
-				$data['legislatura']		=	$this->input->post('legislatura');
-				$data['responsable']		=	$this->input->post('responsable');
-				$data['tipo']				=	$this->input->post('tipos');
-				$data['folio']				=	$this->input->post('folio');
-				$data['fecha']				=	$this->input->post('fecha');
-				$data['monto']				=	$this->input->post('monto');
-				$data['descripcion']		=	$this->input->post('descripción');
-				$data['razonsocial']		=	$this->input->post('razonsocial');
-				$data['rfc']				=	$this->input->post('rfc');
-
-				$data['alias']				=	$this->input->post('alias');
-				$data['direccion1']			=	$this->input->post('direccion1');
-				$data['direccion2']			=	$this->input->post('direccion1');
+            $this->db->insert('gastos');
 
             if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;

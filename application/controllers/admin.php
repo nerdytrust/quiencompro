@@ -123,6 +123,7 @@ class Admin extends CI_Controller {
 				'ct_camara' => $this->quien->get_camaras(),
 				'ct_responsable' => $this->quien->get_responsables(),
 				'ct_tipo' => $this->quien->get_tipos(),
+				'ct_solicitud' => $this->quien->get_lista_solicitudes_admin(),
 			);
 
 
@@ -192,10 +193,13 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('rfc','RFC','trim|required|xss_clean');
 		$this->form_validation->set_rules('alias','Alias','trim|required|xss_clean');
 		$this->form_validation->set_rules('direccion1','Direccion 1','trim|required|xss_clean');
+		$this->form_validation->set_rules('document','Archivo PDF','trim|required|xss_clean');
+		
 
 		if ( $this->form_validation->run() == FALSE ){
 			echo validation_errors();
 		}else {
+				$data['solicitud']			=	$this->input->post('solicitud');
 				$data['camara']			    =	$this->input->post('camara');
 				$data['legislatura']		=	$this->input->post('legislatura');
 				$data['responsable']		=	$this->input->post('responsable');
@@ -203,9 +207,10 @@ class Admin extends CI_Controller {
 				$data['folio']				=	$this->input->post('folio');
 				$data['fecha']				=	$this->input->post('fecha');
 				$data['monto']				=	$this->input->post('monto');
-				$data['descripcion']		=	$this->input->post('descripción');
+				$data['descripcion']		=	$this->input->post('descripcion');
 				$data['razonsocial']		=	$this->input->post('razonsocial');
 				$data['rfc']				=	$this->input->post('rfc');
+				$data['document']			=	$this->input->post('document');
 
 				$data['alias']				=	$this->input->post('alias');
 				$data['direccion1']			=	$this->input->post('direccion1');
