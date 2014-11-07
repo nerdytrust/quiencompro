@@ -78,6 +78,13 @@
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
+	    public function get_detalle_solicitud($id_solicitud)
+	    {
+	    	$this->db->select('id,request_folio,request_document,response_folio,response_date,response_document,request_date');
+			$this->db->from("sol_gastos");
+			$this->db->where("id", $id_solicitud);
+			return $this->db->get()->result_array();
+	    }
 
 	    public function get_detalle_factura($id_factura){
 	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
@@ -216,6 +223,26 @@
 
 		}
 
+
+
+		public function save_nueva_solicitud($data){
+
+			$this->db->set('request_folio', 	$data['requestfolio'] ); //traer desde los datos de la ssesion del usuario
+            $this->db->set('request_document',  $data['soldocument']);
+            $this->db->set('response_folio', 	$data['responsefolio']);
+            $this->db->set('response_date', 	$data['resdate']);
+            $this->db->set('response_document', $data['resdocument']);
+            $this->db->set('request_date', 		$data['soldate']);
+            
+
+            $this->db->insert('sol_gastos');
+
+            if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+		}
+
+
+
 		public function actualiza_nota($data){
 			$data2 = array(
                'title' => $data['title-note'],
@@ -236,6 +263,33 @@
 			if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;
 		}
+
+		public function actualiza_solicitud($data){
+
+			//print_r($data);die;
+
+			$data2 = array(
+               'request_folio' 		=> $data['requestfolio'],
+               'response_folio' 	=> $data['responsefolio'],
+               'request_date' 		=> $data['soldate'],
+               'response_date' 		=> $data['resdate'],
+               'request_document' 	=> $data['soldocument'],
+               'response_document' 	=> $data['resdocument']
+            );
+
+			$this->db->where('id', $data['id-solicitud']);
+			$this->db->update('sol_gastos', $data2); 
+
+			//echo $this->db->last_query();die;
+
+			if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+		}
+
+
+
+
+
 
 		public function check_login($data){	
 			$this->db->select('id, username, password, seudonimo, tweeter, level');
@@ -279,6 +333,16 @@
 			$eliminado = $this->db->delete('content'); 
 			echo $this->db->affected_rows();
 		}
+		public function elimina_factura($id_factura){
+			$this->db->where('id', $id_factura);
+			$eliminado = $this->db->delete('gastos'); 
+			echo $this->db->affected_rows();
+		}
+		public function elimina_solicitud($id_solicitud){
+			$this->db->where('id', $id_solicitud);
+			$eliminado = $this->db->delete('sol_gastos'); 
+			echo $this->db->affected_rows();
+		}
 
 
 		public function get_legislaturas(){	
@@ -304,6 +368,13 @@
 			$this->db->select('id,name');
 			$this->db->from("tipo_gastos");
 			$this->db->where('active',1);
+			return $this->db->get()->result_array();
+		}
+		public function get_lista_solicitudes_admin(){	
+			$this->db->select('id,request_folio,request_document,response_folio,response_date,response_document,request_date');
+			$this->db->from("sol_gastos");
+			$this->db->order_by("id", "desc");
+			$this->db->limit(20);
 			return $this->db->get()->result_array();
 		}
 

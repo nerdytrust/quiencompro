@@ -144,7 +144,7 @@
 				</fieldset>
 
 			    </br>
-			        <input id="envia_nota_nueva" type="submit" class="btn" value="Enviar" />
+			        <input id="envia_factura_nueva" type="submit" class="btn" value="Enviar" />
 			        
 			        <a type="button" class="btn btn-small btn-outline" href="admin">Cancelar</a>
 
@@ -164,17 +164,6 @@
 <script type="text/javascript">
 $(function()
 {
-    $('#content').redactor(
-    {
-    	imageUpload:'<?=base_url()?>admin/upload_image_content',
-    	minHeight: 500,
-    	toolbarFixed: true,
-    	toolbarFixedTopOffset: 80,
-    	focus: true,
-        buttonSource: true
-
-    });
-
     $('#file').on('success.tools.upload', function(json)
     {
     	$('.tools-droparea').css('background','#15B551');

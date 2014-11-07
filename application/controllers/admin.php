@@ -33,9 +33,27 @@ class Admin extends CI_Controller {
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
 			$data = array('titlepage' => '¿ Quién Compró ?' );
-			$data_facturas = array('data' => $this->quien->get_lista_facturas_admin($user_id,$nivel) 	);
+			$data_facturas = array('data' => $this->quien->get_lista_facturas_admin($user_id,$nivel));
 			$this->load->view('header',$data);
 			$this->load->view('admin-facturas', $data_facturas);
+			$this->load->view('footer');
+		}
+		else{
+			redirect('login');	
+		}
+	}
+
+	public function solicitudes()
+	{
+		$this->output->enable_profiler(TRUE);
+		if($this->session->userdata('session') === TRUE ){
+			$nivel=$this->session->userdata('level');
+			$user_id=$this->session->userdata('id');
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+
+			$data_solicitudes = array('data' => $this->quien->get_lista_solicitudes_admin($user_id,$nivel) 	);
+			$this->load->view('header',$data);
+			$this->load->view('admin-solicitudes', $data_solicitudes);
 			$this->load->view('footer');
 		}
 		else{
@@ -59,6 +77,25 @@ class Admin extends CI_Controller {
 		}
 
 	}
+	public function editar_solicitud()
+	{
+		if($this->session->userdata('session') === TRUE ){
+			$this->output->enable_profiler(TRUE);
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+
+			$id_solicitud = $this->input->get( "id_solicitud" );
+			$solicitud_data = array('data' => $this->quien->get_detalle_solicitud($id_solicitud), 'nota' => $id_solicitud );
+			$this->load->view('header',$data);
+			$this->load->view('edita-solicitudes', $solicitud_data);
+			$this->load->view('footer');
+		} else {
+			redirect('login');	
+		}
+
+	}
+
+
+
 
 	public function nueva_nota(){
 		if($this->session->userdata('session') === TRUE ){
@@ -91,6 +128,21 @@ class Admin extends CI_Controller {
 
 			$this->load->view('header',$data);
 			$this->load->view('nueva-factura',$catalogos);
+			$this->load->view('footer');
+		}
+		else{
+			redirect('login');	
+		}
+	}
+
+	public function nueva_solicitud()
+	{
+		if($this->session->userdata('session') === TRUE ){
+			$this->output->enable_profiler(TRUE);
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+
+			$this->load->view('header',$data);
+			$this->load->view('nueva-solicitud');
 			$this->load->view('footer');
 		}
 		else{
@@ -173,10 +225,54 @@ class Admin extends CI_Controller {
 
 	}
 
+	public function guarda_solicitud()
+	{
+
+		$this->form_validation->set_rules('requestfolio' ,'Folio de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('responsefolio','Folio de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('soldate','Fecha de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('resdate','Fecha de Respuesta','trim|required|xss_clean');
+		$this->form_validation->set_rules('soldocument','Documento de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('resdocument','Documento de Respuesta','trim|required|xss_clean');
+
+		if ( $this->form_validation->run() == FALSE ){
+			echo validation_errors();
+		}else {
+				$data['requestfolio']		=	$this->input->post('requestfolio');
+				$data['responsefolio']		=	$this->input->post('responsefolio');
+				$data['soldate']			=	$this->input->post('soldate');
+				$data['resdate']			=	$this->input->post('resdate');
+				$data['soldocument']		=	$this->input->post('soldocument');
+				$data['resdocument']		=	$this->input->post('resdocument');
+
+	            $data 						= 	$this->security->xss_clean($data);  
+	            
+	            $ins_note_check = $this->quien->save_nueva_solicitud($data);
+
+	            if ( $ins_note_check != FALSE ){
+	            	echo "exito";
+	            }else {
+	            	echo "No se han insertado los datos correctamente";
+				}
+		}
+
+
+	}
+
 
 	public function elimina_nota(){
 		$id_nota = $this->input->get( "id_nota" );
 		$elimina_data = $this->quien->elimina_nota($id_nota);
+		echo $elimina_data;
+	}
+	public function elimina_factura(){
+		$id_factura = $this->input->get( "id_factura" );
+		$elimina_data = $this->quien->elimina_factura($id_factura);
+		echo $elimina_data;
+	}
+	public function elimina_solicitud(){
+		$id_solicitud = $this->input->get( "id_solicitud" );
+		$elimina_data = $this->quien->elimina_solicitud($id_solicitud);
 		echo $elimina_data;
 	}
 
@@ -211,6 +307,38 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function actualiza_solicitud(){
+
+		$this->form_validation->set_rules('requestfolio' ,'Folio de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('responsefolio','Folio de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('soldate','Fecha de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('resdate','Fecha de Respuesta','trim|required|xss_clean');
+		$this->form_validation->set_rules('soldocument','Documento de Solicitud','trim|required|xss_clean');
+		$this->form_validation->set_rules('resdocument','Documento de Respuesta','trim|required|xss_clean');
+
+		if ( $this->form_validation->run() == FALSE ){
+			echo validation_errors();
+		}else {
+				$data['id-solicitud']		=	$this->input->post('id-solicitud');
+				$data['requestfolio']		=	$this->input->post('requestfolio');
+				$data['responsefolio']		=	$this->input->post('responsefolio');
+				$data['soldate']			=	$this->input->post('soldate');
+				$data['resdate']			=	$this->input->post('resdate');
+				$data['soldocument']		=	$this->input->post('soldocument');
+				$data['resdocument']		=	$this->input->post('resdocument');
+
+	            $data 						= 	$this->security->xss_clean($data);  
+	            
+	            $update_note_check = $this->quien->actualiza_solicitud($data);
+
+	            if ( $update_note_check != FALSE ){
+	            	echo "exito";
+	            }else {
+	            	echo "No se han insertado los datos correctamente";
+				}
+		}
+	}
+
 
 	public function upload_pdf_factura()
 	{
@@ -222,7 +350,7 @@ class Admin extends CI_Controller {
 		    $filename = $dir.$_FILES['file']['name'];
 		    move_uploaded_file($_FILES['file']['tmp_name'], $filename);
 		    $array = array(
-		        'filelink' => $_FILES['file']['name']
+		        'filelink' => substr($_FILES['file']['name'],0,-4)
 		    );
 		    echo stripslashes(json_encode( $array ) );
 		}

@@ -30,7 +30,7 @@
 			<div class="unit-100">
 
 				<ul class="btn-control-list">
-					<li><a type="button" class="btn btn" href="admin/nueva_factura">Nuevo</a></li>					
+					<li><a type="button" class="btn btn" href="admin/nueva_solicitud">Nuevo</a></li>					
 				</ul>
 				
 			</div>
@@ -38,24 +38,22 @@
 			<div class="unit-100">
 				<table class="table-hovered">
 
-
-				    <?php foreach ($data as $data_factura) { ?>
+				    <?php foreach ($data as $data_solicitud) { ?>
 
 				    <tr>
 				        <td>
-				        	<?php echo $data_factura['id'];?> 
+				        	<?php echo $data_solicitud['id'];?> 
 				        </td>
 				        <td>
-				        	<a style="cursor:pointer;" href="<?php echo base_url(); ?>admin/editar_factura?id_factura=<?php echo $data_factura['id']; ?>">
-				        		<?php echo $data_factura['detail'];?><br>
-				        		<span style="color:#A01599;"><?php echo $data_factura['emisor_alias'];?></span>
+				        	<a style="cursor:pointer;" href="<?php echo base_url(); ?>admin/editar_solicitud?id_solicitud=<?php echo $data_solicitud['id']; ?>">
+				        		<span style="color:#A01599;"><?php echo $data_solicitud['request_folio'];?></span>
 				        	</a>
 				        </td>
 				        <td>
-				        	<?php echo substr($data_factura['date'],0,10);?>
+				        	<?php echo $data_solicitud['request_document'];?>
 				        </td>
 				        <td>
-				        	<a value="<?php echo base_url(); ?>admin/elimina_factura?id_factura=<?php echo $data_factura['id']; ?>" class="btn btn-red elimina-factura">
+				        	<a value="<?php echo base_url(); ?>admin/elimina_solicitud?id_solicitud=<?php echo $data_solicitud['id']; ?>" class="btn btn-red elimina-solicitud">
 				        		Eliminar
 				        	</a>
 				        </td>
