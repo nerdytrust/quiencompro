@@ -121,10 +121,26 @@
 
 				<fieldset>
 				    	<label>
-					    	Documento de la factura: 
+					    	Documento de la factura (pdf): 
 					    	<input type="file" id="file" name="file" data-tools="upload" data-url="<?=base_url()?>admin/upload_pdf_factura">
 					    	<input type="hidden" id="document" name="document" value="">
 				    	</label>
+				</fieldset>
+
+				<fieldset class="ffact">
+				        <legend>Complemento</legend>
+						<label>
+					    	Alias del emisor: 
+					    	<input type="text" name="alias" value="" >
+					    </label>
+					    <label>
+					    	Direccion 1: 
+					    	<input type="text" name="direccion1" value="" >
+					    </label>
+					    <label>
+					    	Direccion 2: 
+					    	<input type="text" name="direccion2" value="" >
+					    </label>
 				</fieldset>
 
 			    </br>

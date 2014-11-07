@@ -129,6 +129,51 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function guarda_factura()
+	{
+
+		$this->form_validation->set_rules('folio','Folio','trim|required|xss_clean');
+		$this->form_validation->set_rules('fecha','Fecha','trim|required|xss_clean');
+		$this->form_validation->set_rules('monto','Monto','trim|required|xss_clean');
+		$this->form_validation->set_rules('descripcion','Descripcion','trim|required|xss_clean');
+		$this->form_validation->set_rules('razonsocial','Razon Social','trim|required|xss_clean');
+		$this->form_validation->set_rules('rfc','RFC','trim|required|xss_clean');
+		$this->form_validation->set_rules('alias','Alias','trim|required|xss_clean');
+		$this->form_validation->set_rules('direccion1','Direccion 1','trim|required|xss_clean');
+
+		if ( $this->form_validation->run() == FALSE ){
+			echo validation_errors();
+		}else {
+				$data['camara']			    =	$this->input->post('camara');
+				$data['legislatura']		=	$this->input->post('legislatura');
+				$data['responsable']		=	$this->input->post('responsable');
+				$data['tipo']				=	$this->input->post('tipos');
+				$data['folio']				=	$this->input->post('folio');
+				$data['fecha']				=	$this->input->post('fecha');
+				$data['monto']				=	$this->input->post('monto');
+				$data['descripcion']		=	$this->input->post('descripción');
+				$data['razonsocial']		=	$this->input->post('razonsocial');
+				$data['rfc']				=	$this->input->post('rfc');
+
+				$data['alias']				=	$this->input->post('alias');
+				$data['direccion1']			=	$this->input->post('direccion1');
+				$data['direccion2']			=	$this->input->post('direccion1');
+
+	            $data 						= 	$this->security->xss_clean($data);  
+	            
+	            $ins_note_check = $this->quien->save_nueva_factura($data);
+
+	            if ( $ins_note_check != FALSE ){
+	            	echo "exito";
+	            }else {
+	            	echo "No se han insertado los datos correctamente";
+				}
+		}
+
+
+	}
+
+
 	public function elimina_nota(){
 		$id_nota = $this->input->get( "id_nota" );
 		$elimina_data = $this->quien->elimina_nota($id_nota);

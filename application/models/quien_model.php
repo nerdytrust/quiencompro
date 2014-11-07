@@ -177,6 +177,45 @@
 			else return FALSE;
 		}	
 
+		public function save_nueva_factura($data){
+
+			$this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
+            $this->db->set('title', $data['title-note']);
+            $this->db->set('description', $data['desc-note']);
+            $this->db->set('alias', $data['title-note']);
+            $this->db->set('content', $data['content-note']);
+            $this->db->set('created_date', date('Y-m-d H:i:s'));
+            $this->db->set('modify_date',  date('Y-m-d H:i:s'));
+            $this->db->set('vip', $data['vip-note']);
+            $this->db->set('featured', $data['feat-note']);
+            $this->db->set('featured_image', $data['feat-img-note']);
+            $this->db->set('published', $data['published-note']);
+            $this->db->set('tags', $data['tags-note']);
+            
+
+            $this->db->insert('content');
+
+
+            	$data['camara']			    =	$this->input->post('camara');
+				$data['legislatura']		=	$this->input->post('legislatura');
+				$data['responsable']		=	$this->input->post('responsable');
+				$data['tipo']				=	$this->input->post('tipos');
+				$data['folio']				=	$this->input->post('folio');
+				$data['fecha']				=	$this->input->post('fecha');
+				$data['monto']				=	$this->input->post('monto');
+				$data['descripcion']		=	$this->input->post('descripción');
+				$data['razonsocial']		=	$this->input->post('razonsocial');
+				$data['rfc']				=	$this->input->post('rfc');
+
+				$data['alias']				=	$this->input->post('alias');
+				$data['direccion1']			=	$this->input->post('direccion1');
+				$data['direccion2']			=	$this->input->post('direccion1');
+
+            if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+
+		}
+
 		public function actualiza_nota($data){
 			$data2 = array(
                'title' => $data['title-note'],
