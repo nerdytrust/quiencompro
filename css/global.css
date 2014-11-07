@@ -116,7 +116,10 @@ header nav.navbar .menu > ul > li{
 	.socialitem{display: inline-block; float: right !important; padding: 1em;}
 	header nav.navbar .menu{width: 30px;display: inline-block;}
 	header nav{height: 3.5em;}
-	.navbar .logo{ width: 150px;}
+	.navbar .logo{ 
+		width: 150px;
+		display: inline-block;
+	}
 	.navbar .socialitem{text-align: right;width: 2.5em;padding-left: 5px;padding-right: 5px;display: inline-block;}
 	header nav.navbar .menu > ul{
 		top: 3.5em;

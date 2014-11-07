@@ -30,8 +30,8 @@
 		<ul style="height: 5em;">
 			<li class="menu"><a href="#"><img src="images/icons/glyphicons_113_justify.png" alt=""></a>
 				<ul>
-					<li>Facturas</li>
-					<li>Notas</li>
+					<li><a style="color:#fff;" href="<?=base_url()?>facturas">Facturas</a></li>
+					<li><a style="color:#fff;" href="<?=base_url()?>notas">Notas</a></li>
 				</ul>
 			</li>
 			<li class="logo" style="margin:0;">
