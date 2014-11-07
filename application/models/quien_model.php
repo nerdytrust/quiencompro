@@ -89,7 +89,8 @@
 	    }
 
 	    public function get_detalle_factura($id_factura){
-	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, 
+	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto,
+	    		c.id As ico_tipo_gasto,
 	    		d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, 
 	    		a.emisor_name , a.emisor_rfc,a.emisor_alias, a.emisor_address1, a.emisor_address2, 
 	    		a.document, f.response_document AS solicitud,
@@ -146,7 +147,7 @@
 	    public function search($match=''){
 	    	
 			$result = array();
-			$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc, a.emisor_alias,a.document, f.response_document AS solicitud");
+			$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc, a.emisor_alias,a.document, f.response_document AS solicitud");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
 			$this->db->join('tipo_gastos AS c',' a.id_tipo = c.id ');
@@ -323,9 +324,9 @@
 
 		public function get_lista_notas_admin($user, $level, $ini_pagina = 0){
 	    	$this->db->select("id, title, description, featured_image, modify_date");
- 		    if ($level != 1) {
- 		    	$this->db->where('author', $user);
- 		    }
+ 		    //if ($level != 1) {
+ 		    //	$this->db->where('author', $user);
+ 		    //}
  		    $this->db->order_by("modify_date", "desc");
  		    $this->db->limit(50, $ini_pagina);
 	        $sql = $this->db->get("content");

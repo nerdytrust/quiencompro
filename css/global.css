@@ -72,7 +72,7 @@ header nav.navbar .menu > ul > li{
 }
 .first-main{
 	font-family: Montserrat;
-	padding-top: 2px;
+	padding-top: 3px;
 	font-size: 1em;
 	height: 3em;
 	margin: 0;
@@ -81,10 +81,12 @@ header nav.navbar .menu > ul > li{
 	/* background: rgba(10,10,10,0.8); */
 	color: #fefefe;
 	padding-left: 1em;
-	margin-top: 5px;
+	/*margin-top: 5px;*/
 	text-align: right;
 	font-variant: small-caps;
-	border-bottom: 1px solid #fff;
+
+	border-top: 1px solid #fff;
+	/*border-bottom: 1px solid #fff;*/
 }
 .title1-1{
 	color:#000 !important;
@@ -121,16 +123,20 @@ header nav.navbar .menu > ul > li{
 	}
 	.main{top: 3.5em;}
 	.hiddenmobile{display: none !important;}
+	.first-main{padding-left: 0}
 	.lista-2 li{
 		height: 7em !important;
+		padding: 0px 1em;
 	}
 	.lista-2 li div > div{
 		width: 49% !important;
 		vertical-align: middle;
 		margin-bottom: 0px !important;
+
 	}
 	.title-2{
 		padding-top: 0.5em;
+		height: 2.8em !important;
 	}
 	.title1-1{
 		font-size:0.5em;
@@ -141,6 +147,9 @@ header nav.navbar .menu > ul > li{
 	header nav h1{padding: 0.5em 0 0 0;}
 	.navbar .logo img{
 		height: 4em;
+	}
+	footer .property-info{
+		height: auto !important;
 	}
 	
 }
@@ -215,6 +224,7 @@ header nav.navbar .menu > ul > li{
 .lista-2 li{
 	display: inline-table;
 	height: 6.9em;
+	margin: 1.5em 0;
 }
 .lista-2 li div > div {
 	display: inline-block;
@@ -232,7 +242,8 @@ footer{
 	color: #fff;
 }
 footer .property-info{
-	height: 15em;
+	/*height: 15em;*/
+	height: auto;
 	font-size: 1em;
 	padding: 1em;
 	font-variant: small-caps;
@@ -524,4 +535,8 @@ fieldset{
 }
 .admin_menu a{
 	color: #fff;
+}
+
+.item-body{
+	padding: 1em;
 }

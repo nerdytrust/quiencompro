@@ -6,7 +6,7 @@
 				México D.F. a <?=strftime('%A %d de %B de %Y', time())?>
 			</div>
 			
-			<div style="display: inline-block;padding-top: 1px;">
+			<div style="display: inline-block;padding-top: 3px;">
 				<form action="<?=base_url()?>busqueda">
 					<input type="text" name="txt" class="input-on-black"  placeholder="Criterio de Búsqueda" />
 					<span class="btn-append">
