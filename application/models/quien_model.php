@@ -80,7 +80,7 @@
 	    }
 
 	    public function get_detalle_factura($id_factura){
-	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
+	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_name , a.emisor_rfc,a.emisor_alias, a.emisor_address1, a.emisor_address2, a.document, f.response_document AS solicitud");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b', 'a.id_legislatura = b.id ');
 			$this->db->join('tipo_gastos AS c', 'a.id_tipo = c.id ');
@@ -232,6 +232,29 @@
 
 			$this->db->where('id', $data['id-note']);
 			$this->db->update('content', $data2); 
+
+			if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+		}
+
+		public function actualiza_factura($data){
+			$data2 = array(
+               'id_camara' 			=> $data['camara'],
+               'id_legislatura' 	=> $data['legislatura'],
+               'id_responsable' 			=> $data['responsable'],
+               'detail' 			=> $data['descripcion'],
+               'id_tipo' 			=> $data['tipo'],
+               'folio' 				=> $data['folio'],
+               'amount'				=> $data['monto'],
+               'emisor_name' 			=> $data['razonsocial'],
+               'emisor_rfc' 		=> $data['rfc'],
+               'emisor_alias'		=> $data['alias'],
+               'emisor_address1' 		=> $data['direccion1'],
+               'emisor_address2' 			=> $data['direccion2']
+            );
+
+			$this->db->where('id', $data['id']);
+			$this->db->update('gastos', $data2); 
 
 			if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;

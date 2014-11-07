@@ -98,6 +98,27 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function editar_factura(){
+
+		if($this->session->userdata('session') === TRUE ){
+			$data = array('titlepage' => '¿ Quién Compró ?' );
+			$id_factura = $this->input->get( "id_factura" );
+			$catalogos = array(
+					'ct_legislatura' => $this->quien->get_legislaturas(),
+					'ct_camara' => $this->quien->get_camaras(),
+					'ct_responsable' => $this->quien->get_responsables(),
+					'ct_tipo' => $this->quien->get_tipos(),
+				);
+			$factura_data = array('data' => $this->quien->get_detalle_factura($id_factura), 'catalogos' => $catalogos , 'factura' => $id_factura );
+
+				$this->load->view('header',$data);
+				$this->load->view('edita-facturas',$factura_data);
+				$this->load->view('footer');
+			} else {
+				redirect('login');
+			}
+	}
+
 	public function guarda_nota(){
 		$this->form_validation->set_rules('title-note','Título Nota','trim|required|xss_clean');
 		$this->form_validation->set_rules('tags-note','Tags','trim|required|xss_clean');
@@ -204,6 +225,47 @@ class Admin extends CI_Controller {
 	            $update_note_check = $this->quien->actualiza_nota($data);
 
 	            if ( $update_note_check != FALSE ){
+	            	echo "exito";
+	            }else {
+	            	echo "No se han insertado los datos correctamente";
+				}
+		}
+	}
+
+	public function actualiza_factura(){
+
+		$this->form_validation->set_rules('folio','Folio','trim|required|xss_clean');
+		$this->form_validation->set_rules('fecha','Fecha','trim|required|xss_clean');
+		$this->form_validation->set_rules('monto','Monto','trim|required|xss_clean');
+		$this->form_validation->set_rules('descripcion','Descripcion','trim|required|xss_clean');
+		$this->form_validation->set_rules('razonsocial','Razon Social','trim|required|xss_clean');
+		$this->form_validation->set_rules('rfc','RFC','trim|required|xss_clean');
+		$this->form_validation->set_rules('alias','Alias','trim|required|xss_clean');
+		$this->form_validation->set_rules('direccion1','Direccion 1','trim|required|xss_clean');
+
+		if ( $this->form_validation->run() == FALSE ){
+			echo validation_errors();
+		}else {
+				$data['id']				    =	$this->input->post('id_factura');	
+				$data['camara']			    =	$this->input->post('camara');
+				$data['legislatura']		=	$this->input->post('legislatura');
+				$data['responsable']		=	$this->input->post('responsable');
+				$data['tipo']				=	$this->input->post('tipos');
+				$data['folio']				=	$this->input->post('folio');
+				$data['fecha']				=	$this->input->post('fecha');
+				$data['monto']				=	$this->input->post('monto');
+				$data['descripcion']		=	$this->input->post('descripcion');
+				$data['razonsocial']		=	$this->input->post('razonsocial');
+				$data['rfc']				=	$this->input->post('rfc');
+				$data['alias']				=	$this->input->post('alias');
+				$data['direccion1']			=	$this->input->post('direccion1');
+				$data['direccion2']			=	$this->input->post('direccion2');
+
+	            $data 						= 	$this->security->xss_clean($data);  
+	            
+	            $update_fact_check = $this->quien->actualiza_factura($data);
+
+	            if ( $update_fact_check != FALSE ){
 	            	echo "exito";
 	            }else {
 	            	echo "No se han insertado los datos correctamente";

@@ -48,5 +48,19 @@ $(function(){
 	
 	});
 
+	$("#id_form_edita_factura").submit(function(){
+		$(this).ajaxSubmit({
+			success: function(data){
+				if(data != "exito"){
+					alert(data);
+				}else{
+					alert("Datos actualizados!");
+					window.location.href = 'admin/facturas';
+				}
+			} 
+		});
+		return false;
+	});
+
 
 });
