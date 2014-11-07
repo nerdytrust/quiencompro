@@ -78,6 +78,13 @@
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
+	    public function get_detalle_solicitud($id_solicitud)
+	    {
+	    	$this->db->select('id,request_folio,request_document,response_folio,response_date,response_document,request_date');
+			$this->db->from("sol_gastos");
+			$this->db->where("id", $id_solicitud);
+			return $this->db->get()->result_array();
+	    }
 
 	    public function get_detalle_factura($id_factura){
 	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_name , a.emisor_rfc,a.emisor_alias, a.emisor_address1, a.emisor_address2, a.document, f.response_document AS solicitud");
@@ -179,42 +186,48 @@
 
 		public function save_nueva_factura($data){
 
-			$this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
-            $this->db->set('title', $data['title-note']);
-            $this->db->set('description', $data['desc-note']);
-            $this->db->set('alias', $data['title-note']);
-            $this->db->set('content', $data['content-note']);
-            $this->db->set('created_date', date('Y-m-d H:i:s'));
-            $this->db->set('modify_date',  date('Y-m-d H:i:s'));
-            $this->db->set('vip', $data['vip-note']);
-            $this->db->set('featured', $data['feat-note']);
-            $this->db->set('featured_image', $data['feat-img-note']);
-            $this->db->set('published', $data['published-note']);
-            $this->db->set('tags', $data['tags-note']);
-            
+			$this->db->set('id_camara', $data['camara'] ); //traer desde los datos de la ssesion del usuario
+            $this->db->set('id_legislatura', $data['legislatura']);
+            $this->db->set('id_responsable', $data['responsable']);
+            $this->db->set('id_tipo', $data['tipo']);
+            $this->db->set('folio', $data['folio']);
+            $this->db->set('date', $data['fecha']);
+            $this->db->set('amount',  $data['monto']);
+            $this->db->set('detail', $data['descripcion']);
+            $this->db->set('emisor_name', $data['alias']);
+            $this->db->set('emisor_alias', $data['razonsocial']);
+            $this->db->set('emisor_rfc', $data['rfc']);
+            $this->db->set('emisor_address1', $data['direccion1']);
+            $this->db->set('emisor_address2', $data['direccion2']);
+            $this->db->set('document', $data['document']);
+            $this->db->set('id_sol', $data['solicitud']);
 
-            $this->db->insert('content');
-
-
-            	$data['camara']			    =	$this->input->post('camara');
-				$data['legislatura']		=	$this->input->post('legislatura');
-				$data['responsable']		=	$this->input->post('responsable');
-				$data['tipo']				=	$this->input->post('tipos');
-				$data['folio']				=	$this->input->post('folio');
-				$data['fecha']				=	$this->input->post('fecha');
-				$data['monto']				=	$this->input->post('monto');
-				$data['descripcion']		=	$this->input->post('descripción');
-				$data['razonsocial']		=	$this->input->post('razonsocial');
-				$data['rfc']				=	$this->input->post('rfc');
-
-				$data['alias']				=	$this->input->post('alias');
-				$data['direccion1']			=	$this->input->post('direccion1');
-				$data['direccion2']			=	$this->input->post('direccion1');
+            $this->db->insert('gastos');
 
             if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;
 
 		}
+
+
+
+		public function save_nueva_solicitud($data){
+
+			$this->db->set('request_folio', 	$data['requestfolio'] ); //traer desde los datos de la ssesion del usuario
+            $this->db->set('request_document',  $data['soldocument']);
+            $this->db->set('response_folio', 	$data['responsefolio']);
+            $this->db->set('response_date', 	$data['resdate']);
+            $this->db->set('response_document', $data['resdocument']);
+            $this->db->set('request_date', 		$data['soldate']);
+            
+
+            $this->db->insert('sol_gastos');
+
+            if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+		}
+
+
 
 		public function actualiza_nota($data){
 			$data2 = array(
@@ -237,7 +250,9 @@
 			else return FALSE;
 		}
 
+
 		public function actualiza_factura($data){
+
 			$data2 = array(
                'id_camara' 			=> $data['camara'],
                'id_legislatura' 	=> $data['legislatura'],
@@ -259,6 +274,32 @@
 			if ($this->db->affected_rows() > 0) return TRUE;
 			else return FALSE;
 		}
+		
+
+
+		public function actualiza_solicitud($data){
+
+			//print_r($data);die;
+
+			$data2 = array(
+               'request_folio' 		=> $data['requestfolio'],
+               'response_folio' 	=> $data['responsefolio'],
+               'request_date' 		=> $data['soldate'],
+               'response_date' 		=> $data['resdate'],
+               'request_document' 	=> $data['soldocument'],
+               'response_document' 	=> $data['resdocument']
+            );
+
+			$this->db->where('id', $data['id-solicitud']);
+			$this->db->update('sol_gastos', $data2); 
+
+
+
+			if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+		}
+
+
 
 		public function check_login($data){	
 			$this->db->select('id, username, password, seudonimo, tweeter, level');
@@ -302,6 +343,16 @@
 			$eliminado = $this->db->delete('content'); 
 			echo $this->db->affected_rows();
 		}
+		public function elimina_factura($id_factura){
+			$this->db->where('id', $id_factura);
+			$eliminado = $this->db->delete('gastos'); 
+			echo $this->db->affected_rows();
+		}
+		public function elimina_solicitud($id_solicitud){
+			$this->db->where('id', $id_solicitud);
+			$eliminado = $this->db->delete('sol_gastos'); 
+			echo $this->db->affected_rows();
+		}
 
 
 		public function get_legislaturas(){	
@@ -327,6 +378,13 @@
 			$this->db->select('id,name');
 			$this->db->from("tipo_gastos");
 			$this->db->where('active',1);
+			return $this->db->get()->result_array();
+		}
+		public function get_lista_solicitudes_admin(){	
+			$this->db->select('id,request_folio,request_document,response_folio,response_date,response_document,request_date');
+			$this->db->from("sol_gastos");
+			$this->db->order_by("id", "desc");
+			$this->db->limit(20);
 			return $this->db->get()->result_array();
 		}
 

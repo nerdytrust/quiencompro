@@ -94,7 +94,7 @@
 									</ul>
 								</div>
 								<div class="details">
-									Textoservidor web. Obsesivo de la tecnología y la cultura digital. Soy fan de Julio Cortázar. Fui Editor de la Revista Etcétera. Trabajé como reportero del Periódico Mural de Guadalajara. Soy maestrante en Periodismo en el CIDE y licenciado en Comunicación por la UNAM.
+									Ex editora online de Milenio y redactora en Unión Yucatán. Colaboradora de Marketing Político Digital en El Universal. Feminista y humanitaria. Cursé un taller de redes sociales en la UdeG y el diplomado en Derechos Humanos en la Ibero y Comunicación y Género de la UNAM.
 								</div>
 							</div>
 						</div>

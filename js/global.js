@@ -1,6 +1,6 @@
 $(function(){
 
-	$("#id_form_nueva_nota").submit(function(){
+	$("#id_form_nueva_nota,#id_form_nueva_factura,#id_form_nueva_solicitud").submit(function(){
 		$(this).ajaxSubmit({
 			success: function(data){
 				if(data != "exito"){
@@ -14,7 +14,7 @@ $(function(){
 		return false;
 	});
 
-	$("#id_form_edita_nota").submit(function(){
+	$("#id_form_edita_nota,#id_form_edita_factura,#id_form_edita_solicitud").submit(function(){
 		$(this).ajaxSubmit({
 			success: function(data){
 				if(data != "exito"){
@@ -28,7 +28,7 @@ $(function(){
 		return false;
 	});
 
-	$('.elimina-nota').click(function(){
+	$('.elimina-nota,.elimina-factura,.elimina-solicitud').click(function(){
 	    var r = confirm("¿Realmente desea eliminar este registro?");
 	    if (r == true) {
 	    		$.get($(this).attr('value'), function(data){
