@@ -43,16 +43,34 @@
 	            $attr = array('id'=>'id_form_edita_factura','name'=>'form_edita_factura','method'=>'POST','autocomplete'=>'off','role'=>'form');
 	            echo form_open_multipart('admin/actualiza_factura', $attr);
 	        ?>
-				
+					<?php if($data && $factura && is_array($data) )
+					{
+						$contenido_fact = $data[0];
+					} else{
+						redirect('admin/facturas');
+					}?>
 				
                 <fieldset>
 				        <legend>Catalogos</legend>
+
+				    <label>
+				        Solicitud
+				        <select name="solicitud" id="solicitud">
+				        	<?php foreach ($catalogos['ct_solicitud'] as $key => $value): ?>
+								<option value="<?=$value['id']?>"  <?php if($contenido_fact['id_sol'] == $value['id'])echo' selected' ?> >
+									<?=$value['request_folio']?>
+								</option>
+				        	<?php endforeach ?>
+				        </select>
+				    </label>
 
                 	<label>
 				        Camara
 				        <select name="camara" id="camara">
 				        	<?php foreach ($catalogos['ct_camara'] as $key => $value): ?>
-								<option value="<?=$value['id']?>"><?=$value['name']?></option>
+								<option value="<?=$value['id']?>" <?php if($contenido_fact['camara'] == $value['name'])echo' selected' ?>>
+									<?=$value['name']?>
+								</option>
 				        	<?php endforeach ?>
 				        </select>
 				    </label>
@@ -60,7 +78,9 @@
 				        Legislatura
 				        <select name="legislatura" id="legislatura">
 				        	<?php foreach ($catalogos['ct_legislatura'] as $key => $value): ?>
-								<option value="<?=$value['id']?>"><?=$value['name']?></option>
+								<option value="<?=$value['id']?>" <?php if($contenido_fact['legislatura'] == $value['name'])echo' selected' ?>>
+									<?=$value['name']?>
+								</option>
 				        	<?php endforeach ?>
 				        </select>
 				    </label>
@@ -69,7 +89,9 @@
 				        Responsable
 				        <select name="responsable" id="responsable">
 				        	<?php foreach ($catalogos['ct_responsable'] as $key => $value): ?>
-								<option value="<?=$value['id']?>"><?=$value['name']?></option>
+								<option value="<?=$value['id']?>" <?php if($contenido_fact['id_responsable'] == $value['id'])echo' selected' ?>>
+									<?=$value['name']?>
+								</option>
 				        	<?php endforeach ?>
 				        </select>
 				    </label>
@@ -78,19 +100,15 @@
 				        Tipo de gasto
 				        <select name="tipos" id="tipos">
 				        	<?php foreach ($catalogos['ct_tipo'] as $key => $value): ?>
-								<option value="<?=$value['id']?>"><?=$value['name']?></option>
+								<option value="<?=$value['id']?>" <?php if($contenido_fact['id_tipo'] == $value['id'])echo' selected' ?>>
+									<?=$value['name']?>
+								</option>
 				        	<?php endforeach ?>
 				        </select>
 				    </label>
 				
 				</fieldset>
-				<?php if($data && $factura && is_array($data) )
-					{
-						$contenido_fact = $data[0];
-					} else{
-						redirect('admin/facturas');
-					}?>
-
+			
 				<fieldset class="ffact">
 				        <legend>Información de la factura</legend>
 
@@ -125,7 +143,7 @@
 				    	<label>
 					    	Documento de la factura (pdf): 
 					    	<input type="file" id="file" name="file" data-tools="upload" data-url="<?=base_url()?>admin/upload_pdf_factura">
-					    	<input type="hidden" id="document" name="document" value="">
+					    	<input type="text" id="document" readonly="readonly" name="document" value="<?=$contenido_fact['document'];?>">
 				    	</label>
 				</fieldset>
 
@@ -146,8 +164,7 @@
 				</fieldset>
 
 			    </br>
-			        <input type="submit" class="btn" value="Enviar" />
-			        
+			    	<input id="envia_factura_edita" type="submit" class="btn" value="Enviar" />
 			        <a type="button" class="btn btn-small btn-outline" href="admin">Cancelar</a>
 
 			    

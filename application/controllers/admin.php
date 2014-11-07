@@ -147,6 +147,7 @@ class Admin extends CI_Controller {
 					'ct_camara' => $this->quien->get_camaras(),
 					'ct_responsable' => $this->quien->get_responsables(),
 					'ct_tipo' => $this->quien->get_tipos(),
+					'ct_solicitud' => $this->quien->get_lista_solicitudes_admin(),
 				);
 			$factura_data = array('data' => $this->quien->get_detalle_factura($id_factura), 'catalogos' => $catalogos , 'factura' => $id_factura );
 
@@ -349,6 +350,7 @@ class Admin extends CI_Controller {
 		}else {
 
 				$data['id']				    =	$this->input->post('id_factura');	
+				$data['solicitud']			=	$this->input->post('solicitud');
 				$data['camara']			    =	$this->input->post('camara');
 				$data['legislatura']		=	$this->input->post('legislatura');
 				$data['responsable']		=	$this->input->post('responsable');
