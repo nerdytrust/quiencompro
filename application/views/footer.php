@@ -136,8 +136,8 @@
 			<div class="unit-40 border-right">
 				<div class="property-info">
 			        <h3>¿Quienes Somos?</h3>
-			        <img style="background:#fff;" src="images/openfeed.png" width="150px" alt="OpenFeed">
-			        <img style="background:#fff;" src="images/mexinf.png" width="200px" alt="México Informate">
+			        <a href="http://www.openfeedback.com.mx" target="_blank"><img style="background:#fff;" src="images/openfeed.png" width="150px" alt="OpenFeed"></a>
+			        <a href="http://mexicoinformate.org" target="_blank"><img style="background:#fff;" src="images/mexinf.png" width="200px" alt="México Informate"></a>
 			        <p style="width: 100%;vertical-align: top;display: inline-block;">
 			          <br>Plataforma de periodismo de datos para vigilar y transparentar el uso del dinero público en las cámaras de Diputados y Senadores de México.
 			        </p>
