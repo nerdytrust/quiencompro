@@ -11,7 +11,7 @@ class Admin extends CI_Controller {
 	}
 
 	public function index(){
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		if($this->session->userdata('session') === TRUE ){
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
@@ -28,7 +28,7 @@ class Admin extends CI_Controller {
 
 	public function facturas()
 	{
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		if($this->session->userdata('session') === TRUE ){
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
@@ -45,7 +45,7 @@ class Admin extends CI_Controller {
 
 	public function solicitudes()
 	{
-		$this->output->enable_profiler(TRUE);
+		//$this->output->enable_profiler(TRUE);
 		if($this->session->userdata('session') === TRUE ){
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
@@ -65,7 +65,7 @@ class Admin extends CI_Controller {
 	public function editar_nota()
 	{
 		if($this->session->userdata('session') === TRUE ){
-			$this->output->enable_profiler(TRUE);
+			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$id_nota = $this->input->get( "id_nota" );
 			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota), 'nota' => $id_nota );
@@ -80,7 +80,7 @@ class Admin extends CI_Controller {
 	public function editar_solicitud()
 	{
 		if($this->session->userdata('session') === TRUE ){
-			$this->output->enable_profiler(TRUE);
+			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 
 			$id_solicitud = $this->input->get( "id_solicitud" );
@@ -99,7 +99,7 @@ class Admin extends CI_Controller {
 
 	public function nueva_nota(){
 		if($this->session->userdata('session') === TRUE ){
-			$this->output->enable_profiler(TRUE);
+			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$this->load->view('header',$data);
 			$this->load->view('nueva-nota');
@@ -114,7 +114,7 @@ class Admin extends CI_Controller {
 	public function nueva_factura()
 	{
 		if($this->session->userdata('session') === TRUE ){
-			$this->output->enable_profiler(TRUE);
+			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 
 
@@ -162,7 +162,7 @@ class Admin extends CI_Controller {
 	public function nueva_solicitud()
 	{
 		if($this->session->userdata('session') === TRUE ){
-			$this->output->enable_profiler(TRUE);
+			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 
 			$this->load->view('header',$data);
