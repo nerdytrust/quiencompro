@@ -41,10 +41,10 @@
 			
 				<li class="divider"></li>
 					
-				<li class="socialitem" ><a href="https://www.facebook.com/pages/Qui%C3%A9n-compr%C3%B3/1494986697404675?ref=hl"><img src="images/icons/facebook-256.png" width="45" alt="" margin="10"></a></li>
-				<li class="socialitem"><a href="https://twitter.com/QuienCompro"><img src="images/icons/twitter-256.png" width="45" alt=""></a></li>
-				<li class="socialitem"><a href="https://www.youtube.com/channel/UC4VH5HkzrRMUYtas7xsEYEw"><img src="images/icons/youtube-256.png" width="45" alt=""></a></li>
-				<li class="socialitem"><a href="https://plus.google.com/u/0/112929316167806049590/posts"><img src="images/icons/googleplus-256.png" width="45" alt=""></a></li>
+				<li class="socialitem" ><a target="_blank" href="https://www.facebook.com/pages/Qui%C3%A9n-compr%C3%B3/1494986697404675?ref=hl"><img src="images/icons/facebook-256.png" width="45" alt="" margin="10"></a></li>
+				<li class="socialitem"><a target="_blank" href="https://twitter.com/QuienCompro"><img src="images/icons/twitter-256.png" width="45" alt=""></a></li>
+				<li class="socialitem"><a target="_blank" href="https://www.youtube.com/channel/UC4VH5HkzrRMUYtas7xsEYEw"><img src="images/icons/youtube-256.png" width="45" alt=""></a></li>
+				<li class="socialitem"><a target="_blank" href="https://plus.google.com/u/0/112929316167806049590/posts"><img src="images/icons/googleplus-256.png" width="45" alt=""></a></li>
 					
 		</ul>
 	</nav>
