@@ -517,3 +517,11 @@ form select {
 fieldset{
 	width: 95%;
 }
+
+.admin_menu{
+	background: #333;
+	color: #fff;
+}
+.admin_menu a{
+	color: #fff;
+}
