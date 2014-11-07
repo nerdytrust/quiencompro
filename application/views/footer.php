@@ -2,12 +2,12 @@
 	<footer class="">
 
 
-<div class="units-row" style="background: #A526A3;color: #fff;">
+<div class="units-row hiddenmobile" style="background: #A526A3;color: #fff;">
 				<div class="property-info">
 			        <h3 style="color:#fff;">El equipo</h3>
 			          
 <!-- Team -->
-					<div class="unit-25 zerif_team">
+					<div class="unit-20 zerif_team">
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
@@ -30,7 +30,7 @@
 						</div>
 					</div>
 
-					<div class="unit-25 zerif_team">
+					<div class="unit-20 zerif_team">
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 
-					<div class="unit-25 zerif_team">
+					<div class="unit-20 zerif_team">
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
@@ -95,6 +95,30 @@
 								</div>
 								<div class="details">
 									Ex editora online de Milenio y redactora en Unión Yucatán. Colaboradora de Marketing Político Digital en El Universal. Feminista y humanitaria. Cursé un taller de redes sociales en la UdeG y el diplomado en Derechos Humanos en la Ibero y Comunicación y Género de la UNAM.
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="unit-15 zerif_team">
+						<div>
+							<div class="team-member">
+								<figure class="profile-pic">
+									<img src="<?=base_url()?>images/lazaro.JPG" alt="">
+								</figure>
+								<div class="member-details">
+									<h3>Lázaro</h3>
+									<div class="position">INVESTIGADOR</div>
+								</div>
+								<div class="social-icons">
+									<ul>
+										<li><a href="https://www.facebook.com/laazaaroo"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
+										<li><a href="https://twitter.com/l_azaro"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+									</ul>
+								</div>
+								<div class="details">
+									
 								</div>
 							</div>
 						</div>

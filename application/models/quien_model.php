@@ -19,12 +19,14 @@
 	    }
 
 	   	public function get_notas_recientes(){
-	    	$this->db->select("id, author, title, description, content, modify_date, vip, featured, published, featured_image");
- 		    $this->db->where('featured', 0);
- 		    $this->db->where('published', 1);
- 		    $this->db->order_by("modify_date", "desc");
+	    	$this->db->select("c.seudonimo, c.tweeter,a.id, a.author, a.title, a.description, a.content, a.modify_date, a.vip, a.featured, a.published, a.featured_image");
+ 		    $this->db->from("content AS a");
+ 		    $this->db->join('usuarios AS c', 'a.author = c.id ');
+ 		    $this->db->where('a.featured', 0);
+ 		    $this->db->where('a.published', 1);
+ 		    $this->db->order_by("a.modify_date", "desc");
  		    $this->db->limit(3);
-	        $sql = $this->db->get("content");
+	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
 

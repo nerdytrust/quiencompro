@@ -48,7 +48,7 @@
                             </div>
                             <div class="unit-60">
                                  <img src="images/icons/user.png" width="45" alt="">
-                                 <span>Por: Redacción  <?=$value['modify_date']?></span><br/>
+                                 <span>Por: <?=$value['seudonimo']?>  <?=$value['modify_date']?></span><br/>
                                  <h3><?=$value['title'];?></h3><br/>
                                  <?=$value['description'];?>
                             </div>
