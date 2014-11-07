@@ -27,7 +27,7 @@
 	
 <header>
 	<nav class="navbar navigation-fixed">
-		<ul>
+		<ul style="height: 5em;">
 			<li class="menu"><a href="#"><img src="images/icons/glyphicons_113_justify.png" alt=""></a>
 				<ul>
 					<li>Facturas</li>
@@ -47,7 +47,16 @@
 				<li class="socialitem"><a target="_blank" href="https://plus.google.com/u/0/112929316167806049590/posts"><img src="images/icons/googleplus-256.png" width="45" alt=""></a></li>
 					
 		</ul>
+		
+		<div class="units-row hiddenmobile" style="background: #333;
+color: whitesmoke;
+text-align: center;
+padding: 0.2em;
+width: 100%;">
+    		Plataforma de datos para transparentar el uso del dinero público en el Congreso de México.
+		</div>
 	</nav>
+
 </header>
 
 <script>

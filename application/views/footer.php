@@ -109,7 +109,7 @@
 								</figure>
 								<div class="member-details">
 									<h3>Lázaro</h3>
-									<div class="position">INVESTIGADOR</div>
+									<div class="position">INVESTIGADOR ESPECIAL</div>
 								</div>
 								<div class="social-icons">
 									<ul>
@@ -118,7 +118,7 @@
 									</ul>
 								</div>
 								<div class="details">
-									
+									Estoy flechado por los datos y sigo en mi etapa de enamoramiento. Soy egresado de Comunicación de la FES Acatlán. En la UNAM también estudié Economía y Diseño Gráfico. Más de la mitad de mi vida ha pasado dentro de una redacción web. Empecé a trabajar en Grupo Mac y regresé hace poco para poner desorden en el área de internet. Antes estuve en la web de La Razón.
 								</div>
 							</div>
 						</div>

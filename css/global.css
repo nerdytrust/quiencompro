@@ -18,6 +18,7 @@ a{
 	color: #000;
 }
 
+
 header nav{
 	width: 100%;
 	background-color: #dedede;
@@ -54,8 +55,8 @@ header nav.navbar .menu > ul > li{
 }
 .navbar .logo{
 	padding: 0;
-	position: relative;
-	display: inline-block;
+	position: fixed;
+	/*display: inline-block;*/
 	width: 20%;
 }
 .navbar .logo img{
@@ -66,7 +67,7 @@ header nav.navbar .menu > ul > li{
 }
 .main{
 	position: relative;
-	top: 5em;
+	top: 7em;
 	margin: 0 20px;
 	background-color: #fefefe;
 }

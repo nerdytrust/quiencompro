@@ -1,9 +1,6 @@
-    
 <div class="main">
 
-<div class="units-row hiddenmobile" style="background: #333;color: whitesmoke;text-align: center;height: 4em;padding: 1em;">
-    Plataforma de periodismo de datos para vigilar y transparentar el uso del dinero público en las cámaras de Diputados y Senadores de México.
-</div>
+
 <div class="units-row first-main"  >
     <div class="unit-100">
     
