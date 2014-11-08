@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<base href="<?=base_url();?>">
 	
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="<?=base_url();?>images/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?=base_url();?>images/favicon.ico" type="image/x-icon">
 
 	<title><?=$titlepage?></title>
 

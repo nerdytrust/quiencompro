@@ -101,6 +101,10 @@ header nav.navbar .menu > ul > li{
 	color: #A526A3 !important;
 	line-height: 1em;
 }
+.featured_image{
+	height:470px;
+}
+
 
 @media (min-width: 768px) {
   .navbar li {
@@ -125,6 +129,9 @@ header nav.navbar .menu > ul > li{
 	header nav.navbar .menu > ul{
 		top: 3.5em;
 		height: 4em;
+	}
+	.featured_image{
+		height:auto;
 	}
 	.main{top: 3.5em;}
 	.hiddenmobile{display: none !important;}

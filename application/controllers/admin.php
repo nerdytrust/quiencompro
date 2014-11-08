@@ -34,6 +34,8 @@ class Admin extends CI_Controller {
 			$user_id=$this->session->userdata('id');
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$data_facturas = array('data' => $this->quien->get_lista_facturas_admin($user_id,$nivel));
+
+			//print_r($data_facturas);die;
 			$this->load->view('header',$data);
 			$this->load->view('admin-facturas', $data_facturas);
 			$this->load->view('footer');
@@ -65,10 +67,12 @@ class Admin extends CI_Controller {
 	public function editar_nota()
 	{
 		if($this->session->userdata('session') === TRUE ){
-			//$this->output->enable_profiler(TRUE);
+			$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$id_nota = $this->input->get( "id_nota" );
 			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota), 'nota' => $id_nota );
+
+			//print_r($nota_data);die;
 			$this->load->view('header',$data);
 			$this->load->view('edita-notas', $nota_data);
 			$this->load->view('footer');

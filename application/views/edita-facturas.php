@@ -20,9 +20,10 @@
 		&nbsp;Opciones del Sistema
 			<ul>
 				<li>Facturas</li>
-				<li>Notas</li>
-				<li>Banners</li>
+				<li><a href="<?=base_url()?>admin/solicitudes">Solicitudes</a></li>
+				<li><a href="<?=base_url()?>admin">Notas</a></li>
 				<hr>
+				<li>Banners</li>
 				<li>Usuarios</li>
 			</ul>	
 

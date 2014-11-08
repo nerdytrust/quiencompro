@@ -71,8 +71,9 @@
 								<div>
 									<input readonly="readonly" type="text"  class="width-90" value="<?=$factura['document']?>">
 								</div>
-								<div>
-									<a href="<?=base_url()?>invoices/<?=$factura['document']?>.pdf" target="_blank" class="button postfix">Descargar</a>
+								<div style="text-align:center;width:90%;">
+								<br/>
+									<a href="<?=base_url()?>invoices/<?=$factura['document']?>.pdf" target="_blank" class="button postfix" style="font-weight:bold;font-size:2em">Descargar</a>
 								</div>
 							</label>
 						</div>

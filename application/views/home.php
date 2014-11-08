@@ -23,7 +23,7 @@
     <!-- Columna Izquierda -->
     <div class="unit-65">
         <div><a href="<?=base_url()?>detallenota?nota=<?=$nota_principal['id']?>">
-            <img src="<?=base_url().$nota_principal['featured_image']?>" alt="<?=$nota_principal['title']?>" width="100%">
+            <img src="<?=base_url().$nota_principal['featured_image']?>" alt="<?=$nota_principal['title']?>" width="100%" class="featured_image">
             <div class="imgholder-container unit-65">
                 <div class="imgholder">
                     <?=$nota_principal['title']?>
@@ -98,7 +98,7 @@
                     
                     <li style="width:100%;">
                             <div class="unit-100 hiddenmobile" >
-                                <img  width="100%" src="<?=($banner_der==null) ? 'http://dummyimage.com/300x300/000/fff.png&text=Lorem+Image' : $banner_der['image']?>" alt="">
+                                <img  width="100%" src="<?=($banner_der==null) ? 'http://dummyimage.com/300x300/000/fff.png&text=' : $banner_der['image']?>" alt="">
                             </div>
                     </li>
                     

@@ -75,7 +75,7 @@
 	    	$this->db->select("b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured");
 	    	$this->db->from("content AS a");
 			$this->db->join('usuarios AS b', 'a.author = b.id ');
- 		    $this->db->where("published", 1);
+ 		    //$this->db->where("published", 1);
  		    $this->db->where("a.id", $id_nota);
 	        $sql = $this->db->get();
 	        return $sql->result_array();
@@ -342,8 +342,10 @@
 			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
 			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
 			$this->db->order_by("a.date ", "desc");
-	        $this->db->limit(50, $ini_pagina);
+	        $this->db->limit(100, $ini_pagina);
  		    $sql = $this->db->get();
+
+ 		    //print_r($this->db->last_query());die;
 	        return $sql->result_array();
 	    }
 

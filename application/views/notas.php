@@ -36,15 +36,22 @@
 									<div>
 										<div class="unit-60">
 										<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
-											<h3 style="padding:1em;"><?=$value['title']?></h3><br>
+											<h3><?=$value['title']?></h3><br>
 										</a>
+												<!--
 												<div style="display: inline-block;vertical-align: top;">
 													<img src="images/icons/user.png" width="45" alt="">
 												</div>
 												<div style="display: inline-block;">
 													Redacción  <?=$value['modify_date']?><br/>
 													<a href="https://twitter.com/QuienCompro">Seguir en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
-												</div><br><br>
+												</div>
+
+												-->
+												<div style="display:block;">
+												<img src="images/icons/user.png" width="45" alt=""> &nbsp;&nbsp;
+													Redacción  <?=$value['modify_date']?><br/><br/>
+												</div>
 										<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
 											<span style="color:#333;font-size:1.2em;">
 											<?=$value['description']?>

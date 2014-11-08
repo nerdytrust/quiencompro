@@ -1,5 +1,6 @@
 <div class="main">
-	<div class="units-row first-main"  >
+	<!--<div class="units-row first-main"  >
+		
 		<div class="unit-100">
 			
 			<div class="hiddenmobile" style="display: inline-block;float: left;padding-top: 5px">
@@ -12,15 +13,17 @@
 					<span class="btn-append">
 					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 					</span>
-					<form>
+				</form>
 					</div>
-				</div>
-			</div>
+		</div>
+		
+	</div>-->
+	
 			<?php $nota = $nota[0]?>
 			<div class="units-row">
-				<div class="unit-100">
+				<div class="unit-100" style="text-align:center;">
 					<div>
-						<img src="<?=$nota['featured_image']?>" alt="<?=$nota['title']?>" width="100%" >
+						<img src="<?=$nota['featured_image']?>" alt="<?=$nota['title']?>" style="height:580px">
 						<div class="imgholder-container unit-100">
 							<div class="imgholder">
 								<?=$nota['title']?>
@@ -45,3 +48,5 @@
 				</div>
 			</div>
 		</div>
+
+		<

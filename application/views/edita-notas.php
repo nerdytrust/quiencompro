@@ -17,11 +17,12 @@
 				<div class="unit-30">
 					&nbsp;Opciones del Sistema
 					<ul>
-						<li>Facturas</li>
-						<li>Notas</li>
-						<li>Banners</li>
-						<hr>
-						<li>Usuarios</li>
+				<li><a href="<?=base_url()?>admin/facturas">Facturas</a></li>
+				<li><a href="<?=base_url()?>admin/solicitudes">Solicitudes</a></li>
+				<li>Notas</li>
+				<hr>
+				<li>Banners</li>
+				<li>Usuarios</li>
 					</ul>
 				</div>
 				<div class="unit-70">

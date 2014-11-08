@@ -146,14 +146,14 @@
 			<div class="unit-20 border-right" style="margin-left:0.5%;">
 				<div class="property-info" style="padding-left:0px;padding-right:0px;">
 			        <h3>Contáctanos</h3>
-			          <p style="margin-bottom:0;">Twitter  <a href="#">@quiencompro</a></p>
-              		  <p><a href="#">quiencompro@gmail.com</a></p>
+			          <p style="margin-bottom:0;">Twitter  <a target="_blank" href="https:twitter.com/quiencompro">@quiencompro</a></p>
+              		  <p><a href="mailto:quiencompro@gmail.com">quiencompro@gmail.com</a></p>
 			    </div>
 			</div>
 			<div class="unit-40">
 				<div class="property-info">
 			        <h3>Patrocinadores</h3>
-			          <a href="http://www.nerdytrust.com">
+			          <a href="http://www.nerdytrust.com" target="_blank">
 			          <img style="background:#fff;" src="images/nerd.png" width="85%" alt="Nerdy Trust">
 			          </a>
 			    </div>
