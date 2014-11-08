@@ -28,13 +28,13 @@
 <header>
 	<nav class="navbar navigation-fixed">
 		<ul style="height: 5em;">
-			<li class="menu"><a href="#"><img src="images/icons/glyphicons_113_justify.png" alt=""></a>
+			<li class="menu"><a href="javascript:;"><img src="images/icons/glyphicons_113_justify.png" alt=""></a>
 				<ul>
 					<li><a style="color:#fff;" href="<?=base_url()?>facturas">Facturas</a></li>
 					<li><a style="color:#fff;" href="<?=base_url()?>notas">Notas</a></li>
 				</ul>
 			</li>
-			<li class="logo" style="margin:0;">
+			<li class="logo">
 				<a href="<?=base_url()?>"><img src="images/QC.png" alt="¿ Quien Compro ?" ></a>
 				<!-- <h1><span class="title1-1">¿Quién</span> <span class="title1-2">Compró?</span><h1> -->
 			</li>

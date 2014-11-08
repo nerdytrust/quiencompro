@@ -10,10 +10,13 @@ class Facturas extends CI_Controller {
 	public function index()
 	{
 		$header = array('titlepage' => '¿ Quién Compró ?');
+		$facturas = $this->Quien_model->get_total_facturas();
+		$facturas = $facturas[0];
+
 		$body = array(
 			'lista_facturas' => $this->Quien_model->get_lista_facturas(0),
-			'total_facturas' => $this->Quien_model->get_total_facturas()[0]['total_facturas'],
-			'monto_facturas' => $this->Quien_model->get_total_facturas()[0]['monto_total'],
+			'total_facturas' => $facturas['total_facturas'],
+			'monto_facturas' => $facturas['monto_total'],
 			);
 
 		$this->load->view('header',$header);

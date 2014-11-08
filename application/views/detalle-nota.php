@@ -31,7 +31,7 @@
 				
 			</div>
 			<div class="units-row">
-				<div class="unit-100">
+				<div class="unit-100"  style="padding: 1em;">
 					<img src="images/icons/user.png" width="60" alt="">
 					<div style="display: inline-block;padding-top:0.5em;">
 						<br/><?=$nota['seudonimo']?>  <?=$nota['created_date']?><br/>

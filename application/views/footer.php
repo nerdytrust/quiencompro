@@ -108,7 +108,7 @@
 									<img src="<?=base_url()?>images/lazaro.JPG" alt="">
 								</figure>
 								<div class="member-details">
-									<h3>Lázaro</h3>
+									<h3>Lázaro González</h3>
 									<div class="position">INVESTIGADOR ESPECIAL</div>
 								</div>
 								<div class="social-icons">

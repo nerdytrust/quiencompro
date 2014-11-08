@@ -57,6 +57,7 @@ header nav.navbar .menu > ul > li{
 	padding: 0;
 	position: fixed;
 	/*display: inline-block;*/
+	margin: 0px 0px 0px 40px;
 	width: 20%;
 }
 .navbar .logo img{

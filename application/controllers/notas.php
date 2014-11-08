@@ -10,9 +10,12 @@ class Notas extends CI_Controller {
 	public function index()
 	{
 		$header = array('titlepage' => '¿ Quién Compró ?');
+		$notas =$this->Quien_model->get_total_notas();
+		$notas = $notas[0];
+
 		$body = array(
 			'lista_notas' =>  $this->Quien_model->get_lista_notas(0),
-			'total_notas' => $this->Quien_model->get_total_notas()[0]['total_notas'],
+			'total_notas' => $notas['total_notas'],
 			);
 
 		$this->load->view('header',$header);
