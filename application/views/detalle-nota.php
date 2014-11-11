@@ -19,6 +19,12 @@
 		
 	</div>-->
 	
+<script type="text/javascript">stLight.options({publisher: "c07e8302-bfe7-4f88-9ffb-d2ebc2fa3b21", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+<script>
+var options={ "publisher": "c07e8302-bfe7-4f88-9ffb-d2ebc2fa3b21", "position": "left", "ad": { "visible": false, "openDelay": 5, "closeDelay": 0}, "chicklets": { "items": ["googleplus", "facebook", "twitter", "linkedin"]}};
+var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
+</script>
+	
 			<?php $nota = $nota[0]?>
 			<div class="units-row">
 				<div class="unit-100" style="text-align:center;">
@@ -38,7 +44,7 @@
 					<img src="images/icons/user.png" width="60" alt="">
 					<div style="display: inline-block;padding-top:0.5em;">
 						<br/><?=$nota['seudonimo']?>  <?=$nota['created_date']?><br/>
-						<a href="https://twitter.com/<?=$nota['tweeter']?>">Seguir en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
+						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">Seguir en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
 					</div>
 					<div class="item-body">
 							<?=$nota['description']?>

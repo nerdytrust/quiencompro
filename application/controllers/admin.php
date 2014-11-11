@@ -67,7 +67,7 @@ class Admin extends CI_Controller {
 	public function editar_nota()
 	{
 		if($this->session->userdata('session') === TRUE ){
-			$this->output->enable_profiler(TRUE);
+			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$id_nota = $this->input->get( "id_nota" );
 			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota), 'nota' => $id_nota );
@@ -183,7 +183,7 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('title-note','Título Nota','trim|required|xss_clean');
 		$this->form_validation->set_rules('tags-note','Tags','trim|required|xss_clean');
 		$this->form_validation->set_rules('desc-note','Descripción','trim|required|xss_clean');
-		$this->form_validation->set_rules('content-note','Contenido','trim|required|xss_clean');
+		$this->form_validation->set_rules('content-note','Contenido','trim|required');
 
 		if ( $this->form_validation->run() == FALSE ){
 			echo validation_errors();
@@ -198,7 +198,7 @@ class Admin extends CI_Controller {
 				$data['published-note']		=	$this->input->post('published-note');
 				$data['feat-img-note']		=	$this->input->post('feat-img-note');
 
-	            $data 						= 	$this->security->xss_clean($data);  
+	            //$data 						= 	$this->security->xss_clean($data);  
 	            
 	            $ins_note_check = $this->quien->save_nueva_nota($data);
 
@@ -310,7 +310,7 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('title-note','Título Nota','trim|required|xss_clean');
 		$this->form_validation->set_rules('tags-note','Tags','trim|required|xss_clean');
 		$this->form_validation->set_rules('desc-note','Descripción','trim|required|xss_clean');
-		$this->form_validation->set_rules('content-note','Contenido','trim|required|xss_clean');
+		$this->form_validation->set_rules('content-note','Contenido','trim|required');
 
 		if ( $this->form_validation->run() == FALSE ){
 			echo validation_errors();
@@ -325,7 +325,7 @@ class Admin extends CI_Controller {
 				$data['published-note']		=	$this->input->post('published-note');
 				$data['feat-img-note']		=	$this->input->post('feat-img-note');
 
-	            $data 						= 	$this->security->xss_clean($data);  
+	            //$data 						= 	$this->security->xss_clean($data);  
 	            
 	            $update_note_check = $this->quien->actualiza_nota($data);
 

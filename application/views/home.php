@@ -98,7 +98,8 @@
                     
                     <li style="width:100%;">
                             <div class="unit-100 hiddenmobile" >
-                                <img  width="100%" src="<?=($banner_der==null) ? 'http://dummyimage.com/300x300/000/fff.png&text=' : $banner_der['image']?>" alt="">
+                                <!--<img  width="100%" src="<?=($banner_der==null) ? 'http://dummyimage.com/300x300/000/fff.png&text=' : $banner_der['image']?>" alt="">-->
+                                <iframe width="100%" height="300" src="//www.youtube.com/embed/EoHqCVHLmL8?rel=0&amp;controls=0" frameborder="0" allowfullscreen></iframe>
                             </div>
                     </li>
                     
