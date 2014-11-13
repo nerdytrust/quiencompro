@@ -18,6 +18,9 @@ a{
 	color: #000;
 }
 
+img.thumb{
+	max-width: 330px;
+}
 
 header nav{
 	width: 100%;
@@ -566,7 +569,7 @@ fieldset{
 	font-size: 1.2em;
 }
 
-
 a:hover{
 	color: #ACDF47;
-};
+}
+
