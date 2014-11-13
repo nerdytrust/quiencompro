@@ -94,7 +94,7 @@
 	    		d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, 
 	    		a.emisor_name , a.emisor_rfc,a.emisor_alias, a.emisor_address1, a.emisor_address2, 
 	    		a.document, f.response_document AS solicitud,
-				a.id_sol, a.id_responsable,a.id_tipo
+				a.id_sol, a.id_responsable,a.id_tipo, c.image
 	    		");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b', 'a.id_legislatura = b.id ');

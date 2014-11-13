@@ -170,6 +170,11 @@ header nav.navbar .menu > ul > li{
 		height:auto;
 	}
 
+	input.buscador{
+  		 margin: 1px;
+  		 margin-left: -2.5em;
+  		 width: 182px;
+}
 	
 }
 

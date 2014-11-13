@@ -17,7 +17,7 @@
 			
 			<div style="display: inline-block;padding-top: 3px;">
 				<form action="<?=base_url()?>busqueda">
-					<input type="text" name="txt" class="input-on-black"  placeholder="Criterio de Búsqueda" />
+					<input type="text" name="txt" class="input-on-black buscador"  placeholder="Criterio de Búsqueda" />
 					<span class="btn-append">
 					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 					</span>
@@ -45,6 +45,7 @@
 				<div class="unit-centered unit-70">
 					
 					<div class="unit-centered unit-45">
+						<img src="<?=$factura['image']?>" width="80" alt="">
 						<h3><?=$factura['tipo_gasto']?></h3>
 					</div>
 					<br>

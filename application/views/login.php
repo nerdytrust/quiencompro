@@ -8,7 +8,7 @@
             </div>
           
             <div style="display: inline-block;padding-top: 1px;">    
-                    <input type="text" name="go" class="input-on-black"  placeholder="Búsqueda" />
+                    <input type="text" name="go" class="input-on-black buscador"  placeholder="Búsqueda" />
                     <span class="btn-append">
                         <button class="btn btn-white btn-outline" style="margin-right:5px;">Go</button>
                     </span>
