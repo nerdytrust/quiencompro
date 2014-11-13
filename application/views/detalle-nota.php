@@ -29,7 +29,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 			<div class="units-row">
 				<div class="unit-100" style="text-align:center;">
 					<div>
-						<img src="<?=$nota['featured_image']?>" alt="<?=$nota['title']?>" style="height:580px">
+						<img src="<?=$nota['featured_image']?>" alt="<?=$nota['title']?>" class="imagedetallenota">
 						<div class="imgholder-container unit-100">
 							<div class="imgholder">
 								<?=$nota['title']?>

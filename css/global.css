@@ -104,7 +104,9 @@ header nav.navbar .menu > ul > li{
 .featured_image{
 	height:470px;
 }
-
+.imagedetallenota{
+	height:580px;
+}
 
 @media (min-width: 768px) {
   .navbar li {
@@ -122,6 +124,7 @@ header nav.navbar .menu > ul > li{
 	header nav.navbar .menu{width: 30px;display: inline-block;}
 	header nav{height: 3.5em;}
 	.navbar .logo{ 
+		margin: 0;
 		width: 150px;
 		display: inline-block;
 	}
@@ -163,6 +166,10 @@ header nav.navbar .menu > ul > li{
 	footer .property-info{
 		height: auto !important;
 	}
+	.imagedetallenota{
+		height:auto;
+	}
+
 	
 }
 
