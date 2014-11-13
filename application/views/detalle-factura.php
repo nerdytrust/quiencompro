@@ -91,8 +91,12 @@
 				</div>
 			</div>
 
-	<div class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5" data-colorscheme="light"></div>		
-
+<br>
+<br>
+<br>
+<center>
+	<div class="fb-comments" data-href="<?=base_url()?>detallefactura?factura=<?=$factura['id']?>" data-numposts="5" data-colorscheme="light"></div>		
+</center>
 <br>
 <br>
 <br>
