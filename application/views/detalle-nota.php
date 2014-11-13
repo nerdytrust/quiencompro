@@ -18,6 +18,15 @@
 		</div>
 		
 	</div>-->
+	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+		</script>
 	
 <script type="text/javascript">stLight.options({publisher: "c07e8302-bfe7-4f88-9ffb-d2ebc2fa3b21", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 <script>
@@ -53,6 +62,16 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 					</div>
 				</div>
 			</div>
-		</div>
+		
 
-		<
+		<br>
+		<br>
+		<br>
+		<center>
+			<div class="fb-comments" data-href="<?=base_url()?>detallenota?nota=<?=$nota['id']?>" data-numposts="5" data-colorscheme="light"></div>		
+		</center>
+		<br>
+		<br>
+		<br>
+
+</div>
