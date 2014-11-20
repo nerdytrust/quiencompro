@@ -23,6 +23,37 @@ class Facturas extends CI_Controller {
 		$this->load->view('facturas',$body);
 		$this->load->view('footer');
 	}
+
+	public function detallefactura()
+		{
+			//$facturaid = ($this->input->get('factura')==null) ? 0 : $this->input->get('factura');
+			$facturaid;
+			if ($this->uri->segment(3) === FALSE)
+			{
+			    $facturaid = 0;
+			}
+			else
+			{
+			    $facturaid = $this->uri->segment(3);
+			}
+
+			if($facturaid == 0 || !is_numeric($facturaid))
+					header('Location:'.base_url(),true);
+
+			$header = array('titlepage' => '¿ Quién Compró ?');
+			$body = array(
+					'factura' => $this->Quien_model->get_detalle_factura($facturaid)
+				);
+
+			if(count($body['factura'])<1)
+				header('Location:'.base_url(),true);
+
+			$this->load->view('header',$header);
+
+			$this->load->view('detalle-factura',$body);
+			$this->load->view('footer');
+		}
+
 	public function infinity()
 	{
 		$offset = ($this->input->post('offset')==null) ? 0 : $this->input->post('offset');
