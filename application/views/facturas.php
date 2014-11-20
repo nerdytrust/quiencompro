@@ -32,7 +32,7 @@
 					<div id="container" data-tools="infinity-scroll" data-url="<?=base_url()?>facturas/infinity">
 
 						<?php foreach ($lista_facturas as $key => $value): ?>
-						<li><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>">
+						<li><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>">
 							<div>
 								<div class="unit-100">
 									<img src="images/icons/money.png" alt="">

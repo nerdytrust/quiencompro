@@ -25,7 +25,7 @@
                 <br>
                 <?php
                     $attr = array('id'=>'form_admin_login','name'=>'form_admin_login','method'=>'POST','autocomplete'=>'off','role'=>'form');
-                    echo form_open_multipart('login/verificar', $attr);
+                    echo form_open_multipart('home/verificar_login', $attr);
                 ?>
                     <label>
                         Email

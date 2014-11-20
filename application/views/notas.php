@@ -35,7 +35,7 @@
 							<div class="units-row">
 									<div>
 										<div class="unit-60">
-										<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+										<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
 											<h3><?=$value['title']?></h3><br>
 										</a>
 												<!--

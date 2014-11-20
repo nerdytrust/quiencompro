@@ -7,6 +7,37 @@ class Notas extends CI_Controller {
 		$this->load->model('Quien_model');
 	}
 
+		public function detallenota()
+	{
+
+		//$notaid = ($this->input->get('nota')==null) ? 0 : $this->input->get('nota');
+		$notaid;
+			if ($this->uri->segment(3) === FALSE)
+			{
+			    $notaid = 0;
+			}
+			else
+			{
+			    $notaid = $this->uri->segment(3);
+			}
+
+		if($notaid == 0 || !is_numeric($notaid))
+				header('Location:'.base_url(),true);
+
+		$header = array('titlepage' => '¿ Quién Compró ?');
+		$body = array(
+				'nota' => $this->Quien_model->get_detalle_nota($notaid)
+			);
+
+		if(count($body['nota'])<1)
+			header('Location:'.base_url(),true);
+
+		$this->load->view('header',$header);
+		$this->load->view('detalle-nota',$body);
+		$this->load->view('footer');
+
+	}
+
 	public function index()
 	{
 		$header = array('titlepage' => '¿ Quién Compró ?');
@@ -42,7 +73,7 @@ class Notas extends CI_Controller {
 										<a href="https://twitter.com/QuienCompro">Seguir en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
 									</div>
 								</div>
-								<a href="'.base_url().'detallenota?nota='.$value['id'].'">
+								<a href="'.base_url().'notas/detallenota/'.$value['id'].'">
 									<h3 style="padding:1em;">'.$value['title'].'</h3>
 									<div class="units-row">
 										<div class="unit-60">

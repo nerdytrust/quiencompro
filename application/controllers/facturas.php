@@ -62,7 +62,7 @@ class Facturas extends CI_Controller {
 
 		foreach ($facturas as $key => $value) {
 			echo '
-				<li><a href="'.base_url().'detallefactura?factura='.$value['id'].'">
+				<li><a href="'.base_url().'facturas/detallefactura/'.$value['id'].'">
 							<div>
 								<div class="unit-100">
 									<img src="images/icons/money.png" alt="">

@@ -22,7 +22,7 @@ class Admin extends CI_Controller {
 			$this->load->view('footer');
 		}
 		else{
-			redirect('login');	
+			redirect('home/login');	
 		}
 	}
 
