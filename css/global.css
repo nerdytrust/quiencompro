@@ -15,7 +15,7 @@ body {
 		}
 a{
 	text-decoration: none;
-	color: #000;
+	color: #CA47DF;
 }
 
 img.thumb{
@@ -65,9 +65,11 @@ header nav.navbar .menu > ul > li{
 }
 .navbar .logo img{
 	height: 6em;
+	position: relative;
+	top: -0.4em;
 }
 .navbar .socialitem{
-	text-align: right;
+	text-align: right;	
 }
 .main{
 	position: relative;
@@ -569,7 +571,8 @@ fieldset{
 	font-size: 1.2em;
 }
 
-a:hover{
-	color: #ACDF47;
+a:hover {
+/* color: #ACDF47; */
+color: #9A2EFE;
 }
 

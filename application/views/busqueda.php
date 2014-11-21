@@ -13,7 +13,7 @@
 	                <span class="btn-append">
 	                    <button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 	                </span>
-	       		<form>
+	       		</form>
 	        </div>
 	    </div>
 	</div>
@@ -38,7 +38,7 @@
 			<?php
 				foreach ($search_invoice as $key => $value) {
 			?>
-				<li><a href="<?=base_url()?>detallefactura?factura=<?=$value->id?>">
+				<li><a href="<?=base_url()?>facturas/detallefactura/<?=$value->id?>">
 					<div>
 						<div class="unit-100">
 							<img src="images/icons/glyphicons_037_coins.png" alt="">
@@ -81,7 +81,7 @@
 				foreach ($search_content as $key => $value) {
 				?>
 
-				<li><a href="<?=base_url()?>detallenota?nota=<?=$value->id?>">
+				<li><a href="<?=base_url()?>notas/detallenota/<?=$value->id?>">
 					<div>
 						<div class="unit-100">
 							<!--<img class="hiddenmobile" width="100%" src="http://lorempixel.com/220/80/technics/" alt="">-->

@@ -35,7 +35,7 @@
 						<li><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>">
 							<div>
 								<div class="unit-100">
-									<img src="images/icons/money.png" alt="">
+									<img src="images/icons/money.png" alt="Gastos">
 									<h3 style="padding:1em;"><?=$value['detail']?></h3>
 									<div class="units-row">
 										<div class="unit-40">

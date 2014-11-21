@@ -49,17 +49,17 @@
 
 												-->
 												<div style="display:block;">
-												<img src="images/icons/user.png" width="45" alt=""> &nbsp;&nbsp;
+												<img src="images/icons/user.png" width="45" alt="Usuario"> &nbsp;&nbsp;
 													Redacción  <?=$value['modify_date']?><br/><br/>
 												</div>
-										<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+										<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
 											<span style="color:#333;font-size:1.2em;">
 											<?=$value['description']?>
 											</span>
 										</a>
 										</div>
 										<div class="unit-35">
-										<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+										<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
 											<!--<img class="hiddenmobile" src="http://lorempixel.com/280/120/technics/" alt="">
 											<img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">-->
 											<img src="<?=$value['featured_image']?>" alt="<?=$value['title']?>">

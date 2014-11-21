@@ -22,9 +22,9 @@
 					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 					</span>
 					<form>
-					</div>
-				</div>
 			</div>
+		</div>
+	</div>
 			<?php $factura = $factura[0];?>
 			<div class="unit-100">
 				<div class="large-8 columns large-centered" style="padding-left:2em;">
@@ -45,7 +45,7 @@
 				<div class="unit-centered unit-70">
 					
 					<div class="unit-centered unit-45">
-						<img src="<?=$factura['image']?>" width="80" alt="">
+						<img src="<?=$factura['image']?>" width="80" alt="Tipo de gasto">
 						<h3><?=$factura['tipo_gasto']?></h3>
 					</div>
 					<br>
@@ -92,13 +92,13 @@
 				</div>
 			</div>
 
-<br>
-<br>
-<br>
-<center>
-	<div class="fb-comments" data-href="<?=base_url()?>detallefactura?factura=<?=$factura['id']?>" data-numposts="5" data-colorscheme="light"></div>		
-</center>
-<br>
-<br>
-<br>
-		</div>
+	<br>
+	<br>
+	<br>
+	<center>
+		<div class="fb-comments" data-href="<?=base_url()?>facturas/detallefactura/<?=$factura['id']?>" data-numposts="5" data-colorscheme="light"></div>		
+	</center>
+	<br>
+	<br>
+	<br>
+</div>

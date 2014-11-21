@@ -22,7 +22,7 @@
 <div class="units-row">
     <!-- Columna Izquierda -->
     <div class="unit-65">
-        <div><a href="<?=base_url()?>detallenota?nota=<?=$nota_principal['id']?>">
+        <div><a href="<?=base_url()?>notas/detallenota/<?=$nota_principal['id']?>">
             <img src="<?=base_url().$nota_principal['featured_image']?>" alt="<?=$nota_principal['title']?>" width="100%" class="featured_image">
             <div class="imgholder-container unit-65">
                 <div class="imgholder">
@@ -38,7 +38,7 @@
                 ?>
                     <li>
                         <div>
-                        <a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+                        <a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
                             <div class="unit-40">
                                 <!--
                                 <img class="hiddenmobile"  src="http://lorempixel.com/280/240/technics/" alt="">
@@ -76,9 +76,9 @@
                         foreach ($facturas_recientes as $key => $value) {
                     ?>
                     <li>
-                        <div><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>" style="color:#000;">
+                        <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>" style="color:#000;">
                             <div class="unit-30">
-                                <img src="images/icons/money.png" width="50" alt="">
+                                <img src="images/icons/money.png" width="50" alt="Gastos">
                             </div>
                             <div class="unit-70">
                                 <span style="font-weight:bold;"><?=$value['name']?>:</span>
@@ -139,9 +139,9 @@
                     foreach ($facturas_monto as $key => $value) {
                 ?>
                     <li>
-                        <div><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>" style="color:#000;">
+                        <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>" style="color:#000;">
                             <div class="unit-20">
-                                <img src="images/icons/notebook.png" alt="">
+                                <img src="images/icons/notebook.png" alt="facturas">
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;"><?=$value['name']?>:</span>
@@ -178,9 +178,9 @@
                     foreach ($facturas_beneficiados as $key => $value) {
                 ?>
                     <li>
-                        <div><a href="<?=base_url()?>detallefactura?factura=<?=$value['id']?>" style="color:#000;">
+                        <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>" style="color:#000;">
                             <div class="unit-20">
-                                <img src="images/icons/stats.png" alt="">
+                                <img src="images/icons/stats.png" alt="Gráfica"> 
                             </div>
                             <div class="unit-40">
                                 <span style="font-weight:bold;"><?=$value['name']?>:</span>

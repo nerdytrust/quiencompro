@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Plataforma de periodismo de datos para transparentar el uso del dinero público en el Congreso de México">
 	<base href="<?=base_url();?>">
 	
 	<link rel="shortcut icon" href="<?=base_url();?>images/favicon.ico" type="image/x-icon">
@@ -38,14 +39,14 @@
 	  ga('send', 'pageview');
 	</script>
 
-
 </head>
+
 <body>
 	
 <header>
 	<nav class="navbar navigation-fixed">
 		<ul style="height: 5em;">
-			<li class="menu"><a href="javascript:;"><img src="images/icons/glyphicons_113_justify.png" alt=""></a>
+			<li class="menu"><a href="javascript:;"><img src="images/icons/glyphicons_113_justify.png" alt="Menu"></a>
 				<ul>
 					<li><a style="color:#fff;" href="<?=base_url()?>facturas">Facturas</a></li>
 					<li><a style="color:#fff;" href="<?=base_url()?>notas">Notas</a></li>
@@ -57,20 +58,21 @@
 			</li>
 			
 				<li class="divider"></li>
-					
-				<li class="socialitem" ><a target="_blank" href="https://www.facebook.com/pages/Qui%C3%A9n-compr%C3%B3/1494986697404675?ref=hl"><img src="images/icons/facebook-256.png" width="45" alt="" margin="10"></a></li>
-				<li class="socialitem"><a target="_blank" href="https://twitter.com/QuienCompro"><img src="images/icons/twitter-256.png" width="45" alt=""></a></li>
-				<li class="socialitem"><a target="_blank" href="https://www.youtube.com/channel/UC4VH5HkzrRMUYtas7xsEYEw"><img src="images/icons/youtube-256.png" width="45" alt=""></a></li>
-				<li class="socialitem"><a target="_blank" href="https://plus.google.com/u/0/112929316167806049590/posts"><img src="images/icons/googleplus-256.png" width="45" alt=""></a></li>
-					
+				
+				
+					<li class="socialitem" ><a target="_blank" href="https://www.facebook.com/pages/Qui%C3%A9n-compr%C3%B3/1494986697404675?ref=hl"><img src="images/icons/facebook-256.png" width="45" alt="FaceBook" ></a></li>
+					<li class="socialitem"><a target="_blank" href="https://twitter.com/QuienCompro"><img src="images/icons/twitter-256.png" width="45" alt="Twitter"></a></li>
+					<li class="socialitem"><a target="_blank" href="https://www.youtube.com/channel/UC4VH5HkzrRMUYtas7xsEYEw"><img src="images/icons/youtube-256.png" width="45" alt="YouTube"></a></li>
+					<li class="socialitem"><a target="_blank" href="https://plus.google.com/u/0/112929316167806049590/posts"><img src="images/icons/googleplus-256.png" width="45" alt="GooglePlus"></a></li>
+							
 		</ul>
 		
 		<div class="units-row hiddenmobile" style="background: #333;
-color: whitesmoke;
-text-align: center;
-padding: 0.2em;
-width: 100%;">
-    		Plataforma de datos para transparentar el uso del dinero público en el Congreso de México.
+		color: whitesmoke;
+		text-align: center;
+		padding: 0.2em;
+		width: 100%;">
+    		Plataforma de periodismo de datos para transparentar el uso del dinero público en el Congreso de México.
     		<a style="width: 25px;display: inline;" href="https://es.scribd.com/doc/245963021/Quien-Compro" target="_blank"><img src="images/hand.png" alt="hand"></a>
 		</div>
 	</nav>
@@ -85,3 +87,5 @@ width: 100%;">
 			$("header nav .menu > ul").slideDown();
 	});
 </script>
+
+</html>

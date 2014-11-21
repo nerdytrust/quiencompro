@@ -11,7 +11,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/israel.JPG" alt="">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/israel.JPG" alt="Israel_Piña">
 								</figure>
 								<div class="member-details">
 									<h3>Israel Piña</h3>
@@ -19,8 +19,8 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/israelpicam"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
-										<li><a href="https://twitter.com/Israel_Picam"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+										<li><a href="https://www.facebook.com/israelpicam"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Israel" margin="10"></a></li>
+										<li><a href="https://twitter.com/Israel_Picam"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Israel"></a></li>
 									</ul>
 								</div>
 								<div class="details">
@@ -34,7 +34,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/elidet.JPG" alt="">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/elidet.JPG" alt="Elidet_Soto">
 								</figure>
 								<div class="member-details">
 									<h3>Elidet Soto</h3>
@@ -42,8 +42,8 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/eli.soto.52"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
-										<li><a href="https://twitter.com/ElidetSoto"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+										<li><a href="https://www.facebook.com/eli.soto.52"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Elidet" margin="10"></a></li>
+										<li><a href="https://twitter.com/ElidetSoto"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Elidet"></a></li>
 									</ul>
 								</div>
 								<div class="details">
@@ -57,7 +57,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/isaac.JPG" alt="">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/isaac.JPG" alt="Isaac_Caporal">
 								</figure>
 								<div class="member-details">
 									<h3>Isaac Caporal</h3>
@@ -65,8 +65,8 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/icaporal"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
-										<li><a href="https://twitter.com/ICaporal"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+										<li><a href="https://www.facebook.com/icaporal"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Isaac" margin="10"></a></li>
+										<li><a href="https://twitter.com/ICaporal"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Isaac"></a></li>
 									</ul>
 								</div>
 								<div class="details">
@@ -81,7 +81,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/Miriam.JPG" alt="">
+									<img src="http://www.openfeedback.com.mx/wp-content/themes/zerif-lite/images/Miriam.JPG" alt="Miriam_Vizcarra">
 								</figure>
 								<div class="member-details">
 									<h3>Miriam Vizcarra</h3>
@@ -89,8 +89,8 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/miriamgonzalezvizcarra"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
-										<li><a href="https://twitter.com/Miriam_Vizcarra"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+										<li><a href="https://www.facebook.com/miriamgonzalezvizcarra"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Miriam" margin="10"></a></li>
+										<li><a href="https://twitter.com/Miriam_Vizcarra"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Miriam"></a></li>
 									</ul>
 								</div>
 								<div class="details">
@@ -105,7 +105,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="<?=base_url()?>images/lazaro.JPG" alt="">
+									<img src="<?=base_url()?>images/lazaro.JPG" alt="Lazaro_Gonzalez">
 								</figure>
 								<div class="member-details">
 									<h3>Lázaro González</h3>
@@ -113,8 +113,8 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/laazaaroo"><img src="images/icons/facebook-256.png" width="25" alt="" margin="10"></a></li>
-										<li><a href="https://twitter.com/l_azaro"><img src="images/icons/twitter-256.png" width="25" alt=""></a></li>
+										<li><a href="https://www.facebook.com/laazaaroo"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Lazaro" margin="10"></a></li>
+										<li><a href="https://twitter.com/l_azaro"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Lazaro"></a></li>
 									</ul>
 								</div>
 								<div class="details">

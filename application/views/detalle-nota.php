@@ -53,7 +53,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 					<img src="images/icons/user.png" width="60" alt="">
 					<div style="display: inline-block;padding-top:0.5em;">
 						<br/><?=$nota['seudonimo']?>  <?=$nota['created_date']?><br/>
-						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">Seguir en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
+						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">Sigueme en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
 					</div>
 					<div class="item-body">
 							<?=$nota['description']?>
@@ -68,7 +68,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 		<br>
 		<br>
 		<center>
-			<div class="fb-comments" data-href="<?=base_url()?>detallenota?nota=<?=$nota['id']?>" data-numposts="5" data-colorscheme="light"></div>		
+			<div class="fb-comments" data-href="<?=base_url()?>notas/detallenota/<?=$nota['id']?>" data-numposts="5" data-colorscheme="light"></div>		
 		</center>
 		<br>
 		<br>
