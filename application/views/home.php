@@ -14,7 +14,7 @@
                 <span class="btn-append">
                     <button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
                 </span>
-        <form>
+        </form>
         </div>
     </div>
 </div>
@@ -47,7 +47,7 @@
                                 <img class="thumb" style="margin-top: 2em;"  src="<?=base_url().$value['featured_image']?>" alt="<?=$value['title']?>" >
                             </div>
                             <div class="unit-60" style="font-size:1.2em;">
-                                 <img src="images/icons/user.png" width="45" alt="">
+                                 <!-- <img src="images/icons/user.png" width="45" alt=""> -->
                                  <span>Por: <?=$value['seudonimo']?>  <?=$value['modify_date']?></span><br/>
                                  <h3><?=$value['title'];?></h3><br/>
                                  <?=$value['description'];?>
@@ -83,7 +83,7 @@
                             <div class="unit-70">
                                 <span style="font-weight:bold;"><?=$value['name']?>:</span>
                                 <span style="font-size:1em;"><?=$value['detail']?></span>
-                                <span style="color:#ACDF47;"><?=money_format('%i',$value['amount'])?></span>
+                                <span style="color:#A526A3;"><?=money_format('%i',$value['amount'])?></span>
                             </div>
                             </a>
                         </div>
@@ -151,7 +151,7 @@
                                 <div>
                                     <?=$value['modify_date']?>
                                 </div>
-                                <div><span style="color:#ACDF47;"><?=money_format('%i',$value['amount'])?></span></div>
+                                <div><span style="color:#A526A3;"><?=money_format('%i',$value['amount'])?></span></div>
                             </div>
                             </a>
                         </div>
@@ -188,7 +188,7 @@
                             </div>
                             <div class="unit-40">
                                 <div ><?=$value['emisor_rfc']?></div>
-                                <div ><span style="color:#ACDF47;"><?=money_format('%i',$value['total'])?></span></div>
+                                <div ><span style="color:#A526A3;"><?=money_format('%i',$value['total'])?></span></div>
                             </div>
                             </a>
                         </div>
