@@ -72,7 +72,7 @@
 	    }
 
 	    public function get_detalle_nota($id_nota){
-	    	$this->db->select("b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured");
+	    	$this->db->select("a.id,b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured");
 	    	$this->db->from("content AS a");
 			$this->db->join('usuarios AS b', 'a.author = b.id ');
  		    //$this->db->where("published", 1);
@@ -89,7 +89,7 @@
 	    }
 
 	    public function get_detalle_factura($id_factura){
-	    	$this->db->select("b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto,
+	    	$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto,
 	    		c.id As ico_tipo_gasto,
 	    		d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, 
 	    		a.emisor_name , a.emisor_rfc,a.emisor_alias, a.emisor_address1, a.emisor_address2, 

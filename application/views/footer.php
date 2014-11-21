@@ -19,7 +19,7 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/israelpicam"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Israel" margin="10"></a></li>
+										<li><a href="https://www.facebook.com/israelpicam"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Israel"></a></li>
 										<li><a href="https://twitter.com/Israel_Picam"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Israel"></a></li>
 									</ul>
 								</div>
@@ -42,7 +42,7 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/eli.soto.52"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Elidet" margin="10"></a></li>
+										<li><a href="https://www.facebook.com/eli.soto.52"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Elidet" ></a></li>
 										<li><a href="https://twitter.com/ElidetSoto"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Elidet"></a></li>
 									</ul>
 								</div>
@@ -65,7 +65,7 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/icaporal"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Isaac" margin="10"></a></li>
+										<li><a href="https://www.facebook.com/icaporal"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Isaac" ></a></li>
 										<li><a href="https://twitter.com/ICaporal"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Isaac"></a></li>
 									</ul>
 								</div>
@@ -89,7 +89,7 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/miriamgonzalezvizcarra"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Miriam" margin="10"></a></li>
+										<li><a href="https://www.facebook.com/miriamgonzalezvizcarra"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Miriam" ></a></li>
 										<li><a href="https://twitter.com/Miriam_Vizcarra"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Miriam"></a></li>
 									</ul>
 								</div>
@@ -113,7 +113,7 @@
 								</div>
 								<div class="social-icons">
 									<ul>
-										<li><a href="https://www.facebook.com/laazaaroo"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Lazaro" margin="10"></a></li>
+										<li><a href="https://www.facebook.com/laazaaroo"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Lazaro" ></a></li>
 										<li><a href="https://twitter.com/l_azaro"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Lazaro"></a></li>
 									</ul>
 								</div>
@@ -136,8 +136,8 @@
 			<div class="unit-40 border-right">
 				<div class="property-info">
 			        <h3>¿Quiénes Somos?</h3>
-			        <a href="http://www.openfeedback.com.mx" target="_blank"><img style="background:#fff;" src="images/openfeed.png" width="150px" alt="OpenFeed"></a>
-			        <a href="http://mexicoinformate.org" target="_blank"><img style="background:#fff;" src="images/mexinf.png" width="200px" alt="México Informate"></a>
+			        <a href="http://www.openfeedback.com.mx" target="_blank"><img style="background:#fff;" src="images/openfeed.png" width="150" alt="OpenFeed"></a>
+			        <a href="http://mexicoinformate.org" target="_blank"><img style="background:#fff;" src="images/mexinf.png" width="200" alt="México Informate"></a>
 			        <p style="width: 100%;vertical-align: top;display: inline-block;">
 			          <br>Plataforma de periodismo de datos para vigilar y transparentar el uso del dinero público en las cámaras de Diputados y Senadores de México.
 			        </p>
@@ -146,7 +146,7 @@
 			<div class="unit-20 border-right" style="margin-left:0.5%;">
 				<div class="property-info" style="padding-left:0px;padding-right:0px;">
 			        <h3>Contáctanos</h3>
-			          <p style="margin-bottom:0;">Twitter  <a target="_blank" href="https:twitter.com/quiencompro">@quiencompro</a></p>
+			          <p style="margin-bottom:0;">Twitter  <a target="_blank" href="https://twitter.com/quiencompro">@quiencompro</a></p>
               		  <p><a href="mailto:quiencompro@gmail.com">quiencompro@gmail.com</a></p>
 			    </div>
 			</div>
@@ -154,7 +154,7 @@
 				<div class="property-info">
 			        <h3>Patrocinadores</h3>
 			          <a href="http://www.nerdytrust.com" target="_blank">
-			          <img style="background:#fff;" src="images/nerd.png" width="85%" alt="Nerdy Trust">
+			          <img style="background:#fff;width:85%;" src="images/nerd.png" alt="Nerdy Trust">
 			          </a>
 			    </div>
 			</div>

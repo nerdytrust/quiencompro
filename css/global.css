@@ -109,6 +109,7 @@ header nav.navbar .menu > ul > li{
 }
 .featured_image{
 	height:470px;
+	width: 100%;
 }
 .imagedetallenota{
 	height:580px;
