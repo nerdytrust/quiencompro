@@ -15,11 +15,12 @@ body {
 		}
 a{
 	text-decoration: none;
-	color: #CA47DF;
+	color: #333;
 }
 
 img.thumb{
 	max-width: 330px;
+	width: 100%;
 }
 
 header nav{
@@ -108,6 +109,7 @@ header nav.navbar .menu > ul > li{
 }
 .featured_image{
 	height:470px;
+	width: 100%;
 }
 .imagedetallenota{
 	height:580px;
@@ -572,7 +574,12 @@ fieldset{
 }
 
 a:hover {
-/* color: #ACDF47; */
-color: #9A2EFE;
+color: #A526A3;
 }
 
+.item-body a{
+	color: #A526A3;
+}
+.item-body a:hover{
+	color: #333;
+}
