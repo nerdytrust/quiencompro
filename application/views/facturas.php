@@ -24,7 +24,7 @@
 				<!-- Columna Izquierda -->
 				<div class="unit-100">
 					<span class="bignumber-1"><?=$total_facturas?></span>
-					<h3>Registros en FACTURAS</h3>
+					<h3>Registros de FACTURAS</h3>
 					<br><h3 style="padding-left:5px;color:forestgreen;"><?=money_format('%i',$monto_facturas )?></h4>
 					<hr>
 					<ul class="lista-3">
@@ -35,27 +35,34 @@
 						<li><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>">
 							<div>
 								<div class="unit-100">
-									<img src="images/icons/money.png" alt="Gastos">
+									<img src="<?=$value['image']?>" width="80" alt="Tipo de gasto">
 									<h3 style="padding:1em;"><?=$value['detail']?></h3>
+									
 									<div class="units-row">
+										
 										<div class="unit-40">
 											<ul class="lista-4">
 												<li><span>Camara:</span> <?=$value['camara']?></li>
 												<li><span>Legislatura:</span> <?=$value['legislatura']?></li>
 											</ul>
+											<hr>
 										</div>
+
 										<div class="unit-30">
 											<ul class="lista-4">
 												<li><span><?=$value['responsable']?></span></li>
 												<li><span>Monto:</span> <?=money_format('%i',$value['amount'])?></li>
 											</ul>
+											<hr>
 										</div>
+
 										<div class="unit-30">
 											<ul class="lista-4">
 												<li><span>Fecha:</span> <?=$value['date']?></li>
-												<li><span><?=$value['emisor_alias']?></span></li>
+												<li><span><?=$value['emisor_alias']?></span></li>												
 											</ul>
 										</div>
+
 									</div>
 								</div>
 							</div>

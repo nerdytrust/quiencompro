@@ -125,7 +125,7 @@
 	    }
 
 	    public function get_lista_facturas($ini_pagina){
-	    	$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
+	    	$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud, c.image");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
 			$this->db->join('tipo_gastos AS c',' a.id_tipo = c.id ');

@@ -10,34 +10,37 @@
 				<form action="<?=base_url()?>busqueda">
 					<input type="text" name="txt" class="input-on-black buscador"  placeholder="Criterio de Búsqueda" />
 					<span class="btn-append">
-					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
+					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar </button>
 					</span>
-					<form>
-					</div>
-				</div>
+				</form>
 			</div>
+		</div>
+	</div>
+		
 			<div>
 				
-				<span><h2>Lista de Notas:</h2></span>
+				<h2><span>Lista de Notas:</span></h2>
 			</div>
 			<div class="units-row">
 				<!-- Columna Izquierda -->
 				<div class="unit-100">
-					<span class="bignumber-1"><?=$total_notas?></span>
+					<span class="bignumber-1"><?=$total_notas?>
+					</span>
 					<h3>Registros en NOTAS</h3>
 					<hr>
+					
 					<ul class="lista-3">
 						
-					<div id="container" data-tools="infinity-scroll" data-url="<?=base_url()?>notas/infinity">
+						<div id="container" data-tools="infinity-scroll" data-url="<?=base_url()?>notas/infinity">
 
-						<?php foreach ($lista_notas as $key => $value): ?>
+							<?php foreach ($lista_notas as $key => $value): ?>
 							<li>
-							<div class="units-row">
-									<div>
-										<div class="unit-60">
-										<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
-											<h3><?=$value['title']?></h3><br>
-										</a>
+								<div class="units-row">
+										<div>
+											<div class="unit-60">
+												<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+													<h3><?=$value['title']?></h3><br>
+												</a>
 												<!--
 												<div style="display: inline-block;vertical-align: top;">
 													<img src="images/icons/user.png" width="45" alt="">
@@ -49,35 +52,36 @@
 
 												-->
 												<div style="display:block;">
-												<img src="images/icons/user.png" width="45" alt="Usuario"> &nbsp;&nbsp;
-													Redacción  <?=$value['modify_date']?><br/><br/>
+													<img src="images/icons/user.png" width="45" alt=""> 
+														<br> &nbsp;&nbsp;
+															 Redacción  
+														</br>
+														<?=$value['modify_date']?><br/><br/>
 												</div>
-										<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
-											<span style="color:#333;font-size:1.2em;">
-											<?=$value['description']?>
-											</span>
-										</a>
+												<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+													<span style="color:#333;font-size:1.2em;">
+													<?=$value['description']?>
+													</span>
+												</a>
+											</div>
+											<div class="unit-35">
+												<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
+												<!--<img class="hiddenmobile" src="http://lorempixel.com/280/120/technics/" alt="">
+												<img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">-->
+													<img src="<?=$value['featured_image']?>" alt="<?=$value['title']?>">
+												</a>
+											</div>
 										</div>
-										<div class="unit-35">
-										<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
-											<!--<img class="hiddenmobile" src="http://lorempixel.com/280/120/technics/" alt="">
-											<img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">-->
-											<img src="<?=$value['featured_image']?>" alt="<?=$value['title']?>">
-										</a>
-										</div>
-									</div>
-							</div>
-						</li>
-						<?php endforeach ?>
+								</div>
+							</li>
+							<?php endforeach ?>
+					</div>
 
-						</div>
-
-						
-					</ul>
-				</div>
-				
+				</ul>
 			</div>
-		
-			
+				
 		</div>
+			
+</div>
+
 		

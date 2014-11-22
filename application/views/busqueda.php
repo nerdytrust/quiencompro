@@ -69,7 +69,7 @@
 
     		</ul>
 
-    	</div>
+    	</dsiv>
 
     	<div class="unit-35">
     		<span class="bignumber-2"><?=$num_content?></span>
