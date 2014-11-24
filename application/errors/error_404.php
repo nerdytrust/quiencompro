@@ -24,7 +24,7 @@
 	<h1>Lo sentimos</h1>
 	<hr>
 	<center>
-	<img class="broke" src="images/QC1.png">
+	<img class="broke" src="http://www.quiencompro.com/images/QC.png">
 	</center>
 		<h1><?php echo $heading; ?></h1>
 		<hr>
