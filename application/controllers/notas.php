@@ -24,7 +24,8 @@ class Notas extends CI_Controller {
 		if($notaid == 0 || !is_numeric($notaid))
 				header('Location:'.base_url(),true);
 
-		$header = array('titlepage' => '¿ Quién Compró ?');
+		$header = array('titlepage' => '¿ Quién Compró ?'
+			,'nota' => $this->Quien_model->get_detalle_nota($notaid));
 		$body = array(
 				'nota' => $this->Quien_model->get_detalle_nota($notaid)
 			);

@@ -39,6 +39,28 @@
 	  ga('send', 'pageview');
 	</script>
 
+
+	<?php
+		$img = base_url().'images/QC.png';
+		$title = $titlepage; 
+		$desc  = 'Plataforma de periodismo de datos para transparentar el uso del dinero público en el Congreso de México';
+		$url = "http://".$_SERVER['HTTP_HOST'].":".$_SERVER['SERVER_PORT'].$_SERVER['REQUEST_URI'];
+		if(isset($nota))
+		{
+			$nota= $nota[0];
+			$img  = base_url().$nota['featured_image'];
+			$title = $nota['title'];
+			$desc = $nota['description'];
+		}
+	?>
+	
+	<meta property="og:url"   content="<?=$url?>">
+	<meta property="og:title" content="<?=$title?>">
+	<meta property="og:site_name" content="¿Quién Compró?"/>
+	<meta property="og:description" content="<?=$desc?>">
+	<meta property="og:image" content="<?=$img?>">
+
+
 </head>
 
 <body>

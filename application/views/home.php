@@ -23,7 +23,7 @@
         <!-- Columna Izquierda -->
         <div class="unit-65">
             <div>
-                <a href="<?=base_url()?>notas/detallenota/<?=$nota_principal['id']?>">
+                <a href="<?=base_url()?>notas/detallenota/<?=$nota_principal['id']?>/<?=urlencode(urlencode($nota_principal['title']))?>">
                     <img src="<?=base_url().$nota_principal['featured_image']?>" alt="<?=$nota_principal['title']?>"  class="featured_image">
                     <div class="imgholder-container unit-65">
                         <div class="imgholder">
@@ -39,7 +39,7 @@
                     ?>
                         <li>
                             <div>
-                            <a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>">
+                            <a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>/<?=urlencode(urlencode($value['title']))?>">
                                 <div class="unit-40">
                                     <!--
                                     <img class="hiddenmobile"  src="http://lorempixel.com/280/240/technics/" alt="">

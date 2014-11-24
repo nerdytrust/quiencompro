@@ -81,7 +81,7 @@
 				foreach ($search_content as $key => $value) {
 				?>
 
-				<li><a href="<?=base_url()?>notas/detallenota/<?=$value->id?>">
+				<li><a href="<?=base_url()?>notas/detallenota/<?=$value->id?>/<?=urlencode(urlencode($value['title']))?>">
 					<div>
 						<div class="unit-100">
 							<!--<img class="hiddenmobile" width="100%" src="http://lorempixel.com/220/80/technics/" alt="">-->
