@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>404 Page Not Found</title>
+<title>404 P&aacute;gina no encontrada</title>
 </head>
 <style type="text/css">
 	body {
@@ -24,11 +24,11 @@
 	<h1>Lo sentimos</h1>
 	<hr>
 	<center>
-	<img class="broke" src="http://www.quiencompro.com/images/QC.png">
+	<img class="broke" src="images/QC1.png">
 	</center>
-		<h1><?php echo $heading; ?></h1>
+		<h1> P&aacute;gina no encontrada </h1>
 		<hr>
-		<p><?php echo $message; ?><p>
+		<p>La p&aacute;gina requerida no ha sido encontrada<p>
 	</div>
 </body>
 </html>

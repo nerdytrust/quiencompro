@@ -5,6 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta name="description" content="Plataforma de periodismo de datos para transparentar el uso del dinero público en el Congreso de México">
+	<meta http-equiv="content-language" content="es">
 	<base href="<?=base_url();?>">
 	
 	<link rel="shortcut icon" href="<?=base_url();?>images/favicon.ico" type="image/x-icon">

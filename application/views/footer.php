@@ -146,10 +146,11 @@
 			<div class="unit-20 border-right" style="margin-left:0.5%;">
 				<div class="property-info" style="padding-left:0px;padding-right:0px;">
 			        <h3>Contáctanos</h3>
-			          <p style="margin-bottom:0;">Twitter  <a target="_blank" href="https://twitter.com/quiencompro">@quiencompro</a></p>
-              		  <p><a href="mailto:quiencompro@gmail.com">quiencompro@gmail.com</a></p>
+						<a href="https://twitter.com/quiencompro"><img src="images/ctwitter.png" alt="contacto twitter"></a>
+						<a href="mailto:quiencompro@gmail.com"><img src="images/cgmail.png" alt="contacto gmail"></a>
 			    </div>
 			</div>
+			
 			<div class="unit-40">
 				<div class="property-info">
 			        <h3>Patrocinadores</h3>
