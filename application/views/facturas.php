@@ -12,7 +12,7 @@
 					<span class="btn-append">
 					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 					</span>
-					<form>
+				</form>
 					</div>
 				</div>
 			</div>
