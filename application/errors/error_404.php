@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <title>404 P&aacute;gina no encontrada</title>
-</head>
+
 <style type="text/css">
 	body {
 	   		color: #a526a3;
@@ -16,6 +16,7 @@
 	}
 	
   </style>
+  </head>
 
 <body>
 	<div id="container">

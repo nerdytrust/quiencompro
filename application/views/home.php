@@ -9,12 +9,14 @@
             </div>
           
             <div style="display: inline-block;padding-top: 1px;">    
-            <form action="<?=base_url()?>busqueda">
+                <form action="<?=base_url()?>busqueda">
                     <input type="text" name="txt" class="input-on-black buscador"  placeholder="Criterio de Búsqueda" />
                     <span class="btn-append">
-                        <button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
+                        <button class="btn btn-white btn-outline" style="margin-right:5px;">
+                        Buscar
+                        </button>
                     </span>
-            </form>
+                </form>
             </div>
         </div>
     </div>
@@ -100,7 +102,11 @@
                         <li style="width:100%;">
                                 <div class="unit-100 hiddenmobile" >
                                     <!--<img  width="100%" src="<?=($banner_der==null) ? 'http://dummyimage.com/300x300/000/fff.png&text=' : $banner_der['image']?>" alt="">-->
+
                                     <iframe style="width: 100%; border:none;" height="300" src="//www.youtube.com/embed/EoHqCVHLmL8?rel=0&amp;controls=0" allowfullscreen></iframe>
+
+                                    <img  style="width: 100%" src="<?=base_url()?>images/dal2014winners.png" alt="Ganadores DAL2014">
+
                                 </div>
                         </li>
                         
@@ -114,7 +120,7 @@
     <div class="units-row">
 
 
-        <div class="unit-50" >
+        <div class="unit-50">
             <div>
                 <div class="title-2"> Ranking de Monto en Facturas</div>
                 <div>

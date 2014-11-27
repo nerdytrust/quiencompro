@@ -18,14 +18,14 @@
 			</div>
 			<div>
 				
-				<span><h2>Lista de Facturas:</h2></span>
+				<h2><span>Lista de Facturas:</span></h2>
 			</div>
 			<div class="units-row">
 				<!-- Columna Izquierda -->
 				<div class="unit-100">
 					<span class="bignumber-1"><?=$total_facturas?></span>
 					<h3>Registros de FACTURAS</h3>
-					<br><h3 style="padding-left:5px;color:forestgreen;"><?=money_format('%i',$monto_facturas )?></h4>
+					<br><h3 style="padding-left:5px;color:forestgreen;"><?=money_format('%i',$monto_facturas )?></h3>
 					<hr>
 					<ul class="lista-3">
 

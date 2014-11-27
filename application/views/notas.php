@@ -31,7 +31,7 @@
 					
 					<ul class="lista-3">
 						
-						<div id="container" data-tools="infinity-scroll" data-url="<?=base_url()?>notas/infinity">
+		 				<div id="container" data-tools="infinity-scroll" data-url="<?=base_url()?>notas/infinity">
 
 							<?php foreach ($lista_notas as $key => $value): ?>
 							<li>
@@ -54,9 +54,10 @@
 												<div style="display:block;">
 													<img src="images/icons/user.png" width="45" alt=""> 
 														<br> &nbsp;&nbsp;
-															 Redacción  
-														</br>
-														<?=$value['modify_date']?><br/><br/>
+															Redacción  
+														<br>
+														<?=$value['modify_date']?>
+														<br> <br>
 												</div>
 												<a href="<?=base_url()?>detallenota?nota=<?=$value['id']?>">
 													<span style="color:#333;font-size:1.2em;">

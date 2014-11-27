@@ -19,9 +19,9 @@
 				<form action="<?=base_url()?>busqueda">
 					<input type="text" name="txt" class="input-on-black buscador"  placeholder="Criterio de Búsqueda" />
 					<span class="btn-append">
-					<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
+						<button class="btn btn-white btn-outline" style="margin-right:5px;">Buscar</button>
 					</span>
-					<form>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -31,16 +31,19 @@
 					<br>
 					<h1 class="title">Detalle de la compra</h1>
 					<hr>
-					<span>
-					<br>
-					<span style="font-size:6em;"><?=$factura['legislatura']?></span>
-					Legislatura<br>
-					</span>
+						<span>
+							<br>
+								<span style="font-size:6em;"><?=$factura['legislatura']?>
+								</span>
+								Legislatura
+							<br/>
+						</span>
 					<br/>
 					Se presenta la información del gasto reportado el <span><?=substr($factura['fecha_factura'],0,10)?></span>
 				</div>
 			</div>
 			<hr>
+
 			<div class="units-row">
 				<div class="unit-centered unit-70">
 					
@@ -81,7 +84,7 @@
 								<div>
 									<input readonly="readonly" type="text"  class="width-90" value="<?=$factura['document']?>">
 								</div>
-								<div style="text-align:center;width:90%;">
+								<div style="text-align:center; width:90%;">
 								<br/>
 									<a href="<?=base_url()?>invoices/<?=$factura['document']?>.pdf" target="_blank" class="button postfix" style="font-weight:bold;font-size:2em">Descargar</a>
 								</div>
@@ -95,9 +98,9 @@
 	<br>
 	<br>
 	<br>
-	<center>
+	<div style="center">
 		<div class="fb-comments" data-href="<?=base_url()?>facturas/detallefactura/<?=$factura['id']?>" data-numposts="5" data-colorscheme="light"></div>		
-	</center>
+	</div>
 	<br>
 	<br>
 	<br>
