@@ -81,14 +81,15 @@
 								<input readonly="readonly" type="text"  class="width-90" value="<?=$factura['emisor_rfc']?>">
 							</label>
 							<label>Documento de la factura
-								<div>
+								
 									<input readonly="readonly" type="text"  class="width-90" value="<?=$factura['document']?>">
-								</div>
-								<div style="text-align:center; width:90%;">
-								<br/>
-									<a href="<?=base_url()?>invoices/<?=$factura['document']?>.pdf" target="_blank" class="button postfix" style="font-weight:bold;font-size:2em">Descargar</a>
-								</div>
 							</label>
+
+							<div style="text-align:center; width:90%;">
+								<br/>
+								<a href="<?=base_url()?>invoices/<?=$factura['document']?>.pdf" target="_blank" class="button postfix" style="font-weight:bold;font-size:2em">Descargar</a>
+							</div>
+					
 						</div>
 						
 					</form>

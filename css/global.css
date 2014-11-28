@@ -115,9 +115,18 @@ header nav.navbar .menu > ul > li{
 	height:580px;
 }
 
+
+/*@media (max-width: 320px){
+	.navbar .logo {
+		width: 100px;
+		height: 20px;
+		}
+
+}*/
+
 @media (min-width: 768px) {
   .navbar li {
-  	width: 8%;
+  	width: 14%;
   	margin-top:1em;
 	}
 	.socialitem{
@@ -125,6 +134,7 @@ header nav.navbar .menu > ul > li{
 	}
 	.hiddendesktop{display: none !important;}
 }
+
 @media (max-width: 768px) {
 	.divider{display: none;}
 	.socialitem{display: inline-block; float: right !important; padding: 1em;}
@@ -324,7 +334,7 @@ footer h3{
 	padding:1em;
 	width: 100%;	
 	/*background: rgba(10,10,10,0.1);*/
-	/*border: 1px solid #999;*/
+	border-bottom: 1px dashed #999;
 }
 .lista-3 li .unit-50{
 	margin-left: 0;
@@ -583,3 +593,5 @@ color: #A526A3;
 .item-body a:hover{
 	color: #333;
 }
+
+
