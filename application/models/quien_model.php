@@ -72,7 +72,7 @@
 	    }
 
 	    public function get_detalle_nota($id_nota){
-	    	$this->db->select("a.id,b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured");
+	    	$this->db->select("a.id,b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured, b.image");
 	    	$this->db->from("content AS a");
 			$this->db->join('usuarios AS b', 'a.author = b.id ');
  		    //$this->db->where("published", 1);
@@ -109,11 +109,13 @@
 	    }
 
 	    public function get_lista_notas($ini_pagina = 0){
-	    	$this->db->select("id, title, description, featured_image,modify_date");
- 		    $this->db->where('published', 1);
- 		    $this->db->order_by("modify_date", "desc");
+	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo");
+	    	$this->db->from("content AS a");
+	    	$this->db->join('usuarios AS b', 'a.author = b.id ');
+ 		    $this->db->where('a.published', 1);
+ 		    $this->db->order_by("a.modify_date", "desc"); 
  		    $this->db->limit(10, $ini_pagina);
-	        $sql = $this->db->get("content");
+	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
 

@@ -105,7 +105,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="<?=base_url()?>images/lazaro.JPG" alt="Lazaro_Gonzalez">
+									<img src="<?=base_url()?>images/team/lazaro.JPG" alt="Lazaro_Gonzalez">
 								</figure>
 								<div class="member-details">
 									<h3>Lázaro González</h3>

@@ -42,7 +42,7 @@
 									<div class="units-row">
 										
 										<div class="unit-40">
-											<ul class="lista-4">
+											<ul class="lista-4" >
 												<li><span> Camara:</span> <?=$value['camara']?></li>
 												<li><span> Legislatura:</span> <?=$value['legislatura']?></li>
 											</ul>

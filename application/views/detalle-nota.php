@@ -50,9 +50,11 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 			</div>
 			<div class="units-row">
 				<div class="unit-100"  style="padding: 1em;">
-					<img src="images/icons/user.png" width="60" alt="">
+					<div class="unit-centered unit-45" >
+						<img src="<?=$nota['image']?>" width="80" alt="Usuario"style="float: left; margin: 20px;">
+					</div>
 					<div style="display: inline-block;padding-top:0.5em;">
-						<br/><?=$nota['seudonimo']?>  <?=$nota['created_date']?><br/>
+						<br/><?=$nota['seudonimo']?>  <br/> <?=$nota['created_date']?><br/>
 						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">Sigueme en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
 					</div>
 					<div class="item-body">

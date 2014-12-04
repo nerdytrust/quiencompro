@@ -52,10 +52,10 @@
 
 												-->
 												<div style="display:block;">
-													<img src="images/icons/user.png" width="45" alt=""> 
-														<br> &nbsp;&nbsp;
-															Redacción  
-														<br>
+													<div class="unit-centered unit-45" >
+															<img src="<?=$value['image']?>" width="80" alt="Usuario">
+													</div> 
+														<br/><?=$value['seudonimo']?>  <br/>
 														<?=$value['modify_date']?>
 														<br> <br>
 												</div>
