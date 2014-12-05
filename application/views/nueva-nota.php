@@ -44,10 +44,20 @@
                     $attr = array('id'=>'id_form_nueva_nota','name'=>'form_nueva_nota','method'=>'POST','autocomplete'=>'off','role'=>'form');
                     echo form_open_multipart('admin/guarda_nota', $attr);
                 ?>
-				    <label>
-				        Name
-				        <input type="text" name="title-note" class="width-50" />
-				    </label>
+				    <fieldset>
+					        <legend> Autor </legend>
+					        <!--<input type="text" name="title-note" class="width-50" /> -->
+					        
+				  		<select name="usuarios">    
+							<option value="Select" selected="selected">Seleccione</option>
+							<option value="Israel">Israel Piña</option>
+						    <option value="Elideth">Elidet Soto</option>
+					        <option value="Isaac">Isaac Caporal</option>
+					        <option value="Miriam">Miriam Vizcarra</option>
+						    <option value="Lazaro">Lazaro Gonzalez</option>
+						</select>				
+					 </fieldset>		
+
 				    <fieldset>
 				        <legend>Meta data</legend>
 				            Tags

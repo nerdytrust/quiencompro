@@ -33,7 +33,9 @@ class Admin extends CI_Controller {
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
 			$data = array('titlepage' => '¿ Quién Compró ?' );
-			$data_facturas = array('data' => $this->quien->get_lista_facturas_admin($user_id,$nivel));
+			$data_facturas = array(
+				'data_completo' => $this->quien->get_lista_facturas_admin($user_id,$nivel,0,1),
+				'data_incompleto' => $this->quien->get_lista_facturas_admin($user_id,$nivel,0,0));
 
 			//print_r($data_facturas);die;
 			$this->load->view('header',$data);
@@ -220,7 +222,7 @@ class Admin extends CI_Controller {
 		$this->form_validation->set_rules('rfc','RFC','trim|required|xss_clean');
 		$this->form_validation->set_rules('alias','Alias','trim|required|xss_clean');
 		$this->form_validation->set_rules('direccion1','Direccion 1','trim|required|xss_clean');
-		$this->form_validation->set_rules('document','Archivo PDF','trim|required|xss_clean');
+		//$this->form_validation->set_rules('document','Archivo PDF','trim|required|xss_clean');
 		
 
 		if ( $this->form_validation->run() == FALSE ){
