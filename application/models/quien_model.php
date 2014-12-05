@@ -348,7 +348,7 @@
 	        return $sql->result_array();
 	    }
 
-	    public function get_lista_facturas_admin($user, $level, $ini_pagina = 0){
+	    public function get_lista_facturas_admin($user, $level, $ini_pagina = 0, $complete = 0){
 	    	$this->db->select("a.id,b.name AS legislatura, a.date AS fecha_factura, c.name AS tipo_gasto, d.name AS camara, e.name AS responsable, a.folio, a.date, a.amount, a.detail, a.emisor_rfc,a.emisor_alias, a.document, f.response_document AS solicitud");
 	    	$this->db->from("gastos AS a");
 			$this->db->join('legislaturas AS b',' a.id_legislatura = b.id ');
@@ -356,8 +356,25 @@
 			$this->db->join('camaras AS d', 'a.id_camara = d.id ');
 			$this->db->join('responsable_gastos AS e',' a.id_responsable = e.id ');
 			$this->db->join('sol_gastos AS f', 'a.id_sol = f.id ');
+			$limit = 100;
+			
+				if ($complete == 1 )
+					{
+						$this->db->where("a.document != '' ");
+						$limit = 100;
+					}
+				else if ($complete == 0)
+					{
+						$this->db->where("a.document = ''");
+						$limit = 10;
+		   			}
+				else
+					{
+						//*******
+					}
+
 			$this->db->order_by("a.date ", "desc");
-	        $this->db->limit(100, $ini_pagina);
+	        $this->db->limit($limit, $ini_pagina);
  		    $sql = $this->db->get();
 
  		    //print_r($this->db->last_query());die;
