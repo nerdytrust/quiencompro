@@ -112,7 +112,9 @@
 	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo");
 	    	$this->db->from("content AS a");
 	    	$this->db->join('usuarios AS b', 'a.author = b.id ');
+
  		    $this->db->where('a.published', 1);
+
  		    $this->db->order_by("a.modify_date", "desc"); 
  		    $this->db->limit(10, $ini_pagina);
 	        $sql = $this->db->get();
@@ -324,14 +326,25 @@
 			$login->free_result();
 		}
 
-		public function get_lista_notas_admin($user, $level, $ini_pagina = 0){
-	    	$this->db->select("id, title, description, featured_image, modify_date");
+		public function get_lista_notas_admin($user, $level, $ini_pagina = 0, $estado = 0){
+	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, a.published");
+	    	$this->db->from("content AS a");
+	    	
  		    //if ($level != 1) {
  		    //	$this->db->where('author', $user);
  		    //}
+ 		    if ($estado == 1)
+ 		    {
+ 		    	$this->db->where("a.published = 1");
+			}
+ 		    else if ($estado == 0)
+ 		    {
+ 		    	$this->db->where("a.published != 1");
+
+ 		    }
  		    $this->db->order_by("modify_date", "desc");
- 		    $this->db->limit(50, $ini_pagina);
-	        $sql = $this->db->get("content");
+ 		   $this->db->limit(50, $ini_pagina);
+	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
 

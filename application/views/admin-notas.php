@@ -38,7 +38,37 @@
 
 			<div class="unit-100">
 				<table class="table-hovered">
-				    <?php foreach ($data as $data_note) { ?>
+					<center><h2>NOTAS SIN PUBLICAR</h2></center>
+				    	<?php foreach ($data_sinpublicar as $data_note) { ?>
+						    <tr>
+						        <td>
+						        	<?php echo $data_note['id'];?> 
+						        </td>
+						        <td>
+						        	<a style="cursor:pointer;" href="<?php echo base_url(); ?>admin/editar_nota?id_nota=<?php echo $data_note['id']; ?>">
+						        		<?php echo $data_note['title'];?>
+						        	</a>
+						        </td>
+						        <td>
+						        	<?php echo $data_note['modify_date'];?>
+						        </td>
+						        <td>
+						        	<a value="<?php echo base_url(); ?>admin/elimina_nota?id_nota=<?php echo $data_note['id']; ?>" class="btn btn-green elimina-nota">
+						        		Habilitar
+						        	</a>
+						        	<a value="<?php echo base_url(); ?>admin/elimina_nota?id_nota=<?php echo $data_note['id']; ?>" class="btn btn-red elimina-nota">
+				        				Eliminar
+				        			</a>
+						        	
+						        </td>
+						    </tr>
+				    	<?php } ?>
+
+				</table>
+				<table class="table-hovered">
+					<center><h2>NOTAS PUBLICADAS</h2></center>
+
+				    <?php foreach ($data_publicada as $data_note) { ?>
 				    <tr>
 				        <td>
 				        	<?php echo $data_note['id'];?> 
@@ -53,7 +83,7 @@
 				        </td>
 				        <td>
 				        	<a value="<?php echo base_url(); ?>admin/elimina_nota?id_nota=<?php echo $data_note['id']; ?>" class="btn btn-red elimina-nota">
-				        		Eliminar
+				        		Deshabilitar 
 				        	</a>
 				        </td>
 				    </tr>

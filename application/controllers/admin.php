@@ -8,6 +8,8 @@ class Admin extends CI_Controller {
 		$this->load->library('session');
 		$this->load->model('quien_model', 'quien');
 		$this->load->helper(array('download', 'file', 'url', 'html', 'form'));
+		$this->load->helper('number');
+
 	}
 
 	public function index(){
@@ -16,7 +18,9 @@ class Admin extends CI_Controller {
 			$nivel=$this->session->userdata('level');
 			$user_id=$this->session->userdata('id');
 			$data = array('titlepage' => '¿ Quién Compró ?' );
-			$data_notas = array('data' => $this->quien->get_lista_notas_admin($user_id,$nivel) 	);
+			$data_notas = array(
+				'data_sinpublicar' => $this->quien->get_lista_notas_admin($user_id,$nivel,0, 0),
+				'data_publicada' => $this->quien->get_lista_notas_admin($user_id,$nivel,0, 1));
 			$this->load->view('header',$data);
 			$this->load->view('admin-notas', $data_notas);
 			$this->load->view('footer');
