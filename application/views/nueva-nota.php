@@ -55,12 +55,10 @@
 						    <option value="Lazaro">Lazaro Gonzalez</option>
 						</select>				
 					 </fieldset>	
-					
 					 <fieldset>
 					 	<legend> Titulo </legend>
 					 	<input type="text" name="title-note" class="width-50" /> 	
 					 </fieldset>
-				    
 				    <fieldset>
 				        <legend>Meta data</legend>
 				            Tags

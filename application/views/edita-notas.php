@@ -49,14 +49,14 @@
 	                	
 						 <fieldset>	
 					        <legend> Autor </legend>
-				  		  <select name="usuarios">    
-							<option value="Select" selected="selected">Seleccione</option>
-							<option value="Israel">Israel Piña</option>
-						    <option value="Elideth">Elidet Soto</option>
-					        <option value="Isaac">Isaac Caporal</option>
-					        <option value="Miriam">Miriam Vizcarra</option>
-						    <option value="Lazaro">Lazaro Gonzalez</option>
-						  </select>				
+					  		  <select name="usuarios">    
+								<option value="Select" selected="selected">Seleccione</option>
+								<option value="Israel">Israel Piña</option>
+							    <option value="Elideth">Elidet Soto</option>
+						        <option value="Isaac">Isaac Caporal</option>
+						        <option value="Miriam">Miriam Vizcarra</option>
+							    <option value="Lazaro">Lazaro Gonzalez</option>
+							  </select>				
 						</fieldset>
 
 						    <fieldset>
