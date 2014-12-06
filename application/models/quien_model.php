@@ -178,7 +178,7 @@
 	    //Salvar nueva nota
 	    //Recibe un arrelo con los datos a insertar desde el form
 		public function save_nueva_nota($data){
-            $this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
+           // $this->db->set('author', $data['autor-note'] ); //traer desde los datos de la ssesion del usuario
             $this->db->set('title', $data['title-note']);
             $this->db->set('description', $data['desc-note']);
             $this->db->set('alias', $data['title-note']);
@@ -243,6 +243,7 @@
 
 		public function actualiza_nota($data){
 			$data2 = array(
+			   'usuarios'=> $data['usuarios'],
                'title' => $data['title-note'],
                'description' => $data['desc-note'],
                'alias' => $data['title-note'],

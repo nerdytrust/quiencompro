@@ -46,11 +46,24 @@
 		                    $attr = array('id'=>'id_form_edita_nota','name'=>'form_edita_nota','method'=>'POST','autocomplete'=>'off','role'=>'form');
 		                    echo form_open_multipart('admin/actualiza_nota', $attr);
 	                	?>
-							
-							<label>
-								Name
-								<input type="text" name="title-note" class="width-50" value="<?php echo $contenido_nota['title']; ?>" />
-							</label>
+	                	
+						 <fieldset>	
+					        <legend> Autor </legend>
+				  		  <select name="usuarios">    
+							<option value="Select" selected="selected">Seleccione</option>
+							<option value="Israel">Israel Piña</option>
+						    <option value="Elideth">Elidet Soto</option>
+					        <option value="Isaac">Isaac Caporal</option>
+					        <option value="Miriam">Miriam Vizcarra</option>
+						    <option value="Lazaro">Lazaro Gonzalez</option>
+						  </select>				
+						</fieldset>
+
+						    <fieldset>
+						          <legend> Titulo </legend>
+								  <input type="text" name="title-note" class="width-50" value="<?php echo $contenido_nota['title']; ?>" />
+					        </fieldset>
+
 							<fieldset>
 								<legend>Meta data</legend>
 								Tags
