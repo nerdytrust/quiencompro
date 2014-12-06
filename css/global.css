@@ -361,7 +361,7 @@ footer h3{
 	/*background: #fefefe;*/
 	/*background: #dedede;*/
 	border: none;
-	width: 100%
+	width: 100%;
 }
 .lista-4 li > span{
 	font-weight: bold;
@@ -557,7 +557,7 @@ footer h3{
 
 form select {
 	height: 2em;
-	width: 40%;
+	width: 98%;
 }
 
 .ffact label{

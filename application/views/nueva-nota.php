@@ -46,8 +46,6 @@
                 ?>
 				    <fieldset>
 					        <legend> Autor </legend>
-					        <!--<input type="text" name="title-note" class="width-50" /> -->
-					        
 				  		<select name="usuarios">    
 							<option value="Select" selected="selected">Seleccione</option>
 							<option value="Israel">Israel Piña</option>
@@ -56,8 +54,11 @@
 					        <option value="Miriam">Miriam Vizcarra</option>
 						    <option value="Lazaro">Lazaro Gonzalez</option>
 						</select>				
-					 </fieldset>		
-
+					 </fieldset>	
+					 <fieldset>
+					 	<legend> Titulo </legend>
+					 	<input type="text" name="title-note" class="width-50" /> 	
+					 </fieldset>
 				    <fieldset>
 				        <legend>Meta data</legend>
 				            Tags

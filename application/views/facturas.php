@@ -16,7 +16,7 @@
 			</div>
 		</div>
 	</div>
-<div>
+			<div>
 				
 				<h2><span>Lista de Facturas:</span></h2>
 			</div>
@@ -69,7 +69,7 @@
 								</div>
 							</div>
 						</a>
-					</li>
+						</li>
 
 					<?php endforeach ?>
 
@@ -80,4 +80,4 @@
 			
 		</div>
 		
-	</div>
+</div>
