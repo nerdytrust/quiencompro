@@ -386,6 +386,16 @@
 			$eliminado = $this->db->delete('content'); 
 			echo $this->db->affected_rows();
 		}
+		
+		public function habilita_nota ($id_nota)
+		{
+			$this->db->where('id', $id_nota);
+			
+			$this->db->update('published', 1);
+			if ($this->db->affected_rows() > 0) return TRUE;
+			else return FALSE;
+		}
+		
 		public function elimina_factura($id_factura){
 			$this->db->where('id', $id_factura);
 			$eliminado = $this->db->delete('gastos'); 
