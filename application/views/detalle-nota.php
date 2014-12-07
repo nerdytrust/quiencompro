@@ -55,7 +55,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 					</div>
 					<div style="display: inline-block;padding-top:0.5em;">
 						<br/><?=$nota['seudonimo']?>  <br/> <?=$nota['created_date']?><br/>
-						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">Sigueme en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
+						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">S&iacute;gueme en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
 					</div>
 					<div class="item-body">
 							<?=$nota['description']?>
