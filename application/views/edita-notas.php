@@ -41,23 +41,24 @@
 						redirect('admin');
 					}?>
 
+
 					<div class="unit-100">
 						<?php
 		                    $attr = array('id'=>'id_form_edita_nota','name'=>'form_edita_nota','method'=>'POST','autocomplete'=>'off','role'=>'form');
 		                    echo form_open_multipart('admin/actualiza_nota', $attr);
 	                	?>
 	                	
-						 <fieldset>	
-					        <legend> Autor </legend>
-					  		  <select name="usuarios">    
-								<option value="Select" selected="selected">Seleccione</option>
-								<option value="Israel">Israel Piña</option>
-							    <option value="Elideth">Elidet Soto</option>
-						        <option value="Isaac">Isaac Caporal</option>
-						        <option value="Miriam">Miriam Vizcarra</option>
-							    <option value="Lazaro">Lazaro Gonzalez</option>
-							  </select>				
-						</fieldset>
+						 <fieldset>
+						    <legend> Autor </legend>
+					  		<label>
+						        Usuarios
+						        <select name="usuario" id="usuario">
+						        	<?php foreach ($usuarios as $key => $value): ?>
+										<option <?php if($value['id']==$contenido_nota['usuario'])echo 'selected'; ?>   value="<?=$value['id']?>"><?=$value['seudonimo']?></option>
+						        	<?php endforeach ?>
+						        </select>
+						    </label>
+						 </fieldset>
 
 						    <fieldset>
 						          <legend> Titulo </legend>
@@ -92,15 +93,15 @@
 						    </fieldset>
 						    <label>
 						    	Nota destacada: 
-						    	<input type="checkbox" name="feat-note" value="1">
+						    	<input type="checkbox" name="feat-note" value="1" <?php if($contenido_nota['featured'])echo 'checked'?>>
 						    </label>
 						    <label>
 						    	Publicar:
-						    	<input type="checkbox" name="published-note" value="1">
+						    	<input type="checkbox" name="published-note" value="1" <?php if($contenido_nota['published'])echo 'checked'?> >
 						    </label>
 						    <label>
 						    	Nota VIP: 
-						    	<input type="checkbox" name="vip-note" value="1">
+						    	<input type="checkbox" name="vip-note" value="1" <?php if($contenido_nota['vip'])echo 'checked'?>>
 						    </label>
 						    	<input type="hidden" name="id-note" value="<?php echo $nota; ?>" />
 							<p>

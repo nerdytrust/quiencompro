@@ -72,7 +72,7 @@
 	    }
 
 	    public function get_detalle_nota($id_nota){
-	    	$this->db->select("a.id,b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured, b.image");
+	    	$this->db->select("b.id as usuario, a.id,b.seudonimo, b.tweeter, a.title, a.description,a.featured_image, a.alias, a.content, a.created_date, a.tags, a.published, a.vip, a.featured, b.image");
 	    	$this->db->from("content AS a");
 			$this->db->join('usuarios AS b', 'a.author = b.id ');
  		    //$this->db->where("published", 1);
@@ -243,6 +243,7 @@
 
 		public function actualiza_nota($data){
 			$data2 = array(
+			   'author' => $data['autor-note'],
                'title' => $data['title-note'],
                'description' => $data['desc-note'],
                'alias' => $data['title-note'],
@@ -387,13 +388,17 @@
 			echo $this->db->affected_rows();
 		}
 		
+		public function desactiva_nota ($id_nota)
+		{
+			$this->db->where('id', $id_nota);			
+			$this->db->update('content', array('published'=>0));
+			echo $this->db->affected_rows();
+		}
 		public function habilita_nota ($id_nota)
 		{
-			$this->db->where('id', $id_nota);
-			
-			$this->db->update('published', 1);
-			if ($this->db->affected_rows() > 0) return TRUE;
-			else return FALSE;
+			$this->db->where('id', $id_nota);			
+			$this->db->update('content', array('published'=>1));
+			echo $this->db->affected_rows();
 		}
 		
 		public function elimina_factura($id_factura){
@@ -408,6 +413,13 @@
 		}
 
 
+		public function get_usuarios(){	
+			$this->db->select('id,seudonimo');
+			$this->db->from("usuarios");
+			$this->db->where('active',1);
+			$this->db->order_by("id", "desc");
+			return $this->db->get()->result_array();
+		}
 		public function get_legislaturas(){	
 			$this->db->select('id,name');
 			$this->db->from("legislaturas");

@@ -99,9 +99,9 @@
 	<br>
 	<br>
 	<br>
-	<div style="center">
+	<center>
 		<div class="fb-comments" data-href="<?=base_url()?>facturas/detallefactura/<?=$factura['id']?>" data-numposts="5" data-colorscheme="light"></div>		
-	</div>
+	</center>
 	<br>
 	<br>
 	<br>

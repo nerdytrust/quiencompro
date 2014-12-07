@@ -21,7 +21,7 @@ class Admin extends CI_Controller {
 			$data_notas = array(
 				'data_sinpublicar' => $this->quien->get_lista_notas_admin($user_id,$nivel,0, 0),
 				'data_publicada' => $this->quien->get_lista_notas_admin($user_id,$nivel,0, 1));
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('admin-notas', $data_notas);
 			$this->load->view('footer');
 		}
@@ -42,7 +42,7 @@ class Admin extends CI_Controller {
 				'data_incompleto' => $this->quien->get_lista_facturas_admin($user_id,$nivel,0,0));
 
 			//print_r($data_facturas);die;
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('admin-facturas', $data_facturas);
 			$this->load->view('footer');
 		}
@@ -60,7 +60,7 @@ class Admin extends CI_Controller {
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 
 			$data_solicitudes = array('data' => $this->quien->get_lista_solicitudes_admin($user_id,$nivel) 	);
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('admin-solicitudes', $data_solicitudes);
 			$this->load->view('footer');
 		}
@@ -76,10 +76,9 @@ class Admin extends CI_Controller {
 			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 			$id_nota = $this->input->get( "id_nota" );
-			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota), 'nota' => $id_nota );
-
+			$nota_data = array('data' => $this->quien->get_detalle_nota($id_nota), 'nota' => $id_nota,'usuarios' => $this->quien->get_usuarios() );
 			//print_r($nota_data);die;
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('edita-notas', $nota_data);
 			$this->load->view('footer');
 		} else {
@@ -95,7 +94,7 @@ class Admin extends CI_Controller {
 
 			$id_solicitud = $this->input->get( "id_solicitud" );
 			$solicitud_data = array('data' => $this->quien->get_detalle_solicitud($id_solicitud), 'nota' => $id_solicitud );
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('edita-solicitudes', $solicitud_data);
 			$this->load->view('footer');
 		} else {
@@ -110,9 +109,13 @@ class Admin extends CI_Controller {
 	public function nueva_nota(){
 		if($this->session->userdata('session') === TRUE ){
 			//$this->output->enable_profiler(TRUE);
-			$data = array('titlepage' => '¿ Quién Compró ?' );
-			$this->load->view('header',$data);
-			$this->load->view('nueva-nota');
+			$data  = array('titlepage' => '¿ Quién Compró ?' );
+
+			$data2 = array('usuarios' => $this->quien->get_usuarios());
+
+
+			$this->load->view('header-admin',$data);
+			$this->load->view('nueva-nota',$data2);
 			$this->load->view('footer');
 		}
 		else{
@@ -137,7 +140,7 @@ class Admin extends CI_Controller {
 			);
 
 
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('nueva-factura',$catalogos);
 			$this->load->view('footer');
 		}
@@ -161,7 +164,7 @@ class Admin extends CI_Controller {
 				);
 			$factura_data = array('data' => $this->quien->get_detalle_factura($id_factura), 'catalogos' => $catalogos , 'factura' => $id_factura );
 
-				$this->load->view('header',$data);
+				$this->load->view('header-admin',$data);
 				$this->load->view('edita-facturas',$factura_data);
 				$this->load->view('footer');
 			} else {
@@ -175,7 +178,7 @@ class Admin extends CI_Controller {
 			//$this->output->enable_profiler(TRUE);
 			$data = array('titlepage' => '¿ Quién Compró ?' );
 
-			$this->load->view('header',$data);
+			$this->load->view('header-admin',$data);
 			$this->load->view('nueva-solicitud');
 			$this->load->view('footer');
 		}
@@ -194,7 +197,8 @@ class Admin extends CI_Controller {
 		if ( $this->form_validation->run() == FALSE ){
 			echo validation_errors();
 		}else {
-				$data['autor-note']			=	$this->session->userdata('id');
+				//$data['autor-note']			=	$this->session->userdata('id');
+				$data['autor-note']			=	$this->input->post('usuario');
 				$data['title-note']			=	$this->input->post('title-note');
 				$data['tags-note']			=	$this->input->post('tags-note');
 				$data['desc-note']			=	$this->input->post('desc-note');
@@ -296,6 +300,18 @@ class Admin extends CI_Controller {
 	}
 
 
+	public function habilita_nota(){
+		$id_nota = $this->input->get( "id_nota" );
+		$activa_data = $this->quien->habilita_nota($id_nota);
+		echo $activa_data;
+	}
+
+	public function desactiva_nota(){
+		$id_nota = $this->input->get( "id_nota" );
+		$desactiva_data = $this->quien->desactiva_nota($id_nota);
+		echo $desactiva_data;
+	}
+
 	public function elimina_nota(){
 		$id_nota = $this->input->get( "id_nota" );
 		$elimina_data = $this->quien->elimina_nota($id_nota);
@@ -321,6 +337,7 @@ class Admin extends CI_Controller {
 		if ( $this->form_validation->run() == FALSE ){
 			echo validation_errors();
 		}else {
+				$data['autor-note']			=	$this->input->post('usuario');
 				$data['id-note']			=	$this->input->post('id-note');
 				$data['title-note']			=	$this->input->post('title-note');
 				$data['tags-note']			=	$this->input->post('tags-note');
@@ -389,7 +406,7 @@ class Admin extends CI_Controller {
 		}
 	
 
-		            public function actualiza_solicitud(){
+		public function actualiza_solicitud(){
 
 		$this->form_validation->set_rules('requestfolio' ,'Folio de Solicitud','trim|required|xss_clean');
 		$this->form_validation->set_rules('responsefolio','Folio de Solicitud','trim|required|xss_clean');

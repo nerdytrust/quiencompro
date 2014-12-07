@@ -227,6 +227,13 @@ header nav.navbar .menu > ul > li{
 	/*color: #fefefe;*/
 	color: #333;
 	padding: 0.5em;
+	border-bottom: 1px dashed #ccc;
+}
+.lista-1 li:last-of-type{
+	border: none;
+}
+.no-border{
+	border: none !important;
 }
 .lista-1 li div > div {
 	display: inline-block;

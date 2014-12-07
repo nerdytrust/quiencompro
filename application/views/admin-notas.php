@@ -82,7 +82,7 @@
 				        	<?php echo $data_note['modify_date'];?>
 				        </td>
 				        <td>
-				        	<a value="<?php echo base_url(); ?>admin/elimina_nota?id_nota=<?php echo $data_note['id']; ?>" class="btn btn-red elimina-nota">
+				        	<a value="<?php echo base_url(); ?>admin/desactiva_nota?id_nota=<?php echo $data_note['id']; ?>" class="btn btn-red elimina-nota">
 				        		Deshabilitar 
 				        	</a>
 				        </td>

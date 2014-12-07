@@ -79,7 +79,7 @@
                             foreach ($facturas_recientes as $key => $value) {
                         ?>
                         <li>
-                            <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>" style="color:#000;">
+                            <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>/<?=$value['name']?>" style="color:#000;">
                                 <div class="unit-30">
                                     <img src="images/icons/money.png" width="50" alt="Gastos">
                                 </div>
@@ -94,7 +94,7 @@
                         <?php
                             }
                         ?>
-                        <li>
+                        <li  class="no-border">
                             <div class="unit-push-right unit-80" style="text-align:right;margin-right:1em;">
                                 <a href="<?=base_url()?>facturas">Ver más facturas >></a>
                             </div>
@@ -129,7 +129,7 @@
                     ?>
                         <li>
                             <div>
-                                <a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>" style="color:#000;">
+                                <a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>/<?=$value['name']?>" style="color:#000;">
                                     <div class="unit-20">
                                         <img src="images/icons/notebook.png" alt="facturas">
                                     </div>
@@ -171,7 +171,7 @@
                         foreach ($facturas_beneficiados as $key => $value) {
                     ?>
                         <li>
-                            <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>" style="color:#000;">
+                            <div><a href="<?=base_url()?>facturas/detallefactura/<?=$value['id']?>/<?=$value['name']?>" style="color:#000;">
                                 <div class="unit-20">
                                     <img src="images/icons/stats.png" alt="Gráfica"> 
                                 </div>

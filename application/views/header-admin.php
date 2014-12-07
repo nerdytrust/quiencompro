@@ -25,21 +25,6 @@
 	<link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
 
 
-	<script type="text/javascript">var switchTo5x=true;</script>
-	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-	<script type="text/javascript" src="http://s.sharethis.com/loader.js"></script>
-
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-56506246-1', 'auto');
-	  ga('send', 'pageview');
-	</script>
-
-
 	<?php
 		$img = base_url().'images/QC.png';
 		$title = $titlepage; 
@@ -75,7 +60,7 @@
 				</ul>
 			</li>
 			<li class="logo">
-				<a href="<?=base_url()?>"><img src="images/QC.png" alt="¿ Quien Compro ?"></a>
+				<a href="<?=base_url()?>/admin"><img src="images/QC.png" alt="¿ Quien Compro ?"></a>
 				<!-- <h1><span class="title1-1">¿Quién</span> <span class="title1-2">Compró?</span><h1> -->
 			</li>
 			

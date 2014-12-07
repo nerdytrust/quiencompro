@@ -29,17 +29,17 @@ $(function(){
 	});
 
 	$('.elimina-nota,.elimina-factura,.elimina-solicitud').click(function(){
-	    var r = confirm("¿Realmente desea eliminar este registro?");
+	    var r = confirm("¿Realmente desea realizar esta acción?");
 	    if (r == true) {
 	    		$.get($(this).attr('value'), function(data){
 					if(data == 1){
-						data = "Registro Eliminado.";
-						alert(data);
+						//data = "Registro Eliminado.";
+						//alert(data);
 						window.location.reload();
 					}
 					else
 					{
-						alert("No se  ha podido eliminar el registro: "+data);
+						alert("No se  ha podido realizar esta acción: "+data);
 						window.location.reload();
 					}
 				});

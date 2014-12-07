@@ -45,15 +45,15 @@
                     echo form_open_multipart('admin/guarda_nota', $attr);
                 ?>
 				    <fieldset>
-					        <legend> Autor </legend>
-				  		<select name="usuarios">    
-							<option value="Select" selected="selected">Seleccione</option>
-							<option value="Israel">Israel Piña</option>
-						    <option value="Elideth">Elidet Soto</option>
-					        <option value="Isaac">Isaac Caporal</option>
-					        <option value="Miriam">Miriam Vizcarra</option>
-						    <option value="Lazaro">Lazaro Gonzalez</option>
-						</select>				
+					    <legend> Autor </legend>
+				  		<label>
+					        Usuarios
+					        <select name="usuario" id="usuario">
+					        	<?php foreach ($usuarios as $key => $value): ?>
+									<option value="<?=$value['id']?>"><?=$value['seudonimo']?></option>
+					        	<?php endforeach ?>
+					        </select>
+					    </label>
 					 </fieldset>	
 					 <fieldset>
 					 	<legend> Titulo </legend>
