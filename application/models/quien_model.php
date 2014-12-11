@@ -109,7 +109,7 @@
 	    }
 
 	    public function get_lista_notas($ini_pagina = 0){
-	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo");
+	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo, b.tweeter");
 	    	$this->db->from("content AS a");
 	    	$this->db->join('usuarios AS b', 'a.author = b.id ');
 
