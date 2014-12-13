@@ -53,11 +53,11 @@
 												-->
 												<div style="display:block;">
 													<div class="unit-centered unit-45" >
-														<img src="<?=$value['image']?>" width="80" style="float: left" alt="Usuario">
+														<a href="<?=base_url()?>notas/lista_autores_nota/<?=$value['usuario']?>"><img src="<?=$value['image']?>" width="80" style="float: left" alt="Usuario"></a>
 													</div> 
 
-			
-														<?=$value['seudonimo']?> <br/> <?=$value['modify_date']?> <br/> 
+														<a href="<?=base_url()?>notas/lista_autores_nota/<?=$value['usuario']?>"><?=$value['seudonimo']?></a><br/>
+														<?=$value['modify_date']?> <br/> 
 														<a target="_blank" href="https://twitter.com/<?=$value['tweeter']?>">S&iacute;gueme en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt="twitter"></a> <br><br>
 													
 												</div>

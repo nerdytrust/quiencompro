@@ -38,6 +38,43 @@ class Notas extends CI_Controller {
 		$this->load->view('footer');
 
 	}
+	public function lista_autores_nota()
+	{
+
+		//$notaid = ($this->input->get('nota')==null) ? 0 : $this->input->get('nota');
+		$author;
+			if ($this->uri->segment(3) === FALSE)
+			{
+			    $author = 2;
+			}
+			else
+			{
+			    $author = $this->uri->segment(3);
+			}
+			//echo $author; die;
+
+		if($author == 0 || !is_numeric($author))
+				header('Location:'.base_url(),true);
+
+		$header = array('titlepage' => '¿ Quién Compró ?'
+			,'nota' => $this->Quien_model->get_lista_autores(0,$author));
+		$lista_notas=$this->Quien_model->get_lista_autores(0, $author);
+
+
+		$body = array(
+
+			'lista_notas' =>  $lista_notas, 
+			'total_notas' => count($lista_notas)
+			);
+//print_r($body) ; die;
+		if(count($body['total_notas'])<1)
+			header('Location:'.base_url(),true);
+
+		$this->load->view('header',$header);
+		$this->load->view('notas',$body);
+		$this->load->view('footer');
+
+	}
 
 	public function index()
 	{

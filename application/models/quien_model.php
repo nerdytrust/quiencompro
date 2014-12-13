@@ -29,7 +29,23 @@
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
+	    //
+	    public function get_lista_autores($ini_pagina = 0, $author){
+	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo, b.tweeter, b.id AS usuario");
 
+	    
+	    	$this->db->from("content AS a");
+	    	$this->db->join('usuarios AS b', 'a.author = b.id ');
+	    	$this->db->where('a.published', 1);
+ 		    $this->db->where('a.author', $author);
+ 		    
+
+ 		    $this->db->order_by("a.modify_date", "desc"); 
+ 		    $this->db->limit(10, $ini_pagina);
+	        $sql = $this->db->get();
+	        return $sql->result_array();
+	    }
+	    //
 	   	public function get_facturas_recientes(){
 	    	$this->db->select("a.id,a.id_camara, a.modify_date, a.detail, a.amount, b.name");
  		    $this->db->from("gastos AS a");
@@ -109,7 +125,7 @@
 	    }
 
 	    public function get_lista_notas($ini_pagina = 0){
-	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo, b.tweeter");
+	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo, b.tweeter, b.id AS usuario");
 	    	$this->db->from("content AS a");
 	    	$this->db->join('usuarios AS b', 'a.author = b.id ');
 
