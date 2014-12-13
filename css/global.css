@@ -347,8 +347,7 @@ footer h3{
 	margin-left: 0;
 }
 .lista-3 a{
-	text-decoration: none;
-	color: #A526A3;
+	text-decoration: none;	
 }
 
 
@@ -370,9 +369,13 @@ footer h3{
 	border: none;
 	width: 100%;
 }
-.lista-4 li > span{
+.lista-4 li > span {
 	font-weight: bold;
 }
+.atributo {
+	 color:#A526A3;
+}
+
 
 .lista-5{
 	font-family: Montserrat;
@@ -601,4 +604,8 @@ color: #A526A3;
 	color: #333;
 }
 
+.item-body span{
+	font-weight: bold;
+	font-style: italic;
+}
 

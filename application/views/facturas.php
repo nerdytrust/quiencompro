@@ -43,8 +43,14 @@
 										
 										<div class="unit-40">
 											<ul class="lista-4" >
-												<li><span> Camara:</span> <?=$value['camara']?></li>
-												<li><span> Legislatura:</span> <?=$value['legislatura']?></li>
+												<li>
+													<span> Camara:</span> 
+													<span class="atributo"><?=$value['camara']?> </span> 
+												</li>
+												<li>
+													<span> Legislatura: </span> 
+													<span class="atributo"><?=$value['legislatura']?> </span> 
+												</li>
 											</ul>
 											
 										</div>
@@ -52,15 +58,23 @@
 										<div class="unit-30">
 											<ul class="lista-4">
 												<li><span><?=$value['responsable']?></span></li>
-												<li><span> Monto:</span> <?=money_format('%i',$value['amount'])?></li>
+												<li>
+													<span> Monto: </span> 
+												    <span class="atributo"><?=money_format('%i',$value['amount'])?> </span> 
+												</li>
 											</ul>
 											
 										</div>
 
 										<div class="unit-30">
 											<ul class="lista-4">
-												<li><span> Fecha:</span> <?=$value['date']?></li>
-												<li><span><?=$value['emisor_alias']?></span></li>												
+												<li>
+													<span> Fecha:</span> 
+													<span class="atributo"> <?=$value['date']?> </span>
+												</li>
+												<li>
+												<span><?=$value['emisor_alias']?></span>
+												</li>												
 											</ul>
 										</div>
 

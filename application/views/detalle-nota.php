@@ -59,7 +59,7 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 						<a target="_blank" href="https://twitter.com/<?=$nota['tweeter']?>">S&iacute;gueme en Twitter &nbsp;<img src="images/icons/twitter-256.png" width="20" alt=""></a>
 					</div>
 					<div class="item-body">
-							<?=$nota['description']?>
+							<span><?=$nota['description']?></span>
 							<br><br><br>
 							<?=$nota['content']?>
 					</div>
@@ -78,3 +78,10 @@ var st_hover_widget = new sharethis.widgets.hoverbuttons(options);
 		<br>
 
 </div>
+
+<script type="text/javascript">
+	
+	var tam = $(window).height() -110;
+	$(".imagedetallenota").css("height",tam + "px");
+
+</script>
