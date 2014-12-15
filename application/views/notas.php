@@ -69,7 +69,7 @@
 												</a>
 											</div>
 											<div class="unit-35">
-												<a href="<?=base_url()?>notas/detallenota/$value['id']?>">
+												<a href="<?=base_url()?>notas/detallenota/<?=$value['id']?>/<?=urlencode($value['title'])?>">
 												<!--<img class="hiddenmobile" src="http://lorempixel.com/280/120/technics/" alt="">
 												<img class="hiddendesktop" src="http://lorempixel.com/240/280/technics/" alt="">-->
 													<img src="<?=$value['featured_image']?>" alt="<?=$value['title']?>">
