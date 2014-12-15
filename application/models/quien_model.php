@@ -29,6 +29,17 @@
 	        $sql = $this->db->get();
 	        return $sql->result_array();
 	    }
+	    public function get_rss(){
+	    	$this->db->select("c.seudonimo,a.id, a.author, a.title, a.description, a.modify_date, a.featured, a.published, a.featured_image");
+ 		    $this->db->from("content AS a");
+ 		    $this->db->join('usuarios AS c', 'a.author = c.id ');
+ 		    $this->db->where('a.featured', 0);
+ 		    $this->db->where('a.published', 1);
+ 		    $this->db->order_by("a.modify_date", "desc");
+ 		    $this->db->limit(10);
+	        $sql = $this->db->get();
+	        return $sql->result_array();
+	    }
 	    //
 	    public function get_lista_autores($ini_pagina = 0, $author){
 	    	$this->db->select("a.id, a.title, a.description, a.featured_image, a.modify_date, b.image, b.seudonimo, b.tweeter, b.id AS usuario");
@@ -483,5 +494,8 @@
 			     return TRUE;
 			}
 	    }
+
+	    
+	    
 	} 
 ?>

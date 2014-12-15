@@ -166,7 +166,7 @@
 
 		<div class="units-row end">
 		  Derechos reservados &copy;¿Quién Compró? <?=date('Y')?>
-		</div>
+		 </div>
 
 	</footer>
 
