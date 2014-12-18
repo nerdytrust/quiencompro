@@ -305,6 +305,9 @@ footer .end{
 	text-align: center;
 	background: #A526A3;
 }
+footer .end div{
+	float: right;
+}
 footer h3{
 	/*color:#fff;*/
 }
