@@ -166,6 +166,13 @@
 
 		<div class="units-row end">
 		  Derechos reservados &copy;¿Quién Compró? <?=date('Y')?>
+
+		  	<div>
+				<a target="_blank" href="https://www.google.com.mx/?gfe_rd=cr&ei=X36LVN_JCc6y8wfpnYGAAg">
+				<img src="images/icons/rss.png" width="25" alt="RSS">
+				</a>
+			</div>	
+
 		 </div>
 
 	</footer>
