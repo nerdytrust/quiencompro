@@ -19,13 +19,6 @@
        <link>http://quiencompro.com/</link>
 
 
-       <description>Plataforma de periodismo de datos para transparentar el uso del dinero público en el Congreso de México</description>
-    	           
-        <?php
-             foreach ($nota as $key => $value) {
-        ?>
-        <item>
-           <link><?=base_url()?>notas/rss/<?=$value['id']?>/<?=urlencode($value['title'])?> </link>
                                    
 
                  <author>quiencompro@gmail.com</author>
