@@ -13,8 +13,9 @@
                         foreach ($nota as $key => $value) {
                     ?>
                         <item>
-                            <link><?=base_url()?>notas/rss/<?=$value['id']?>/<?=urlencode($value['title'])?> </link>
-                               
+                            <link><?=base_url()?>rss/RSS<?=$value['id']?>/<?=urlencode($value['title'])?></link>
+                            
+                         
 
                                      <author>quiencompro@gmail.com</author>
                                      <pubDate><?=$value['modify_date']?></pubDate>
