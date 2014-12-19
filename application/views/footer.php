@@ -101,7 +101,7 @@
 					</div>
 
 
-					<div class="unit-15 zerif_team">
+					<div class="unit-20 zerif_team">
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
@@ -124,6 +124,28 @@
 						</div>
 					</div>
 
+					<div class="unit-20 zerif_team">
+						<div>
+							<div class="team-member">
+								<figure class="profile-pic">
+									<img src="<?=base_url()?>images/team/andrés.JPG" alt="Andrés_Zúñiga">
+								</figure>
+								<div class="member-details">
+									<h3>Andrés Zúñiga</h3>
+									<div class="position">INVESTIGADOR ESPECIAL</div>
+								</div>
+								<div class="social-icons">
+									<ul>
+										<li><a href="https://www.facebook.com/andrew.zuniganajar?ref=ts&fref=ts"><img src="images/icons/facebook-256.png" width="25" alt="facebook_Andrés" ></a></li>
+										<li><a href="https://twitter.com/Andrewzn"><img src="images/icons/twitter-256.png" width="25" alt="twitter_Andrés"></a></li>
+									</ul>
+								</div>
+								<div class="details">
+									Apasionado de la comunicación y el periodismo. Con experiencia como corrector en el diario Ecos de la Costa de Colima, reportero y productor de noticias por radio, periodista en los diarios El Informador y Mural de Guadalajara. Egresado en comunicación social en la Universidad de Colima y maestro en comunicación corporativa por la Universidad del Valle de Atemajac, UNIVA. Actual editor web del portal de noticias UN1ON Jalisco.
+								</div>
+							</div>
+						</div>
+					</div>
 
 <!-- Team -->
 
