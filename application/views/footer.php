@@ -128,7 +128,7 @@
 						<div>
 							<div class="team-member">
 								<figure class="profile-pic">
-									<img src="<?=base_url()?>images/team/andrés.JPG" alt="Andrés_Zúñiga">
+									<img src="<?=base_url()?>images/team/andres.JPG" alt="Andrés_Zúñiga">
 								</figure>
 								<div class="member-details">
 									<h3>Andrés Zúñiga</h3>
