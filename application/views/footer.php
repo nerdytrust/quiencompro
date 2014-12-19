@@ -158,7 +158,7 @@
 			          <img style="background:#fff;width:60%;" src="images/nerd.png" alt="Nerdy Trust">
 			          </a>
 							&nbsp;&nbsp;&nbsp;
-			          <a href="http://www.nerdytrust.com" target="_blank">
+			          <a href="http://desarrollandoamerica.org/" target="_blank">
 			          <img style="background:#fff;width:25%;" src="images/LOGO%20DAL%20sobre-blanco.png" alt="Nerdy Trust">
 			          </a>
 			    </div>
