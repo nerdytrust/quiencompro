@@ -40,19 +40,10 @@ class Notas extends CI_Controller {
 	}
 	public function rss()
 	{
-		
-		$header = array('titlepage' => '¿ Quién Compró ?'
-			,'nota' => $this->Quien_model->get_rss());
 		$body = array(
 				'nota' => $this->Quien_model->get_rss()
 			);
-
-		if(count($body['nota'])<1)
-			header('Location:'.base_url(),true);
-
-		
 		$this->load->view('rss', $body);
-		
 	}
 	public function lista_autores_nota()
 	{
